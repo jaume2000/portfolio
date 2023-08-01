@@ -8,6 +8,7 @@ const getLanguageAllDictionary = (lang: string): {[key:string]:{[key:string]:str
 }
 
 const getLanguageDictionary = (lang: string, page: string): {[key:string]:string} =>{
+    if(lang =="default"){lang="en"}
     if(Object.keys(dict).find((x: string)=>x==lang) !== undefined){
         let str = lang as keyof typeof dict;
         return dict[str][page];
