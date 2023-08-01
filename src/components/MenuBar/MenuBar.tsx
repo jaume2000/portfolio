@@ -11,7 +11,6 @@ const MenuBar = ({lang}: {lang:string})=>{
             {lang}
         </menu>
     )
-    //xd
 }
 
 export default MenuBar
