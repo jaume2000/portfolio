@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'NerdFont';
+  src: url('/13270NerdFont-Condensed.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  background-color: white;
+}
+
+menu {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(20, 50, 20);
+  margin:0;
+  padding: 0;
+}
+
+
+.presentation_box {
+  background-color: black;
+  height: 100vh;
+}
+
+.space{
+  height: 100px;
+}
+
+.main_title {
+  margin-top: 0;
+  font-size: 120px;
+  font-family: 'NerdFont', 'Courier New', Courier, monospace;
+  text-align: center;
+  color: rgb(0, 255, 0);
+}
+
+.presentation {
+  font-size: 70px;
+  font-family: 'NerdFont', 'Courier New', Courier, monospace;
+  text-align: center;
+  color: rgb(0, 255, 0);
+
+}
