@@ -25,13 +25,13 @@ let dict: {[key:string]: {[key:string]: {[key:string]:string}}}= {
     },
     en: {
         PresentationPage:{
-            main_title: "Wellcome!",
+            main_title: "Welcome!",
             presentation: "My name is Jaume Ivars Grimalt and I am fullstack developer"
         },
     },
     fr:{
         PresentationPage:{
-            main_title: "Eh bien!",
+            main_title: "Bienvenue!",
             presentation: "Je m'appelle Jaume Ivars et je suis développeur fullstack"
         }
     }
