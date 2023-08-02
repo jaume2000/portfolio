@@ -1,21 +1,11 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { match } from '@formatjs/intl-localematcher'
+import Negotiator from 'negotiator'
  
-const PUBLIC_FILE = /\.(.*)$/
+let headers = { 'accept-language': 'en-US,en;q=0.5' }
+let languages = new Negotiator({ headers }).languages()
+let locales = ['en', 'es', 'fr']
+let defaultLocale = 'en'
+
+console.log("LOROLO EXECUTING MIDDLEWAREE")
  
-export async function middleware(req: NextRequest) {
-  if (
-    req.nextUrl.pathname.startsWith('/_next') ||
-    req.nextUrl.pathname.includes('/api/') ||
-    PUBLIC_FILE.test(req.nextUrl.pathname)
-  ) {
-    return
-  }
- 
-  if (req.nextUrl.locale === 'default') {
-    const locale = req.cookies.get('NEXT_LOCALE')?.value || 'en'
- 
-    return NextResponse.redirect(
-      new URL(`/${locale}${req.nextUrl.pathname}${req.nextUrl.search}`, req.url)
-    )
-  }
-}
+match(languages, locales, defaultLocale) // -> 'en-US'
