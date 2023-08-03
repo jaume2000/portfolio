@@ -1,3 +1,8 @@
+import ca from './ca'
+import es from './es'
+import en from './en'
+import fr from './fr'
+
 
 const getLanguageAllDictionary = (lang: string): {[key:string]:{[key:string]:string}} =>{
     if(Object.keys(dict).find((x: string)=>x==lang) !== undefined){
@@ -20,91 +25,26 @@ const getLanguageDictionary = (lang: string, page: string): {[key:string]:string
     return dict.en[page_key]
 }
 
+const getLanguageEmoji = (lang:string): string => {
 
-type translation_structure = {
-    PresentationPage: {
-        main_title: string,
-        presentation: string
-    },
-    MenuBar: {
-        about: string,
-        works: string,
-        contact: string
-    },
-    Works:{
-        title: string
-    },
-    About: {
-        title: string
-    },
-    Contact: {
-        title: string
+    let emojis = {
+        es: "🇪🇸",
+        en: "🇬🇧",
+        fr: "🇫🇷",
+        ca: "ca"
     }
+    let lang_key = lang as keyof typeof emojis
+
+    return emojis[lang_key]
 }
+
 
 
 let dict: {[key:string]: translation_structure}= {
-    es: {
-        PresentationPage:{
-            main_title: "¡Bienvenido!",
-            presentation: "Me llamo Jaume Ivars Grimalt, y soy desarrollador fullstack"
-        },
-        MenuBar:{
-            about: "Sobre mí",
-            works: "Trabajos",
-            contact: "Contáctame",
-        },
-        Works: {
-            title: "Mis trabajos"
-        },
-        About: {
-            title: "Sobre mí"
-        },
-        Contact: {
-            title: "Contacto"
-        }
-
-    },
-    en: {
-        PresentationPage:{
-            main_title: "Welcome!",
-            presentation: "My name is Jaume Ivars Grimalt and I am fullstack developer"
-        },
-        MenuBar:{
-            about: "About me",
-            works: "My work",
-            contact: "Contact me",
-        },
-        Works: {
-            title: "My work"
-        },
-        About: {
-            title: "About me"
-        },
-        Contact: {
-            title: "Contact me"
-        }
-    },
-    fr:{
-        PresentationPage:{
-            main_title: "Bienvenue!",
-            presentation: "Je m'appelle Jaume Ivars et je suis développeur fullstack"
-        },
-        MenuBar:{
-            about: "A propos de moi",
-            works: "Travaux",
-            contact: "Me contacter",
-        },
-        Works: {
-            title: "Mes travaux"
-        },
-        About: {
-            title: "A propos de moi"
-        },
-        Contact: {
-            title: "Contact"
-        }
-    }
+    es: es,
+    ca: ca,
+    en: en,
+    fr: fr
 }
 
-export default getLanguageDictionary
+export {getLanguageDictionary, getLanguageEmoji}

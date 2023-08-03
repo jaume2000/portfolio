@@ -1,0 +1,79 @@
+.console_container {
+    border-radius: 20px;
+    border: grey 6px solid;
+    margin: 10px;
+    position: relative;
+    height: 80vh;
+    width: 50%;
+    margin: auto;
+}
+
+.console_container_header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    background-color: gray;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.console_container_header_left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.console_container_header_right {
+    height: 100%;
+    width: 50%;
+}
+
+.first_dot {
+    background-color: red;
+}
+
+.second_dot {
+    background-color: rgb(220,220,0);
+}
+.third_dot {
+    background-color: rgb(0,200,0);
+}
+
+.dot {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 3px;
+}
+
+.console_container_content {
+    display: block;
+    padding: 10px;
+}
+
+.light_console {
+    background-color: white;
+    color:black;
+}
+
+.dark_console {
+    background-color: black;
+    color:white;
+}
+
+.hacker_console {
+    background-color: black;
+    color:rgb(0,255,0);
+    border-color: rgb(0,255,0);
+}
+
+.hacker_console > .console_container_header {
+    background-color: rgb(0,255,0);
+}
+
+.hacker_console .first_dot, .hacker_console .second_dot, .hacker_console .third_dot {
+    background-color: black;
+}

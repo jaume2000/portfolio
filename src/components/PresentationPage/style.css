@@ -1,24 +1,41 @@
-.presentation_box {
-    background-color: black;
-    height: 100vh;
-  }
-  
   .space{
     height: 100px;
   }
   
-  .main_title {
-    margin-top: 0;
+  #main_title {
     font-size: 120px;
     font-family: 'NerdFont', 'Courier New', Courier, monospace;
     text-align: center;
-    color: rgb(0, 255, 0);
   }
   
   .presentation {
     font-size: 70px;
-    font-family: 'NerdFont', 'Courier New', Courier, monospace;
     text-align: center;
-    color: rgb(0, 255, 0);
-  
+  }
+
+  .presentation_box {
+    background-image: linear-gradient(to top right,
+    #219ebc 17.9%, #ffffff 18%, #ffffff 81.9%, #ffb703 82%, #ffb703);
+  }
+
+  .black_waves {
+    height: 75px;
+    width: 110%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("/black_wave.png");
+    background-size: 100px;
+    background-repeat: repeat-x;
+    z-index: 0;
+    animation: waves 5s linear infinite;
+  }
+
+  @keyframes waves{
+    0% {
+      transform: translate(-100px,0);
+    }
+    100% {
+      transform: translate(0px,0);
+    }
   }

@@ -1,5 +1,5 @@
-import '@/components/MenuBar/MenuBar'
-import MenuBar from '@/components/MenuBar/MenuBar'
+import '@/components/NavBar/NavBar'
+import MenuBar from '@/components/NavBar/NavBar'
 
 export const metadata = {
   
@@ -20,7 +20,6 @@ export default function RootLayout({
         <title>{"Jaume Ivars' Portfolio"}</title>
       </head>
       <body>
-        <MenuBar lang={params.lang}/>
         {children}
         </body>
     </html>

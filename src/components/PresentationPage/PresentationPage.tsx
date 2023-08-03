@@ -1,6 +1,6 @@
 
 import { useRouter } from "next/navigation"
-import getLanguageDictionary from "@/lang/lang";
+import {getLanguageDictionary} from "@/lang/lang";
 import '@/css/globals.css'
 import './style.css'
 
@@ -11,9 +11,10 @@ const PresentationPage = ({lang}: {lang:string}) => {
 
     return (
         <div>
-            <div className="presentation_box">
-                <h1 className="main_title">{dict.main_title}</h1>
+            <div className="presentation_box fullpage">
+                <h1 id="main_title">{dict.main_title}</h1>
                 <h2 className="presentation">{dict.presentation}</h2>
+                <div className="black_waves"/>
             </div>
         </div>
     )

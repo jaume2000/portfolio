@@ -1,5 +1,5 @@
 import '@/lang/lang'
-import getLanguageDictionary from '@/lang/lang'
+import {getLanguageDictionary} from '@/lang/lang'
 import '@/css/globals.css'
 import './style.css'
 
