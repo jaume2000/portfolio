@@ -38,9 +38,9 @@ nav {
     border: 2px solid;
     border-image: linear-gradient(
       to bottom,
-      rgba(240, 240, 240, 0),
-      rgba(220, 220,220,1), 
-      rgba(240, 240, 240, 0)
+      #f0f0f000,
+      #f0f0f0ff, 
+      #f0f0f000
     ) 1;
     border-top: none;
     border-bottom: none;
