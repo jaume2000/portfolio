@@ -12,7 +12,11 @@ type translation_structure = {
         title: string
     },
     About: {
-        title: string
+        title: string,
+        name_variable: string,
+        birth_variable: string,
+        getHabilities_function: string,
+        birth_month: string
     },
     Contact: {
         title: string

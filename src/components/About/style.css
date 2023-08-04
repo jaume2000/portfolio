@@ -7,3 +7,9 @@
 #about {
     color: white;
 }
+
+.console_line {
+    margin: 0;
+    padding: 2px 0;
+    font-size: 18px;
+}

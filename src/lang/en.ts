@@ -12,7 +12,12 @@ let en: translation_structure = {
         title: "My work"
     },
     About: {
-        title: "About me"
+        title: "About me",
+        name_variable: "name",
+        birth_variable: "birth",
+        getHabilities_function: "getHabilities",
+        birth_month: "October"
+
     },
     Contact: {
         title: "Contact me"
