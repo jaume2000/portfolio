@@ -1,3 +1,4 @@
+/*
 let ca: translation_structure = {
     PresentationPage:{
         main_title: "Benvingut!",
@@ -20,3 +21,4 @@ let ca: translation_structure = {
 }
 
 export default ca
+*/

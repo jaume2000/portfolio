@@ -1,4 +1,4 @@
-import ca from './ca'
+//import ca from './ca'
 import es from './es'
 import en from './en'
 import fr from './fr'
