@@ -31,7 +31,7 @@ const getLanguageEmoji = (lang:string): string => {
         es: "🇪🇸",
         en: "🇬🇧",
         fr: "🇫🇷",
-        ca: "ca"
+        //ca: "ca"
     }
     let lang_key = lang as keyof typeof emojis
 
@@ -42,7 +42,7 @@ const getLanguageEmoji = (lang:string): string => {
 
 let dict: {[key:string]: translation_structure}= {
     es: es,
-    ca: ca,
+    //ca: ca,
     en: en,
     fr: fr
 }
