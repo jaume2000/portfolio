@@ -1,4 +1,4 @@
-let es: translation_structure =
+/*let es: translation_structure =
     {
         PresentationPage:{
             main_title: "¡Bienvenido!",
@@ -21,3 +21,4 @@ let es: translation_structure =
 }
 
 export default es
+*/

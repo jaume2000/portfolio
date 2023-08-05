@@ -1,7 +1,7 @@
 //import ca from './ca'
 //import es from './es'
 import en from './en'
-import fr from './fr'
+//import fr from './fr'
 
 
 const getLanguageAllDictionary = (lang: string): {[key:string]:{[key:string]:string}} =>{
@@ -44,7 +44,7 @@ let dict: {[key:string]: translation_structure}= {
     //es: es,
     //ca: ca,
     en: en,
-    fr: fr
+    //fr: fr
 }
 
 export {getLanguageDictionary, getLanguageEmoji}
