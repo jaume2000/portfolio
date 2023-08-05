@@ -1,5 +1,5 @@
 //import ca from './ca'
-import es from './es'
+//import es from './es'
 import en from './en'
 import fr from './fr'
 
@@ -41,7 +41,7 @@ const getLanguageEmoji = (lang:string): string => {
 
 
 let dict: {[key:string]: translation_structure}= {
-    es: es,
+    //es: es,
     //ca: ca,
     en: en,
     fr: fr
