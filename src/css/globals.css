@@ -33,3 +33,29 @@ body {
   background-color: white;
 }
 
+.console_container_content p{
+  margin: 0;
+  padding: 2px 0;
+  font-size: 18px;
+}
+
+.plain_console_content p{
+  margin-bottom: 2ch;
+  font-size: 18px;
+}
+
+.tab_1{
+  margin-left: 4ch !important;
+}
+
+.tab_2{
+  margin-left: 8ch !important;
+}
+
+.tab_3{
+  margin-left: 12ch !important;
+}
+
+.no_wrap {
+  white-space: nowrap;
+}

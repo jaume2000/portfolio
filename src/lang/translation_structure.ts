@@ -15,8 +15,18 @@ type translation_structure = {
         title: string,
         name_variable: string,
         birth_variable: string,
-        getHabilities_function: string,
-        birth_month: string
+        getProgrammingLanguages_function: string,
+        getNaturalLanguages_function: string,
+        birth_month: string,
+        language_variable:string,
+        native_value:string,
+        english_language:string,
+        spanish_language:string,
+        catalan_language:string,
+        french_language:string,
+        habilities_text:string,
+        habilities_transcribed_text: string,
+        habilities_transcribed_content: string
     },
     Contact: {
         title: string

@@ -1,15 +1,9 @@
 .about_container {
     background-color: black;
     color: white;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 #about {
     color: white;
-}
-
-.console_line {
-    margin: 0;
-    padding: 2px 0;
-    font-size: 18px;
 }
