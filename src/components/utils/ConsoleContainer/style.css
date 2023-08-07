@@ -8,6 +8,7 @@
     border-radius: 20px;
     border: grey 6px solid;
     overflow: hidden;
+    background-color: rgba(0,255,0);
 }
 
 .console_container_header {
