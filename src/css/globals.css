@@ -59,3 +59,13 @@ body {
 .no_wrap {
   white-space: nowrap;
 }
+
+
+.full_size {
+  width: 100%;
+  height: 100%;
+}
+
+.centered_text {
+  text-align: center;
+}

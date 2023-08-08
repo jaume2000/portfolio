@@ -10,6 +10,7 @@ import './style.css'
 import GeneralInformation from './GeneralInformation'
 import TestingInformation from './TestInformation'
 import PlainText from './PlainText'
+import CVDownload from './CVDownload'
 import FolderContainer from '@/components/utils/FolderContainer/FolderContainer'
 import Tab from '@/components/utils/Tab/Tab'
 
@@ -24,7 +25,7 @@ const About = ({lang}: {lang:string})=>{
             {"asd\nasd"}
         />, title: "Studies.docx"},
         {console: <TestingInformation content='Me llamo Jaume y este es mi 4to archivo'/>, title: "Work_experience.tsx"},
-        {console: <TestingInformation content='Me llamo Jaume y este es mi 4to archivo'/>, title: "CV.html"},
+        {console: <CVDownload lang={lang}/>, title: "CV.html"},
     ]
 
     let [selectedContent, setSelectedContent] = useState(0);
