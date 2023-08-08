@@ -34,16 +34,6 @@ nav {
     width: 60%;
     justify-content: space-around;
     align-items: center;
-    border-image-slice: 1;
-    border: 2px solid;
-    border-image: linear-gradient(
-      to bottom,
-      #f0f0f000,
-      #f0f0f0ff, 
-      #f0f0f000
-    ) 1;
-    border-top: none;
-    border-bottom: none;
   }
 
   .menu_option {
