@@ -11,6 +11,7 @@ import GeneralInformation from './GeneralInformation'
 import TestingInformation from './TestInformation'
 import PlainText from './PlainText'
 import CVDownload from './CVDownload'
+import Studies from './Studies'
 import FolderContainer from '@/components/utils/FolderContainer/FolderContainer'
 import Tab from '@/components/utils/Tab/Tab'
 
@@ -21,11 +22,9 @@ const About = ({lang}: {lang:string})=>{
     const selectOptions = [
         {console: <GeneralInformation lang={lang}/>, title: dict.habilities_text},
         {console: <PlainText text={dict.habilities_transcribed_content}/>, title: dict.habilities_transcribed_text},
-        {console: <PlainText custom_style={false} text=
-            {"asd\nasd"}
-        />, title: "Studies.docx"},
-        {console: <TestingInformation content='Me llamo Jaume y este es mi 4to archivo'/>, title: "Work_experience.tsx"},
+        {console: <Studies lang={lang}/>, title: "Studies.docx"},
         {console: <CVDownload lang={lang}/>, title: "CV.html"},
+        {console: <TestingInformation content='Not done yet. Please, visit in a few days.'/>, title: "Work_experience.tsx"},
     ]
 
     let [selectedContent, setSelectedContent] = useState(0);

@@ -39,3 +39,7 @@
     display: flex;
     justify-content: center;
 }
+
+#cv_title {
+    margin-bottom: 50px;
+}

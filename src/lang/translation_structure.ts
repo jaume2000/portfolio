@@ -26,7 +26,10 @@ type translation_structure = {
         french_language:string,
         habilities_text:string,
         habilities_transcribed_text: string,
-        habilities_transcribed_content: string
+        habilities_transcribed_content: string,
+        studies:string,
+        sciling_work_experience:string,
+        neurocatching_work_experience:string
     },
     Contact: {
         title: string

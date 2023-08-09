@@ -39,3 +39,14 @@
       transform: translate(0px,0);
     }
   }
+
+  .unfinished_message {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255,0,0,0.2);
+    border-radius: 10px;
+    width: 40%;
+    font-size: 20px;
+    margin: auto;
+    padding: 10px;
+  }

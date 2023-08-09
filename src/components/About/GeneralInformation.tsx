@@ -53,10 +53,9 @@ const GeneralInformation = ({lang}:{lang:string}) => {
         <p className='tab_1'>{"let "}<C>{dict.english_language}</C>{" = "}<C>{'"B2"'}</C></p>
         <p className='tab_1'>{"let "}<C>{dict.spanish_language}</C>{" = "}<C>{'"'}{dict.native_value}{'"'}</C></p>
         <p className='tab_1'>{"let "}<C>{dict.catalan_language}</C>{" = "}<C>{'"'}{dict.native_value}{'"'}</C></p>
-        <p className='tab_1'>{"let "}<C>{dict.french_language}</C>{" = "}<C>{'"A1"'}</C></p>
         <br/>
-        <p className='tab_1'>{'return {'}
-        {dict.english_language}{', '}{dict.spanish_language}{', '}{dict.catalan_language}{', '}{dict.french_language}{' }'}
+        <p className='tab_1'>{'return { '}
+        {dict.english_language}{', '}{dict.spanish_language}{', '}{dict.catalan_language}{' }'}
         </p>
         <p>{"}"}</p>
     </>

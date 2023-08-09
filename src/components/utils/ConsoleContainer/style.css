@@ -129,3 +129,7 @@
     margin: 0;
     padding: 0;
 }
+
+.hacker_console a {
+    color: rgba(0,255,0)
+}
