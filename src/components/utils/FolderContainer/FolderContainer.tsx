@@ -1,9 +1,10 @@
 import { ReactElement } from 'react'
 import './style.css'
 
-const FolderContainer = ({content_list, selectedKey, setSelectedContent}:{content_list:{console:any, title:string}[], selectedKey: number, setSelectedContent: any})=> {
+const FolderContainer = ({className,content_list, selectedKey, setSelectedContent}:{className:string, content_list:{console:any, title:string}[], selectedKey: number, setSelectedContent: any})=> {
 
-    return <div className='folder_container'>
+    return <div className={'folder_container ' + className}>
+        <div>
         <p>{"root"}</p>
         {content_list.map((x,i)=>{
             return (<span key={i}>
@@ -15,7 +16,7 @@ const FolderContainer = ({content_list, selectedKey, setSelectedContent}:{conten
             </span>)
             }
         )}
-
+    </div>
     </div>
 }
 

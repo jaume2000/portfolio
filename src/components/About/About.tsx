@@ -35,10 +35,12 @@ const About = ({lang}: {lang:string})=>{
             <h1 id='about'>
                 {dict.title}
             </h1>
-            <ConsoleContainer title={selectOptions[selectedContent].title} mode={"hacker_console"} style={{height:"500px", width:'60%', left: "5%", position: "relative", top:"50px"}}>
-                {selectOptions[selectedContent].console}
-            </ConsoleContainer>
-            <FolderContainer content_list={selectOptions} selectedKey={selectedContent} setSelectedContent={setSelectedContent}/>
+            <div className='console_and_file_container'>
+                <FolderContainer className={"custom_folder_container"} content_list={selectOptions} selectedKey={selectedContent} setSelectedContent={setSelectedContent}/>
+                <ConsoleContainer className={"custom_console"} title={selectOptions[selectedContent].title} mode={"hacker_console"}>
+                    {selectOptions[selectedContent].console}
+                </ConsoleContainer>
+            </div>
         </div>
     )
 }

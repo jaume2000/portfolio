@@ -3,10 +3,10 @@ import './style.css'
 
 type console_mode = "dark_console"|"light_console"|"hacker_console"
 
-const ConsoleContainer = ({children, mode, style, title}:{children: React.ReactNode|undefined, mode:console_mode, style:object, title?:string}) => {
+const ConsoleContainer = ({className, children, mode, style, title}:{className?:string, children: React.ReactNode|undefined, mode:console_mode, style?:object, title?:string}) => {
 
     return (
-    <div className={"console_container " + mode } style={style}>
+    <div className={className+" console_container " + mode } style={style}>
         <div className="console_container_header">
             <div className="console_container_header_left">
                 <div className="decorator first_dot dot"/>
