@@ -9,7 +9,7 @@ const GeneralInformation = ({lang}:{lang:string}) => {
 
     return <>
         <C color='rgba(150,150,150)'>
-        <PlainText custom_style={false} text={"/*\nIf this is too hard to understand, please, check Habilities_transcribed.txt\nAlso contains extra info!\n*/"}/>
+        <PlainText custom_style={false} text={dict.general_info_comment}/>
         </C>
         <p>let {dict.name_variable} = {'"'}<C>{'Jaume Ivars Grimalt'}</C>{'"'}</p>
         <p>{"let brith = new Date("}<C>{'05'}</C>, {'"'}<C>{dict.birth_month}</C>{'"'}, <C>{'2001'}</C>{")"}</p>

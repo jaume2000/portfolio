@@ -13,6 +13,7 @@ type translation_structure = {
     },
     About: {
         title: string,
+        general_info_comment:string,
         name_variable: string,
         birth_variable: string,
         getProgrammingLanguages_function: string,

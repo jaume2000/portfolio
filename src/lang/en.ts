@@ -13,6 +13,7 @@ let en: translation_structure = {
     },
     About: {
         title: "About me",
+        general_info_comment: "/*\nIf this is too hard to understand, please, check Habilities.txt\nAlso contains extra info!\n*/",
         name_variable: "name",
         birth_variable: "birth",
         getProgrammingLanguages_function: "get_Hard_Skills",
@@ -25,7 +26,7 @@ let en: translation_structure = {
         catalan_language: "catalan",
         french_language: "french",
         habilities_text: "Habilities.js",
-        habilities_transcribed_text: "Habilities_transcribed.txt",
+        habilities_transcribed_text: "Habilities.txt",
         habilities_transcribed_content: 
 `My name is Jaume Ivars Grimalt, I was born in October 2001 here in Alicante, Spain, so I am currently 21 years old. Curently I am currently living in Valencia, I moved on to study a degree in Computer Engineering and loved the city. I am passionate about the world of entrepreneurship, which has led me to be self-taught and to lead small teams in personal projects.
 I have 4 years of experience in Unity3D and its language C#. I have also learned c and c++ in competitive programming clubs. I learned on my own JavaScript, HTML and CSS to later learn TypeScript, React, NextJS and other libraries such as Express, D3, ThreeJS, etc. I also had the chance to learn databases and cloud services (Firebase, MongoDB, AWS S3, Google Cloud Buckets) and API creation.

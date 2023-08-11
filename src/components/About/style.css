@@ -11,7 +11,7 @@
 
 
 .custom_console {
-    height: 500px;
+    height: min(80vh,700px);
 }
 
 @media only screen 
@@ -41,12 +41,12 @@ and (min-width : 760px) {
 
         position: absolute;
         left: 65%;
-        top: 300px;
         width: 35%;
     }
 
     .console_and_file_container {
         width: 100%;
+        position: relative;
     }
     
     .custom_console {
