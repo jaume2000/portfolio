@@ -37,6 +37,13 @@ body {
   background-color: white;
 }
 
+@media screen and (max-width : 760px) {
+  .fullpage {
+    min-height: 95vh;
+  }
+}
+
+
 .console_container_content p{
   margin: 0;
   padding: 2px 0;
