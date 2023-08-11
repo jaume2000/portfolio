@@ -1,7 +1,7 @@
 let en: translation_structure = {
     PresentationPage:{
         main_title: "Welcome!",
-        presentation: "My name is Jaume Ivars Grimalt and I am fullstack developer"
+        presentation: "I'm Jaume Ivars Grimalt and I do fullstack developing and AI projects"
     },
     MenuBar:{
         about: "About me",

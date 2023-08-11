@@ -3,13 +3,13 @@
   }
   
   #main_title {
-    font-size: 120px;
     font-family: 'NerdFont', 'Courier New', Courier, monospace;
     text-align: center;
   }
   
   .presentation {
-    font-size: 70px;
+    font-size: min(10vw, 10vh);;
+    margin-bottom: 100px;
     text-align: center;
   }
 
@@ -20,7 +20,7 @@
 
   .black_waves {
     height: 75px;
-    width: 110%;
+    width: calc(100% + 100px);
     position: absolute;
     bottom: 0;
     left: 0;
