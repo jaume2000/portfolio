@@ -55,7 +55,7 @@
 }
 
 .dot {
-    border-radius: 50%;
+    border-radius: 100px;
     width: 15px;
     height: 15px;
     margin: 3px;
