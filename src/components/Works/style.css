@@ -4,6 +4,28 @@
     src: url('/DancingScript-VariableFont_wght.ttf') format('truetype');
   }
 
+.black_waves_2 {
+    height: 100px;
+    width: calc(100% + 100px);
+    position: absolute;
+    top: -1px;
+    top: 0;
+    background-image: url("/black_wave_2.png");
+    background-size: 100px;
+    background-repeat: repeat-x;
+    z-index: 0;
+    animation: waves2 5s linear infinite;
+}
+
+@keyframes waves2{
+    0% {
+      transform: translate(0,0);
+    }
+    100% {
+      transform: translate(-100px,0);
+    }
+  }
+  
 
 .works_container {
     background-color: rgb(30,30,30);
@@ -12,6 +34,7 @@
 
 #works {
     margin:0;
+    padding-top: 120px;
     color: white;
 }
 

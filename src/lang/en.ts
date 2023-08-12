@@ -9,7 +9,7 @@ let en: translation_structure = {
         contact: "Contact",
     },
     Works: {
-        title: "My work"
+        title: "Some of my projects"
     },
     About: {
         title: "About me",
@@ -44,7 +44,7 @@ During my education at the university I participated in a large variety of proje
 
     },
     Contact: {
-        title: "Let's work together"
+        title: "Let's work together!"
     }
 }
 

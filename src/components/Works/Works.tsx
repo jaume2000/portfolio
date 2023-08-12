@@ -9,6 +9,7 @@ const Works = ({lang}: {lang:string})=>{
 
     return(
         <div className='works_container fullpage'>
+            <div className="black_waves_2"/>
             <h1 id='works'>
                 {dict.title}
             </h1>
