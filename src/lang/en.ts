@@ -6,7 +6,7 @@ let en: translation_structure = {
     MenuBar:{
         about: "About me",
         works: "My work",
-        contact: "Contact me",
+        contact: "Contact",
     },
     Works: {
         title: "My work"
@@ -44,7 +44,7 @@ During my education at the university I participated in a large variety of proje
 
     },
     Contact: {
-        title: "Contact me"
+        title: "Let's work together"
     }
 }
 

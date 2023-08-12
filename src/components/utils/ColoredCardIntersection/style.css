@@ -1,0 +1,56 @@
+
+:root {
+
+    --card_width: 100px;
+    --card_height: 100px;
+    --card_color_outset: 10px;
+    --card_intersection_color: white;
+    --card_border_radio: 10px;
+    --card_color_1: #ffb703ff;
+    --card_color_2: #219ebcff;
+}
+
+.colored_card {
+    position: relative;
+    margin: calc(var(--card_color_outset) + var(--card_border_radio));
+    z-index: 0;
+}
+
+.colored_card p {
+    margin: 0;
+}
+
+.colored_card_intersection {
+    
+    position: relative;
+    z-index: 3;
+    background-color: var(--card_intersection_color);
+    border-radius: var(--card_border_radio) 0 var(--card_border_radio) 0;
+    width: var(--card_width);
+    height: var(--card_height);
+}
+
+.colored_card_c1 {
+
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    background-color: var(--card_color_1);
+    width: calc(var(--card_width) + var(--card_color_outset) + var(--card_border_radio));
+    height: calc(var(--card_height) + var(--card_color_outset) + var(--card_border_radio));
+    border-radius: var(--card_border_radio);
+}
+
+.colored_card_c2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: var(--card_color_2);
+    width: calc(var(--card_width) + var(--card_color_outset) + var(--card_border_radio));
+    height: calc(var(--card_height) + var(--card_color_outset) + var(--card_border_radio));
+    border-radius: var(--card_border_radio);
+
+
+}

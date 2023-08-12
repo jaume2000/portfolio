@@ -12,6 +12,16 @@ const Works = ({lang}: {lang:string})=>{
             <h1 id='works'>
                 {dict.title}
             </h1>
+            <div className='works_grid'>
+                <div className='W1 grid_element'>
+                    
+                </div>
+                <div className='W2 grid_element'/>
+                <div className='W3 grid_element'/>
+                <div className='W4 grid_element'/>
+                <div className='W5 grid_element'/>
+                <div className='W6 grid_element'/>
+            </div>
         </div>
     )
 }

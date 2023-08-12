@@ -1,7 +1,53 @@
 .works_container {
     background-color: rgb(30,30,30);
+    padding-bottom: 100px;
 }
 
 #works {
     margin:0
+}
+
+.testing_carrousel {
+    overflow-x: scroll;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+
+.testing_element {
+    min-width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top right, rgb(0,0,255), rgb(255,0,0));
+}
+
+.works_grid {
+    display: grid;
+    grid-template-areas: 'W1 W1 W1' 'W2 W3 W3' 'W4 W4 W5' 'W6 W6 W6';
+    gap: 30px;
+    margin: 30px;
+    width: calc(100% -60px);
+}
+
+.works_grid div {
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 0px rgb(255,255,255);
+}
+
+.W1 { grid-area: W1;}
+.W2 { grid-area: W2;}
+.W3 { grid-area: W3;}
+.W4 { grid-area: W4;}
+.W5 { grid-area: W5;}
+.W6 { grid-area: W6;}
+
+.grid_element {
+    height: 50vh;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.grid_element:hover {
+    transform: translate(0px,-10px);
+    box-shadow: 0px 0px 20px rgb(255,255,255);
+    cursor: pointer;
 }
