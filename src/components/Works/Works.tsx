@@ -25,27 +25,32 @@ const Works = ({lang}: {lang:string})=>{
                     </div>
                     <Technologies technologies={["python", "colab"]}/>
                 </div>
-                <div className='grid_element centered'>
-                    <p>{"Perceptron C#"}</p>
+                <div className='grid_element project_background perceptron_project'>
+                    <div className='full_size centered'>
+                        <h2>{"Visual Perceptron"}</h2>
+                    </div>
+                    <Technologies technologies={["c_sharp"]} background_color='white' text_color='black'/>
                 </div>
-                <div className='grid_element centered'>
-                    <p>{"Logic Gate Simulator"}</p>
-                </div>
-                <div className='grid_element centered'>
-                    <p>{"Neurocatching Web"}</p>
+                <div className='grid_element project_background hardware_project'>
+                    <div className='full_size centered'>
+                        <h2>{"Logic Gate Simulator"}</h2>
+                    </div>
+                    <Technologies technologies={["unity3d", "c_sharp"]} background_color='white' text_color='black'/>
                 </div>
             </div>
         </div>
     )
 }
 
-const Technologies = ({technologies}:{technologies:string[]}) => {
+const Technologies = ({technologies,background_color="black", text_color="white"}:{technologies:string[],background_color?:string, text_color?:string}) => {
 
     let nextjs_text:string = "NextJS"
     let react_text:string = "React"
     let typescript_text:string = "TypeScript"
     let python_text:string = "Python"
     let colab:string = "Google\xA0Colab"
+    let c_sharp:string = "C#"
+    let unity3d:string = "Unity\xA03D"
 
     const tech_dict = {
         "nextjs":
@@ -75,12 +80,24 @@ const Technologies = ({technologies}:{technologies:string[]}) => {
         "colab": 
         <div className="technology_logo_container" style={{"--text_length": ((colab.length +2) + "ch")} as React.CSSProperties}>
             <img className='technology_logo round_border white_background' alt='colab logo' src="/colab_logo.jpg"></img>
-            <a href="https://www.python.org/" target='_blank'>{colab}</a>
+            <a href="https://colab.research.google.com/" target='_blank'>{colab}</a>
+        </div>,
+
+        "c_sharp": 
+        <div className="technology_logo_container" style={{"--text_length": ((c_sharp.length +2) + "ch")} as React.CSSProperties}>
+            <img className='technology_logo' alt='c sharp logo' src="/c_sharp_logo.png"></img>
+            <a href="https://dotnet.microsoft.com/es-es/languages/csharp" target='_blank'>{c_sharp}</a>
+        </div>,
+
+        "unity3d": 
+        <div className="technology_logo_container" style={{"--text_length": ((unity3d.length +2) + "ch")} as React.CSSProperties}>
+            <img className='technology_logo round_border' alt='unity 3d logo' src="/unity3d_logo.png"></img>
+            <a href="https://unity.com" target='_blank'>{unity3d}</a>
         </div>
     }
 
     return (
-        <div className='technologies'>
+        <div className='technologies' style={{"--technologies_background_color": background_color, "--technologies_text_color": text_color} as React.CSSProperties}>
             {technologies.map((x,i)=>{return tech_dict[x  as keyof typeof tech_dict]})}
         </div>
 
