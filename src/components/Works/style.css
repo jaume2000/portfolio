@@ -23,30 +23,47 @@
 
 .works_grid {
     display: grid;
-    grid-template-areas: 'W1 W1 W1' 'W2 W3 W3' 'W4 W4 W5';
     gap: 30px;
     margin: 30px;
     width: calc(100% -60px);
 }
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 1000px){
     .works_grid{
-        grid-template-areas: 'W1' 'W2' 'W3' 'W4' 'W5';
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid_element h2 {
+        color: white;
+        font-size: 9vw;
     }
 }
 
-.works_grid div {
-    background-color: rgba(0,0,0,0.7);
-    box-shadow: 0px 0px 0px rgb(255,255,255);
+@media screen and (min-width: 1000px) and (max-width: 2000px) {
+    .works_grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid_element h2 {
+        color: white;
+        font-size: 4.5vw;
+
+    }
 }
 
-.W1 { grid-area: W1;}
-.W2 { grid-area: W2;}
-.W3 { grid-area: W3;}
-.W4 { grid-area: W4;}
-.W5 { grid-area: W5;}
-.W6 { grid-area: W6;}
+@media screen and (min-width: 2000px) {
+    .works_grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid_element h2 {
+        color: white;
+        font-size: 3vw;
+
+    }
+}
 
 .grid_element {
+
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 0px rgb(255,255,255);
     height: 50vh;
     border-radius: 10px;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -55,10 +72,114 @@
 .grid_element:hover {
     transform: translate(0px,-10px);
     box-shadow: 0px 0px 20px rgb(255,255,255);
-    cursor: pointer;
 }
 
 
+.grid_element h2 {
+    color: white;
+    user-select: none;
+}
 .grid_element p {
     color: white;
+    user-select: none;
+}
+
+
+/* Projects CSS */
+
+.portfolio_project {
+    position: relative;
+    background-image: linear-gradient(75deg, var(--main_color1) 45%, white 45.1%, white 54.9%, var(--main_color2) 55%);
+    z-index: 1;
+}
+
+.portfolio_project h2 {
+    user-select: none;
+    margin: 0;
+    color: black;
+    background-color: white;
+    border-radius: 100vh;
+    padding: 1vh 5vh 0px 5vh;
+}
+
+.technologies {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    background-color: black;
+    height: 10vh;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    border-radius: 0 0 10px 0;
+    bottom: -1px;
+}
+
+.technologies:after {
+    position: absolute;
+    content:'';
+    background-color: black;
+    height: 100%;
+    width: 50px;
+    transform: skew(15deg);
+    left: -25px;
+    z-index: 2;
+}
+
+.technology_logo_container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 10vh;
+}
+
+.technology_logo_container a {
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    word-wrap: unset;
+    width: 0;
+    transition: width ease 0.5s, font-size ease 0.5s;
+}
+
+.technology_logo_container a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: width 0.1s ease;
+}
+
+.technology_logo_container:hover a{
+    width: var(--text_length);
+}
+
+.technology_logo_container a:hover{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.technology_logo_container a:hover:after{
+    width: calc(var(--text_length) - 2ch);
+}
+
+.technology_logo_container img {
+    object-fit: contain;
+    max-height: calc(100% - 10px);
+    margin: 0 10px;
+    z-index: 3;
+}
+
+.ts_logo {
+    border-radius: 10px;
+}
+
+.round_border {
+    border-radius: 100%;
+}
+
+.white_border {
+    border: rgba(255,255,255,0.7) 3px solid;
 }

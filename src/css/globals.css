@@ -3,6 +3,11 @@
   src: url('/13270NerdFont-Condensed.ttf') format('truetype');
 }
 
+:root {
+  --main_color1: #ffb703;
+  --main_color2: #219ebc;
+}
+
 * {
   font-family: 'NerdFont';
 }
