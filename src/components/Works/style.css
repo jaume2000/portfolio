@@ -28,6 +28,11 @@
     margin: 30px;
     width: calc(100% -60px);
 }
+@media screen and (max-width: 1000px) {
+    .works_grid{
+        grid-template-areas: 'W1' 'W2' 'W3' 'W4' 'W5';
+    }
+}
 
 .works_grid div {
     background-color: rgba(0,0,0,0.7);
