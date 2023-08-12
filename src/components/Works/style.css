@@ -87,10 +87,13 @@
 
 /* Projects CSS */
 
-.portfolio_project {
+.project_background {
     position: relative;
-    background-image: linear-gradient(75deg, var(--main_color1) 45%, white 45.1%, white 54.9%, var(--main_color2) 55%);
     z-index: 1;
+}
+
+.portfolio_project {
+    background-image: linear-gradient(75deg, var(--main_color1) 45%, white 45.1%, white 54.9%, var(--main_color2) 55%);
 }
 
 .portfolio_project h2 {
@@ -182,4 +185,11 @@
 
 .white_border {
     border: rgba(255,255,255,0.7) 3px solid;
+}
+
+/*Stable diffusion project*/
+
+.stablediffusion_project {
+    background-image: url("/stablediffusion_img1.png");
+    background-position: left -350px top 00px;
 }
