@@ -1,3 +1,10 @@
+
+@font-face {
+    font-family: 'DancingScript';
+    src: url('/DancingScript-VariableFont_wght.ttf') format('truetype');
+  }
+
+
 .works_container {
     background-color: rgb(30,30,30);
     padding-bottom: 100px;
@@ -127,6 +134,7 @@
     transform: skew(15deg);
     left: -25px;
     z-index: 2;
+    mix-blend-mode: hue;
 }
 
 .technology_logo_container {
@@ -192,4 +200,8 @@
 .stablediffusion_project {
     background-image: url("/stablediffusion_img1.png");
     background-position: left -350px top 00px;
+}
+
+.stablediffusion_project h2 {
+    font-family: 'DancingScript', cursive;
 }
