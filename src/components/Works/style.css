@@ -4,7 +4,8 @@
 }
 
 #works {
-    margin:0
+    margin:0;
+    color: white;
 }
 
 .testing_carrousel {
@@ -22,7 +23,7 @@
 
 .works_grid {
     display: grid;
-    grid-template-areas: 'W1 W1 W1' 'W2 W3 W3' 'W4 W4 W5' 'W6 W6 W6';
+    grid-template-areas: 'W1 W1 W1' 'W2 W3 W3' 'W4 W4 W5';
     gap: 30px;
     margin: 30px;
     width: calc(100% -60px);
@@ -50,4 +51,9 @@
     transform: translate(0px,-10px);
     box-shadow: 0px 0px 20px rgb(255,255,255);
     cursor: pointer;
+}
+
+
+.grid_element p {
+    color: white;
 }
