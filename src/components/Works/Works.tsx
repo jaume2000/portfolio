@@ -18,7 +18,7 @@ const Works = ({lang}: {lang:string})=>{
                     <div className='portfolio_title_container full_size centered'>
                         <h2>{"Portfolio Project"}</h2>
                     </div>
-                    <Technologies technologies={["nextjs", "react", "typescript"]}/>
+                    <Technologies github_repo="https://github.com/jaume2000/portfolio" technologies={["nextjs", "react", "typescript"]}/>
                 </div>
                 <div className='grid_element project_background stablediffusion_project'>
                     <div className='full_size centered'>
@@ -43,7 +43,7 @@ const Works = ({lang}: {lang:string})=>{
     )
 }
 
-const Technologies = ({technologies,background_color="black", text_color="white"}:{technologies:string[],background_color?:string, text_color?:string}) => {
+const Technologies = ({technologies,background_color="black", text_color="white", github_repo}:{technologies:string[],background_color?:string, text_color?:string, github_repo?:string}) => {
 
     let nextjs_text:string = "NextJS"
     let react_text:string = "React"
@@ -52,6 +52,7 @@ const Technologies = ({technologies,background_color="black", text_color="white"
     let colab:string = "Google\xA0Colab"
     let c_sharp:string = "C#"
     let unity3d:string = "Unity\xA03D"
+    let github_repo_text:string = "Link\xA0to\xA0repository"
 
     const tech_dict = {
         "nextjs":
@@ -97,9 +98,15 @@ const Technologies = ({technologies,background_color="black", text_color="white"
         </div>
     }
 
+    let github_repo_object = <div className="technology_logo_container" style={{"--text_length": ((github_repo_text.length +2) + "ch")} as React.CSSProperties}>
+    <img className='technology_logo round_border' alt='github repository' src="/github-mark.png"></img>
+    <a href={github_repo} target='_blank'>{github_repo_text}</a>
+</div>
+
     return (
         <div className='technologies' style={{"--technologies_background_color": background_color, "--technologies_text_color": text_color} as React.CSSProperties}>
             {technologies.map((x,i)=>{return tech_dict[x  as keyof typeof tech_dict]})}
+            {github_repo ? github_repo_object : undefined}
         </div>
 
     )
