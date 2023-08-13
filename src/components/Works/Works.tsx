@@ -1,11 +1,12 @@
 import '@/lang/lang'
-import {getLanguageDictionary} from '@/lang/lang'
+import {getLanguageAllDictionary} from '@/lang/lang'
 import '@/css/globals.css'
 import './style.css'
 
+
 const Works = ({lang}: {lang:string})=>{
 
-    let dict = getLanguageDictionary(lang,"Works")
+    let dict = getLanguageAllDictionary(lang).Works
 
     return(
         <div className='works_container fullpage'>
@@ -16,34 +17,35 @@ const Works = ({lang}: {lang:string})=>{
             <div className='works_grid'>
                 <div className='grid_element portfolio_project project_background'>
                     <div className='portfolio_title_container full_size centered'>
-                        <h2>{"Portfolio Project"}</h2>
+                        <h2>{dict.portfolio_project_card_title}</h2>
                     </div>
-                    <Technologies github_repo="https://github.com/jaume2000/portfolio" technologies={["nextjs", "react", "typescript"]}/>
+                    <Technologies lang_dict={dict} github_repo="https://github.com/jaume2000/portfolio" technologies={["nextjs", "react", "typescript"]}/>
                 </div>
                 <div className='grid_element project_background stablediffusion_project'>
                     <div className='full_size centered'>
-                        <h2>{"Fine-Tuned Stable Diffusion"}</h2>
+                        <h2>{dict.stablediffusion_card_title}</h2>
                     </div>
-                    <Technologies technologies={["python", "colab"]}/>
+                    <Technologies lang_dict={dict} technologies={["python", "colab"]}/>
                 </div>
                 <div className='grid_element project_background perceptron_project'>
                     <div className='full_size centered'>
-                        <h2>{"Visual Perceptron"}</h2>
+                        <h2>{dict.visual_perceptron_card_title}</h2>
                     </div>
-                    <Technologies technologies={["c_sharp"]} background_color='white' text_color='black'/>
+                    <Technologies lang_dict={dict} technologies={["c_sharp"]} background_color='white' text_color='black'/>
                 </div>
                 <div className='grid_element project_background hardware_project'>
                     <div className='full_size centered'>
-                        <h2>{"Logic Gate Simulator"}</h2>
+                        <h2>{dict.hardware_project_card_title}</h2>
                     </div>
-                    <Technologies technologies={["unity3d", "c_sharp"]} background_color='white' text_color='black'/>
+                    <Technologies lang_dict={dict} technologies={["unity3d", "c_sharp"]} background_color='white' text_color='black'/>
                 </div>
             </div>
         </div>
     )
 }
 
-const Technologies = ({technologies,background_color="black", text_color="white", github_repo}:{technologies:string[],background_color?:string, text_color?:string, github_repo?:string}) => {
+const Technologies = ({lang_dict, technologies,background_color="black", text_color="white", github_repo}:{lang_dict:object, technologies:string[],background_color?:string, text_color?:string, github_repo?:string}) => {
+
 
     let nextjs_text:string = "NextJS"
     let react_text:string = "React"
@@ -52,7 +54,7 @@ const Technologies = ({technologies,background_color="black", text_color="white"
     let colab:string = "Google\xA0Colab"
     let c_sharp:string = "C#"
     let unity3d:string = "Unity\xA03D"
-    let github_repo_text:string = "Link\xA0to\xA0repository"
+    let github_repo_text:string = lang_dict['github_link_to_repo_text' as keyof typeof lang_dict] as string //"Link\xA0to\xA0repository"
 
     const tech_dict = {
         "nextjs":

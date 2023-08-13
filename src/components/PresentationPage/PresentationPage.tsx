@@ -1,6 +1,6 @@
 
 import { useRouter } from "next/navigation"
-import {getLanguageDictionary} from "@/lang/lang";
+import {getLanguageAllDictionary} from "@/lang/lang";
 import '@/css/globals.css'
 import './style.css'
 import Image from "next/image";
@@ -8,7 +8,7 @@ import Image from "next/image";
 const PresentationPage = ({lang}: {lang:string}) => {
     
     //const {push} = useRouter()
-    let dict = getLanguageDictionary(lang,"PresentationPage");
+    let dict = getLanguageAllDictionary(lang).PresentationPage;
 
     return (
         <div>

@@ -1,4 +1,4 @@
-import {getLanguageDictionary} from '@/lang/lang'
+import {getLanguageAllDictionary} from '@/lang/lang'
 import { defaultLocale } from '@/middleware'
 
 export default function RootLayout({
@@ -9,7 +9,7 @@ export default function RootLayout({
   params: {lang: string}
 }) {
   let language = params.lang ?? defaultLocale;
-  let dict = getLanguageDictionary(language,"Header")
+  let dict = getLanguageAllDictionary(language).Header
   return (
     <html lang={language}>
       <head>

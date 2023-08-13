@@ -1,7 +1,7 @@
 
-#cv_button_container {
+.cv_button_container {
     height: 50px;
-    width: 200px;
+    min-width: 100px;
     border: none;
     background: none;
     padding-bottom: 10px;
@@ -9,7 +9,7 @@
     text-decoration: none;
 }
 
-#cv_button_decoration {
+.cv_button_decoration {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,20 +17,21 @@
     font-size: 18px;
     border: solid rgba(0,255,0) 2px;
     width: 100%;
+    padding: 0 30px;
     height: 100%;
     box-shadow: 0 10px 0 0 rgba(0,255,0);
 }
 
 
-#cv_button_container:hover {
+.cv_button_container:hover {
     padding-bottom: 0;
     padding-top: 10px;
     cursor: pointer;
 }
-#cv_button_container:hover #cv_button_decoration {
+.cv_button_container:hover .cv_button_decoration {
     box-shadow: none;
 }
-#cv_button_container:active #cv_button_decoration{
+.cv_button_container:active .cv_button_decoration{
     border-color: white;
     color: white;
 }

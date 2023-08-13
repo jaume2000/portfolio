@@ -10,8 +10,9 @@ let dict: {[key:string]: translation_structure}= {
     en: en,
     //fr: fr
 }
+let available_languages = Object.keys(dict)
 
-const getLanguageAllDictionary = (lang: string): {[key:string]:{[key:string]:string}} =>{
+const getLanguageAllDictionary = (lang: string): translation_structure =>{
     lang = lang.replaceAll('_','-').split('-')[0];
     if(Object.keys(dict).find((x: string)=>x==lang) !== undefined){
         let str = lang as keyof typeof dict;
@@ -20,7 +21,7 @@ const getLanguageAllDictionary = (lang: string): {[key:string]:{[key:string]:str
     return dict.en
 }
 
-const getLanguageDictionary = (lang: string, page: string): {[key:string]:string} =>{
+const getLanguageDictionary = (lang: string, page: string) =>{
     if(lang =="default"){lang="en"}
 
     let page_key = page as keyof translation_structure
@@ -33,8 +34,8 @@ const getLanguageDictionary = (lang: string, page: string): {[key:string]:string
     return dict.en[page_key]
 }
 
-const isLenguageAvailable= (l:string):boolean => Object.keys(dict).includes(l)
-const getAvailableLenguages = ():string[] => Object.keys(dict)
+const isLenguageAvailable= (l:string):boolean => available_languages.includes(l)
+const getAvailableLenguages = ():string[] => available_languages
 
 
-export {getLanguageDictionary, isLenguageAvailable, getAvailableLenguages}
+export {getLanguageDictionary, isLenguageAvailable, getAvailableLenguages, getLanguageAllDictionary}

@@ -1,9 +1,9 @@
 
-import {getLanguageDictionary} from '@/lang/lang'
+import {getLanguageAllDictionary} from '@/lang/lang'
 import PlainText from './PlainText'
 
 const GeneralInformation = ({lang}:{lang:string}) => {
-    let dict = getLanguageDictionary(lang,'About')
+    let dict = getLanguageAllDictionary(lang).About
 
     let TAB = '\xA0\xA0\xA0'
 
@@ -12,14 +12,16 @@ const GeneralInformation = ({lang}:{lang:string}) => {
         <PlainText custom_style={false} text={dict.general_info_comment}/>
         </C>
         <p>let {dict.name_variable} = {'"'}<C>{'Jaume Ivars Grimalt'}</C>{'"'}</p>
-        <p>{"let brith = new Date("}<C>{'05'}</C>, {'"'}<C>{dict.birth_month}</C>{'"'}, <C>{'2001'}</C>{")"}</p>
-        <p>{"let soft_skills = ["}</p>
+        {/*<p>{"let brith = new Date("}<C>{'05'}</C>, {'"'}<C>{dict.birth_month}</C>{'"'}, <C>{'2001'}</C>{")"}</p>*/}
+        <p>{"let "}{dict.soft_skills.variable}{" = ["}</p>
         <p className="tab_1">
-            {'"'}<C>{'self taught'}</C>{'", '} 
-            {'"'}<C>{'likes challenges'}</C>{'", '}
-            {'"'}<C>{'entrepeneur'}</C>{'", '} 
-            {'"'}<C>{'leadership'}</C>{'", '}
-            <G>{'"'}<C>{'startup culture ♥ '}</C>{'"'}</G>
+            {'"'}<C>{dict.soft_skills.self_taught}</C>{'", '} 
+            {'"'}<C>{dict.soft_skills.likes_challenges}</C>{'", '}
+            {'"'}<C>{dict.soft_skills.entrepeneur}</C>{'", '} 
+            {'"'}<C>{dict.soft_skills.leadership}</C>{'", '}
+            {'"'}<C>{dict.soft_skills.fast_learner}</C>{'", '}
+            {'"'}<C>{dict.soft_skills.creative}</C>{'", '}
+            <G>{'"'}<C>{dict.soft_skills.startup_culture}</C>{'"'}</G>
         </p>
         <p>{' ]'}</p>
         <br/>

@@ -1,12 +1,12 @@
 import '@/lang/lang'
-import {getLanguageDictionary} from '@/lang/lang'
+import {getLanguageAllDictionary} from '@/lang/lang'
 import ColoredCardIntersection from '../utils/ColoredCardIntersection/ColoredCardIntersection'
 import '@/css/globals.css'
 import './style.css'
 
 const Contact = ({lang}: {lang:string})=>{
 
-    let dict = getLanguageDictionary(lang,"Contact")
+    let dict = getLanguageAllDictionary(lang).Contact
 
     return(
         <div className='contact_container fullpage'>

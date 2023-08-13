@@ -1,6 +1,6 @@
 import '@/lang/lang'
 import Image from "next/image"
-import {getLanguageDictionary} from '@/lang/lang'
+import {getLanguageAllDictionary} from '@/lang/lang'
 import '@/css/globals.css'
 import Dropdown from '@/components/utils/Dropdown/Dropdown'
 import Element from '@/components/utils/Element/Element'
@@ -8,7 +8,7 @@ import './style.css'
 
 const NavBar = ({lang}: {lang:string})=>{
 
-    let dict = getLanguageDictionary(lang,"MenuBar")
+    let dict = getLanguageAllDictionary(lang).MenuBar
 
     return(
         <nav>
