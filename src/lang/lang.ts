@@ -4,6 +4,13 @@ import en from './en'
 //import fr from './fr'
 
 
+let dict: {[key:string]: translation_structure}= {
+    //es: es,
+    //ca: ca,
+    en: en,
+    //fr: fr
+}
+
 const getLanguageAllDictionary = (lang: string): {[key:string]:{[key:string]:string}} =>{
     if(Object.keys(dict).find((x: string)=>x==lang) !== undefined){
         let str = lang as keyof typeof dict;
@@ -38,13 +45,9 @@ const getLanguageEmoji = (lang:string): string => {
     return emojis[lang_key]
 }
 
+const isLenguageAvailable= (l:string):boolean => Object.keys(dict).includes(l)
 
 
-let dict: {[key:string]: translation_structure}= {
-    //es: es,
-    //ca: ca,
-    en: en,
-    //fr: fr
-}
 
-export {getLanguageDictionary, getLanguageEmoji}
+
+export {getLanguageDictionary, isLenguageAvailable}
