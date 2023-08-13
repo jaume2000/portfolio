@@ -47,7 +47,7 @@ During my education at the university I participated in a large variety of proje
 
     },
     Contact: {
-        title: "Let's work together!"
+        title: "Let's talk about new projects!"
     }
 }
 

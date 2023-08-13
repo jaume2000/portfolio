@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'DancingScript';
-    src: url('/DancingScript-VariableFont_wght.ttf') format('truetype');
+    src: url('/public/DancingScript-VariableFont_wght.ttf') format('truetype');
   }
 
 .black_waves_2 {
@@ -10,7 +10,7 @@
     position: absolute;
     top: -1px;
     top: 0;
-    background-image: url("/black_wave_2.png");
+    background-image: url("/public/black_wave_2.png");
     background-size: 100px;
     background-repeat: repeat-x;
     z-index: 0;
@@ -215,7 +215,7 @@
 /*Stable diffusion project*/
 
 .stablediffusion_project {
-    background-image: url("/stablediffusion_img1.png");
+    background-image: url("/public/stablediffusion_img1.png");
     background-position: right 0 top 00px;
     background-size: 145%;
 
@@ -228,7 +228,7 @@
 /*Perceptron poject*/
 
 .perceptron_project {
-    background-image: url("/neural_network_background.png");
+    background-image: url("/public/neural_network_background.png");
     background-size: 100%;
     background-position: right 0 top 00px;
 }
@@ -243,7 +243,7 @@
 /*Hardware game*/
 
 .hardware_project {
-    background-image: url("/logic_gate_background.webp");
+    background-image: url("/public/logic_gate_background.webp");
     background-size: 100%;
     background-position: right 0 top 00px;
 }

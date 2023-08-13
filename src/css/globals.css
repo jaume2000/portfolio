@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'NerdFont';
-  src: url('/13270NerdFont-Condensed.ttf') format('truetype');
+  src: url('/public/13270NerdFont-Condensed.ttf') format('truetype');
 }
 
 :root {

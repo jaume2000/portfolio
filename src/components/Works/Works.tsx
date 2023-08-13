@@ -57,49 +57,49 @@ const Technologies = ({technologies,background_color="black", text_color="white"
     const tech_dict = {
         "nextjs":
         <div className="technology_logo_container" style={{"--text_length": ((nextjs_text.length+2) + "ch")} as React.CSSProperties}>
-            <img className='technology_logo round_border' alt='nextjs logo' src="/nextjs_logo.png"></img>
+            <img className='technology_logo round_border' alt='nextjs logo' src="/public/nextjs_logo.png"></img>
             <p>{nextjs_text}</p>
         </div>,
 
         "react":
         <div className="technology_logo_container" style={{"--text_length": ((react_text.length+2) + "ch")} as React.CSSProperties}>
-            <img className='technology_logo round_border' alt='reactjs logo' src="/react_logo.png"></img>
+            <img className='technology_logo round_border' alt='reactjs logo' src="/public/react_logo.png"></img>
             <p>{react_text}</p>
         </div>,
 
         "typescript": 
         <div className="technology_logo_container" style={{"--text_length": ((typescript_text.length +2) + "ch")} as React.CSSProperties}>
-            <img className='technology_logo ts_logo' alt='typescript logo' src="/typescript_logo.png"></img>
+            <img className='technology_logo ts_logo' alt='typescript logo' src="/public/typescript_logo.png"></img>
             <p>{typescript_text}</p>
         </div>,
 
         "python": 
         <div className="technology_logo_container" style={{"--text_length": ((python_text.length +2) + "ch")} as React.CSSProperties}>
-            <img className='technology_logo round_border white_background' alt='python logo' src="/python_logo.png"></img>
+            <img className='technology_logo round_border white_background' alt='python logo' src="/public/python_logo.png"></img>
             <p>{python_text}</p>
         </div>,
 
         "colab": 
         <div className="technology_logo_container" style={{"--text_length": ((colab.length +2) + "ch")} as React.CSSProperties}>
-            <img className='technology_logo round_border white_background' alt='colab logo' src="/colab_logo.jpg"></img>
+            <img className='technology_logo round_border white_background' alt='colab logo' src="/public/colab_logo.jpg"></img>
             <p>{colab}</p>
         </div>,
 
         "c_sharp": 
         <div className="technology_logo_container" style={{"--text_length": ((c_sharp.length +2) + "ch")} as React.CSSProperties}>
-            <img className='technology_logo' alt='c sharp logo' src="/c_sharp_logo.png"></img>
+            <img className='technology_logo' alt='c sharp logo' src="/public/c_sharp_logo.png"></img>
             <p>{c_sharp}</p>
         </div>,
 
         "unity3d": 
         <div className="technology_logo_container" style={{"--text_length": ((unity3d.length +2) + "ch")} as React.CSSProperties}>
-            <img className='technology_logo round_border' alt='unity 3d logo' src="/unity3d_logo.png"></img>
+            <img className='technology_logo round_border' alt='unity 3d logo' src="/public/unity3d_logo.png"></img>
             <p>{unity3d}</p>
         </div>
     }
 
     let github_repo_object = <div className="technology_logo_container" style={{"--text_length": ((github_repo_text.length +2) + "ch")} as React.CSSProperties}>
-    <img className='technology_logo round_border' alt='github repository' src="/github-mark.png"></img>
+    <img className='technology_logo round_border' alt='github repository' src="/public/github-mark.png"></img>
     <a href={github_repo} target='_blank'>{github_repo_text}</a>
 </div>
 

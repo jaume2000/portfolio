@@ -36,7 +36,7 @@
   position: absolute;
   bottom: -1px;
   left: 0;
-  background-image: url("/black_wave.png");
+  background-image: url("/public/black_wave.png");
   background-size: 100px;
   background-repeat: repeat-x;
   z-index: 0;

@@ -1,10 +1,5 @@
-import '@/components/NavBar/NavBar'
-import MenuBar from '@/components/NavBar/NavBar'
 import {getLanguageDictionary} from '@/lang/lang'
-
-export const metadata = {
-  
-}
+import { defaultLocale } from '@/middleware'
 
 export default function RootLayout({
   children,
@@ -13,15 +8,14 @@ export default function RootLayout({
   children: React.ReactNode,
   params: {lang: string}
 }) {
-
-  let language = navigator.language.split('-')[0]
+  let language = params.lang ?? defaultLocale;
   let dict = getLanguageDictionary(language,"Header")
-
   return (
-    <html lang={params.lang}>
+    <html lang={language}>
       <head>
         <meta charSet={"UTF-8"}/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" href="/images/favicon.ico" sizes="any" />
         <title>{dict.title}</title>
         <meta></meta>
       </head>

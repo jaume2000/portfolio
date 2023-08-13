@@ -31,7 +31,7 @@ const ProfileImage = () => {
 
     return(
     <div className="profile_image_container">
-        <img className="profile_image" src="/presentation_photo.png" alt="Presentation photo"/>
+        <img className="profile_image" src="/public/presentation_photo.png" alt="Presentation photo"/>
         <div className="rotating_shadows">
             <div className="profile_shadow_1"/>
             <div className="profile_shadow_2"/>
