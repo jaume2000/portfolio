@@ -1,6 +1,7 @@
 type translation_structure = {
     Header: {
-        title:string
+        title:string,
+        meta_description:string,
     }
     PresentationPage: {
         main_title: string,

@@ -1,7 +1,8 @@
 let es: translation_structure =
     {
         Header: {
-            title: "Jaume Ivars Grimalt - Portafolio"
+            title: "Jaume Ivars Grimalt - Portafolio",
+            meta_description: "Web de Portafolio de Jaume Ivars Grimalt: Ingeniero en computación, programador fullstack e ingeniero en inteligencia artificial"
         },
         PresentationPage:{
             main_title: "¡Bienvenido!",

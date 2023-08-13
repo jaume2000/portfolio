@@ -15,6 +15,7 @@ export default function RootLayout({
       <head>
         <meta charSet={"UTF-8"}/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name='description' content={dict.meta_description}/>
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
         <title>{dict.title}</title>
         <meta></meta>

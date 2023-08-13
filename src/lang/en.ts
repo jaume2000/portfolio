@@ -1,6 +1,7 @@
 let en: translation_structure = {
     Header: {
-        title: "Jaume Ivars Grimalt - Portfolio"
+        title: "Jaume Ivars Grimalt - Portfolio",
+        meta_description: "Portfolio web of Jaume Ivars Grimalt: Computer scientist, fullstack programmer and artificial intelligence engineer."
     },
     PresentationPage:{
         main_title: "Welcome!",
