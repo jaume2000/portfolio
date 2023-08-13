@@ -14,7 +14,7 @@ const Contact = ({lang}: {lang:string})=>{
                 {dict.title}
             </h1>
             <div className='centered' id='contact_card'>
-                <ColoredCardIntersection width='500px' height='300px' color_outset='20px' border_radio='10px'>
+                <ColoredCardIntersection min_width='300px' width='50vw' height='300px' color_outset='20px' border_radio='10px'>
                     <div className='centered full_size'>
                         <div>
                             <p>{"Gmail: jaumeig95@gmail.com"}</p>

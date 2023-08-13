@@ -140,36 +140,26 @@
     justify-content: right;
     position: absolute;
     background-color: var(--technologies_background_color);
-    height: 10vh;
+    height: 8vh;
     bottom: 0;
     right: 0;
     z-index: 2;
-    border-radius: 0 0 10px 0;
+    border-radius: 8vh 0 10px 8vh;
     bottom: 0px;
 }
 
-.technologies:after {
-    position: absolute;
-    content:'';
-    background-color: var(--technologies_background_color);
-    height: 100%;
-    width: 50px;
-    transform: skew(15deg);
-    left: -25px;
-    z-index: 2;
-    mix-blend-mode: hue;
-}
 
 .technology_logo_container {
     display: flex;
     justify-content: right;
     align-items: center;
-    height: 10vh;
+    height: 8vh;
 }
 
-.technology_logo_container a {
+.technology_logo_container a, .technology_logo_container p {
     color: var(--technologies_text_color);
     text-decoration: none;
+    font-size: max(0.8vw, 18px);
     overflow: hidden;
     word-wrap: unset;
     width: 0;
@@ -183,26 +173,30 @@
     width: 0;
     height: 1px;
     background: var(--technologies_text_color);
-    transition: width 0.1s ease;
+    transition: width 0.2s ease;
 }
 
-.technology_logo_container:hover a{
+.technology_logo_container:hover a, .technology_logo_container:hover p{
     width: var(--text_length);
 }
 
 .technology_logo_container a:hover{
-    font-size: 25px;
+    font-size: max(1.2vw, 25px);
     cursor: pointer;
+}
+
+.technology_logo_container p:hover{
+    font-size: max(1.2vw, 25px);
 }
 
 .technology_logo_container a:hover:after{
     width: calc(var(--text_length) - 2ch);
 }
 
-.technology_logo_container img {
+.technology_logo{
     object-fit: contain;
     max-height: calc(100% - 10px);
-    margin: 0 10px;
+    margin: 0 10px 0 5px;
     z-index: 3;
 }
 

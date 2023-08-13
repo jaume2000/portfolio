@@ -58,43 +58,43 @@ const Technologies = ({technologies,background_color="black", text_color="white"
         "nextjs":
         <div className="technology_logo_container" style={{"--text_length": ((nextjs_text.length+2) + "ch")} as React.CSSProperties}>
             <img className='technology_logo round_border' alt='nextjs logo' src="/nextjs_logo.png"></img>
-            <a href="https://nextjs.org/" target='_blank'>{nextjs_text}</a>
+            <p>{nextjs_text}</p>
         </div>,
 
         "react":
         <div className="technology_logo_container" style={{"--text_length": ((react_text.length+2) + "ch")} as React.CSSProperties}>
             <img className='technology_logo round_border' alt='reactjs logo' src="/react_logo.png"></img>
-            <a href="https://react.dev/" target='_blank'>{react_text}</a>
+            <p>{react_text}</p>
         </div>,
 
         "typescript": 
         <div className="technology_logo_container" style={{"--text_length": ((typescript_text.length +2) + "ch")} as React.CSSProperties}>
             <img className='technology_logo ts_logo' alt='typescript logo' src="/typescript_logo.png"></img>
-            <a href="https://www.typescriptlang.org/" target='_blank'>{typescript_text}</a>
+            <p>{typescript_text}</p>
         </div>,
 
         "python": 
         <div className="technology_logo_container" style={{"--text_length": ((python_text.length +2) + "ch")} as React.CSSProperties}>
             <img className='technology_logo round_border white_background' alt='python logo' src="/python_logo.png"></img>
-            <a href="https://www.python.org/" target='_blank'>{python_text}</a>
+            <p>{python_text}</p>
         </div>,
 
         "colab": 
         <div className="technology_logo_container" style={{"--text_length": ((colab.length +2) + "ch")} as React.CSSProperties}>
             <img className='technology_logo round_border white_background' alt='colab logo' src="/colab_logo.jpg"></img>
-            <a href="https://colab.research.google.com/" target='_blank'>{colab}</a>
+            <p>{colab}</p>
         </div>,
 
         "c_sharp": 
         <div className="technology_logo_container" style={{"--text_length": ((c_sharp.length +2) + "ch")} as React.CSSProperties}>
             <img className='technology_logo' alt='c sharp logo' src="/c_sharp_logo.png"></img>
-            <a href="https://dotnet.microsoft.com/es-es/languages/csharp" target='_blank'>{c_sharp}</a>
+            <p>{c_sharp}</p>
         </div>,
 
         "unity3d": 
         <div className="technology_logo_container" style={{"--text_length": ((unity3d.length +2) + "ch")} as React.CSSProperties}>
             <img className='technology_logo round_border' alt='unity 3d logo' src="/unity3d_logo.png"></img>
-            <a href="https://unity.com" target='_blank'>{unity3d}</a>
+            <p>{unity3d}</p>
         </div>
     }
 
