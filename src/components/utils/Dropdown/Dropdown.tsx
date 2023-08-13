@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import {getLanguageEmoji} from '@/lang/lang'
 
 const Dropdown = ({children}:{children:React.ReactNode}) => {
 
