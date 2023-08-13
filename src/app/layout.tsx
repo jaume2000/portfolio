@@ -14,14 +14,15 @@ export default function RootLayout({
   params: {lang: string}
 }) {
 
-
+  let language = navigator.language.split('-')[0]
+  let dict = getLanguageDictionary(language,"Header")
 
   return (
     <html lang={params.lang}>
       <head>
         <meta charSet={"UTF-8"}/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>{"Jaume Ivars Grimalt - Portfolio"}</title>
+        <title>{dict.title}</title>
         <meta></meta>
       </head>
       <body>

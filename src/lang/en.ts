@@ -1,4 +1,7 @@
 let en: translation_structure = {
+    Header: {
+        title: "Jaume Ivars Grimalt - Portfolio"
+    },
     PresentationPage:{
         main_title: "Welcome!",
         presentation: "I'm Jaume Ivars Grimalt and I do fullstack developing and AI projects"

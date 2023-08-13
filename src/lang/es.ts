@@ -1,5 +1,8 @@
 /*let es: translation_structure =
     {
+        Header: {
+            title: "Jaume Ivars Grimalt - Portafolio"
+        },
         PresentationPage:{
             main_title: "¡Bienvenido!",
             presentation: "Me llamo Jaume Ivars Grimalt, y soy desarrollador fullstack"
