@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'DancingScript';
+    src: url('/public/DancingScript-VariableFont_wght.ttf') format('truetype');
+}
+
+/* Card ofthe project general CSS */
+
+.grid_element {
+
+    position: relative;
+    background-color: rgba(0,0,0,0.7); /*Default background*/
+    box-shadow: 0px 0px 0px rgb(255,255,255);
+    height: 50vh;
+    border-radius: 10px;
+    z-index: 1;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.grid_element:hover {
+    transform: translate(0px,-10px);
+    box-shadow: 0px 0px 20px rgb(255,255,255);
+}
+
+.grid_element h2 {
+    color: white;
+    user-select: none;
+}
+.grid_element p {
+    color: white;
+    user-select: none;
+}
+
+
+/* Technologies used part*/
+
+
+.technologies {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    background-color: var(--technologies_background_color);
+    height: 8vh;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    border-radius: 8vh 0 10px 8vh;
+    bottom: 0px;
+}
+
+
+.technology_logo_container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 8vh;
+}
+
+.technology_logo_container a, .technology_logo_container p {
+    color: var(--technologies_text_color);
+    text-decoration: none;
+    font-size: max(0.8vw, 18px);
+    overflow: hidden;
+    word-wrap: unset;
+    width: 0;
+    transition: width ease 0.5s, font-size ease 0.5s;
+}
+
+.technology_logo_container a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background: var(--technologies_text_color);
+    transition: width 0.2s ease;
+}
+
+.technology_logo_container:hover a, .technology_logo_container:hover p{
+    width: var(--text_length);
+}
+
+.technology_logo_container a:hover{
+    font-size: max(1.2vw, 25px);
+    cursor: pointer;
+}
+
+.technology_logo_container p:hover{
+    font-size: max(1.2vw, 25px);
+}
+
+.technology_logo_container a:hover:after{
+    width: calc(var(--text_length) - 2ch);
+}
+
+.technology_logo{
+    object-fit: contain;
+    max-height: calc(100% - 10px);
+    margin: 0 10px 0 5px;
+    z-index: 3;
+}
+
+.ts_logo {
+    border-radius: 10px;
+}
+
+.round_border {
+    border-radius: 100%;
+}
+
+.white_border {
+    border: rgba(255,255,255,0.7) 3px solid;
+}
