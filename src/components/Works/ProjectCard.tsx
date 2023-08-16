@@ -75,7 +75,7 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
 
 }
 
-const SingleTecnology = ({src, title, alt, href, additional_img_class, white_background=false, round_border=true}:{src:string, title:string, alt:string, additional_img_class?:string, white_background?:bool, round_border?:bool, href?:string}) => {
+const SingleTecnology = ({src, title, alt, href, additional_img_class, white_background=false, round_border=true}:{src:string, title:string, alt:string, additional_img_class?:string, white_background?:boolean, round_border?:boolean, href?:string}) => {
     
     let img_classes = 'technology_logo' + (round_border ? ' round_border':'') + (white_background ? ' white_background':'') + (additional_img_class ? ' ' + additional_img_class : '')
     
