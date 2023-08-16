@@ -4,11 +4,11 @@ import { Dispatch, SetStateAction } from 'react'
 import './css/ProjectCard.css'
 import {getLanguageAllDictionary} from '@/lang/lang'
 
-export default function ProjectCard ({lang, title, technologies, github_repo, title_style, background_style, web_link, setHiddenExplanation}:{lang:string, title:string, title_style:React.CSSProperties, technologies:string[], github_repo?:string, background_style:React.CSSProperties, web_link?:string, setHiddenExplanation?:Dispatch<SetStateAction<boolean>>}) {
+export default function ProjectCard ({lang, title, technologies, github_repo, title_style, background_style, web_link, setFirstTime, setHiddenExplanation}:{lang:string, title:string, title_style:React.CSSProperties, technologies:string[], github_repo?:string, background_style:React.CSSProperties, web_link?:string, setFirstTime:Dispatch<SetStateAction<boolean>>, setHiddenExplanation?:Dispatch<SetStateAction<boolean>>}) {
 
 
     return (
-        <div className='grid_element project_background' style={background_style} onClick={()=>setHiddenExplanation ? setHiddenExplanation(false) : undefined}>
+        <div className='grid_element project_background' style={background_style} onClick={()=>{if(setHiddenExplanation){setHiddenExplanation(false); setFirstTime(false)}}}>
             <div className='portfolio_title_container full_size centered'>
                 <h2 style={title_style}>{title}</h2>
             </div>

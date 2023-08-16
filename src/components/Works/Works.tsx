@@ -13,6 +13,7 @@ import ProjectExplanationBox from './ProjectExplanationBox'
 const Works = ({lang}: {lang:string})=>{
 
     const [hidden_work_explanation, set_hidden_work_explanation] = useState(true);
+    const [first_time_load, setFirstTime] = useState(true);
 
     let dict = getLanguageAllDictionary(lang).Works
 
@@ -30,6 +31,7 @@ const Works = ({lang}: {lang:string})=>{
             github_repo='https://github.com/jaume2000/portfolio'
 
             setHiddenExplanation={set_hidden_work_explanation}
+            setFirstTime={setFirstTime}
         />,
         <ProjectCard key={1} lang={lang} title={dict.stablediffusion_card_title}
             background_style={{
@@ -42,6 +44,7 @@ const Works = ({lang}: {lang:string})=>{
             }
             technologies={['python','colab']}
 
+            setFirstTime={setFirstTime}
             setHiddenExplanation={set_hidden_work_explanation}
         />,
         <ProjectCard key={2} lang={lang} title={dict.visual_perceptron_card_title}
@@ -57,6 +60,7 @@ const Works = ({lang}: {lang:string})=>{
             } as React.CSSProperties}
             technologies={['c_sharp']}
 
+            setFirstTime={setFirstTime}
             setHiddenExplanation={set_hidden_work_explanation}
         />,
         <ProjectCard key={3} lang={lang} title={dict.hardware_project_card_title}
@@ -72,6 +76,7 @@ const Works = ({lang}: {lang:string})=>{
             } as React.CSSProperties}
             technologies={['unity3d','c_sharp']}
 
+            setFirstTime={setFirstTime}
             setHiddenExplanation={set_hidden_work_explanation}
         />,
 
@@ -93,6 +98,7 @@ const Works = ({lang}: {lang:string})=>{
             } as React.CSSProperties}
             technologies={['html','css','typescript']}
 
+            setFirstTime={setFirstTime}
             setHiddenExplanation={set_hidden_work_explanation}
         />,
     ]
@@ -104,7 +110,7 @@ const Works = ({lang}: {lang:string})=>{
                 {dict.title}
             </h1>
             <ProjectCardContainer project_cards={project_cards}/>
-            <ProjectExplanationBox hidden={hidden_work_explanation} setHidden={set_hidden_work_explanation}/>
+            <ProjectExplanationBox first_time_load={first_time_load} hidden={hidden_work_explanation} setHidden={set_hidden_work_explanation}/>
         </div>
     )
 }

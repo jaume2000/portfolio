@@ -10,7 +10,7 @@ html:has(div.shown_explanation), body:has(div.shown_explanation){
     width: 100vw;
     height: 100vh;
     background-color: transparent;
-    z-index: 12;
+    z-index: var(--z_index)
 }
 
 .project_explanation_background.shown_explanation {
@@ -62,17 +62,16 @@ html:has(div.shown_explanation), body:has(div.shown_explanation){
 .project_explanation_box{
     position: fixed;
     text-align: center;
-    display: flex;
     justify-content: center;
     align-items: center;
     top:5vh;
     width: min(1000px, 90vw);
     left: max(calc(50vw - 500px), 5vw);
     height: 90vh;
-    background-color: transparent;
+    background-color: black;
     border-radius: 10px;
     color: white;
-    z-index: 13
+    z-index: var(--z_index)
 }
 
 .project_explanation_box.shown_explanation {
@@ -83,7 +82,7 @@ html:has(div.shown_explanation), body:has(div.shown_explanation){
     0% {
         display: none;
         transform: translateY(-200px);
-        background-color: transparent;
+        opacity: 0%;
     }
     1% {
         display: flex;
@@ -92,7 +91,7 @@ html:has(div.shown_explanation), body:has(div.shown_explanation){
         transform: translateY(20px);
     }
     100% {
-        background-color: black;
+        opacity: 100%;
         transform: translateY(0);
         display: flex;
     }
@@ -105,7 +104,7 @@ html:has(div.shown_explanation), body:has(div.shown_explanation){
 @keyframes exit_dialog_box {
     0% {
         display: flex;
-        background-color: black;
+        opacity: 100%;
         transform: translateY(0);
     }
     20% {
@@ -113,10 +112,11 @@ html:has(div.shown_explanation), body:has(div.shown_explanation){
     }
     99% {
         display: flex;
-        background-color: transparent;
+        opacity: 0%;
         transform: translateY(-200px);
     }
     100% {
+        opacity: 0%;
         display: none;
     }
 }
