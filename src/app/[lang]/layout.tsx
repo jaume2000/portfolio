@@ -20,7 +20,7 @@ export default function RootLayout({
         <title>{dict.title}</title>
         <meta></meta>
       </head>
-      <body>
+      <body id='body'>
         {children}
         </body>
     </html>

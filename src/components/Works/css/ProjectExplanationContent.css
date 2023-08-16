@@ -1,0 +1,129 @@
+
+html:has(div.shown_explanation), body:has(div.shown_explanation){
+    overflow-y: hidden;
+}
+
+
+.project_explanation_background{
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 12;
+}
+
+.project_explanation_background.shown_explanation {
+    animation: enter_dialog_background 1s forwards;
+}
+
+@keyframes enter_dialog_background {
+    0% {
+        display: none;
+
+    }
+    1% {
+        display: block;
+        background-color: transparent;
+    }
+    100% {
+        background-color: rgba(0,0,0,0.5);
+        display: block;
+    }
+}
+
+.project_explanation_background.hidden_explanation {
+    animation: exit_dialog_background 0.2s forwards;
+}
+
+@keyframes exit_dialog_background {
+    0% {
+        display: block;
+        background-color: rgba(0,0,0,0.5);
+    }
+    99% {
+        display: block;
+        background-color: transparent;
+    }
+    100% {
+        display: none;
+    }
+}
+
+
+
+
+
+
+.project_explanation_box p{
+
+}
+
+.project_explanation_box{
+    position: fixed;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:5vh;
+    width: min(1000px, 90vw);
+    left: max(calc(50vw - 500px), 5vw);
+    height: 90vh;
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+    z-index: 13
+}
+
+.project_explanation_box.shown_explanation {
+    animation: enter_dialog_box 1s ease-in-out forwards;
+}
+
+@keyframes enter_dialog_box {
+    0% {
+        display: none;
+        transform: translateY(-200px);
+        background-color: transparent;
+    }
+    1% {
+        display: flex;
+    }
+    70%{
+        transform: translateY(20px);
+    }
+    100% {
+        background-color: black;
+        transform: translateY(0);
+        display: flex;
+    }
+}
+
+.project_explanation_box.hidden_explanation {
+    animation: exit_dialog_box 1s forwards;
+}
+
+@keyframes exit_dialog_box {
+    0% {
+        display: flex;
+        background-color: black;
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(20px);
+    }
+    99% {
+        display: flex;
+        background-color: transparent;
+        transform: translateY(-200px);
+    }
+    100% {
+        display: none;
+    }
+}
+
+
+.meme {
+    background-image: url('/public/meme.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}

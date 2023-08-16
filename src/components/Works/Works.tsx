@@ -1,49 +1,20 @@
+"use client"
+
 import '@/lang/lang'
+import { useState } from 'react'
 import {getLanguageAllDictionary} from '@/lang/lang'
 import '@/css/globals.css'
 import './style.css'
 import ProjectCardContainer from './ProjectCardContainer'
 import ProjectCard from './ProjectCard'
+import ProjectExplanationBox from './ProjectExplanationBox'
 
 
 const Works = ({lang}: {lang:string})=>{
 
-    let dict = getLanguageAllDictionary(lang).Works
+    const [hidden_work_explanation, set_hidden_work_explanation] = useState(true);
 
-    /*return(
-        <div className='works_container fullpage'>
-            <div className="black_waves_2"/>
-            <h1 id='works'>
-                {dict.title}
-            </h1>
-            <div className='works_grid'>
-                <div className='grid_element portfolio_project project_background'>
-                    <div className='portfolio_title_container full_size centered'>
-                        <h2>{dict.portfolio_project_card_title}</h2>
-                    </div>
-                    <Technologies lang_dict={dict} github_repo="https://github.com/jaume2000/portfolio" technologies={["nextjs", "react", "typescript"]}/>
-                </div>
-                <div className='grid_element project_background stablediffusion_project'>
-                    <div className='full_size centered'>
-                        <h2>{dict.stablediffusion_card_title}</h2>
-                    </div>
-                    <Technologies lang_dict={dict} technologies={["python", "colab"]}/>
-                </div>
-                <div className='grid_element project_background perceptron_project'>
-                    <div className='full_size centered'>
-                        <h2>{dict.visual_perceptron_card_title}</h2>
-                    </div>
-                    <Technologies lang_dict={dict} technologies={["c_sharp"]} background_color='white' text_color='black'/>
-                </div>
-                <div className='grid_element project_background hardware_project'>
-                    <div className='full_size centered'>
-                        <h2>{dict.hardware_project_card_title}</h2>
-                    </div>
-                    <Technologies lang_dict={dict} technologies={["unity3d", "c_sharp"]} background_color='white' text_color='black'/>
-                </div>
-            </div>
-        </div>
-    )*/
+    let dict = getLanguageAllDictionary(lang).Works
 
     const project_cards = [
         <ProjectCard key={0} lang={lang} title={dict.portfolio_project_card_title}
@@ -57,6 +28,8 @@ const Works = ({lang}: {lang:string})=>{
                 padding: '1vh 5vh 0px 5vh'} as React.CSSProperties}
             technologies={['nextjs','react','typescript']}
             github_repo='https://github.com/jaume2000/portfolio'
+
+            setHiddenExplanation={set_hidden_work_explanation}
         />,
         <ProjectCard key={1} lang={lang} title={dict.stablediffusion_card_title}
             background_style={{
@@ -68,6 +41,8 @@ const Works = ({lang}: {lang:string})=>{
                 fontFamily: "'DancingScript', cursive"}
             }
             technologies={['python','colab']}
+
+            setHiddenExplanation={set_hidden_work_explanation}
         />,
         <ProjectCard key={2} lang={lang} title={dict.visual_perceptron_card_title}
             background_style={{
@@ -81,6 +56,8 @@ const Works = ({lang}: {lang:string})=>{
                 fontFamily: "'Times New Roman', Times, serif"
             } as React.CSSProperties}
             technologies={['c_sharp']}
+
+            setHiddenExplanation={set_hidden_work_explanation}
         />,
         <ProjectCard key={3} lang={lang} title={dict.hardware_project_card_title}
             background_style={{
@@ -95,6 +72,7 @@ const Works = ({lang}: {lang:string})=>{
             } as React.CSSProperties}
             technologies={['unity3d','c_sharp']}
 
+            setHiddenExplanation={set_hidden_work_explanation}
         />,
 
         <ProjectCard key={4} lang={lang} title={dict.sorting_algorithms_project_card_title}
@@ -115,7 +93,7 @@ const Works = ({lang}: {lang:string})=>{
             } as React.CSSProperties}
             technologies={['html','css','typescript']}
 
-
+            setHiddenExplanation={set_hidden_work_explanation}
         />,
     ]
 
@@ -126,6 +104,7 @@ const Works = ({lang}: {lang:string})=>{
                 {dict.title}
             </h1>
             <ProjectCardContainer project_cards={project_cards}/>
+            <ProjectExplanationBox hidden={hidden_work_explanation} setHidden={set_hidden_work_explanation}/>
         </div>
     )
 }
