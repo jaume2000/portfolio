@@ -18,6 +18,8 @@ type translation_structure = {
         stablediffusion_card_title: string,
         visual_perceptron_card_title: string,
         hardware_project_card_title: string,
+        sorting_algorithms_project_card_title:string,
+        link_to_web:string,
         github_link_to_repo_text: string,
     },
     About: {

@@ -3,7 +3,7 @@ import { bool } from 'aws-sdk/clients/signer'
 import './css/ProjectCard.css'
 import {getLanguageAllDictionary} from '@/lang/lang'
 
-export default function ProjectCard ({lang, title, technologies, github_repo, title_style, background_style}:{lang:string, title:string, title_style:React.CSSProperties, technologies:string[], github_repo?:string, background_style:React.CSSProperties}) {
+export default function ProjectCard ({lang, title, technologies, github_repo, title_style, background_style, web_link}:{lang:string, title:string, title_style:React.CSSProperties, technologies:string[], github_repo?:string, background_style:React.CSSProperties, web_link?:string}) {
 
 
     return (
@@ -11,12 +11,12 @@ export default function ProjectCard ({lang, title, technologies, github_repo, ti
             <div className='portfolio_title_container full_size centered'>
                 <h2 style={title_style}>{title}</h2>
             </div>
-            <Technologies lang={lang} github_repo={github_repo} technologies={technologies}/>
+            <Technologies lang={lang} github_repo={github_repo} technologies={technologies} web_link={web_link}/>
         </div>
     )
 }
 
-const Technologies = ({lang, technologies,background_color="black", text_color="white", github_repo}:{lang:string, technologies:string[],background_color?:string, text_color?:string, github_repo?:string}) => {
+const Technologies = ({lang, technologies,background_color="black", text_color="white", github_repo, web_link}:{lang:string, technologies:string[],background_color?:string, text_color?:string, github_repo?:string, web_link?:string}) => {
 
     let dict = getLanguageAllDictionary(lang).Works
 
@@ -59,12 +59,17 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
         <SingleTecnology title={github_repo_text} alt='Github logo' src='/public/github-mark.png' href={github_repo}/>
     )
 
+    let web_object = (
+        <SingleTecnology additional_img_class='ts_logo white_background' round_border={false} title={dict.link_to_web} alt='New tab logo' src='/public/new_tab_icon.png' href={web_link}/>
+    )
+
 
 
     return (
         <div className='technologies' style={{"--technologies_background_color": background_color, "--technologies_text_color": text_color} as React.CSSProperties}>
             {technologies.map((x,i)=>{return tech_dict[x  as keyof typeof tech_dict]})}
             {github_repo ? github_repo_object : undefined}
+            {web_link ? web_object : undefined}
         </div>
 
     )

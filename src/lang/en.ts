@@ -18,6 +18,8 @@ let en: translation_structure = {
         stablediffusion_card_title: "Fine-Tunned Stable Diffussion",
         visual_perceptron_card_title: "Perceptron Visualization",
         hardware_project_card_title: "Logic Gate Simulator",
+        sorting_algorithms_project_card_title: "Sorting algorithms",
+        link_to_web: "Web\xA0link",
         github_link_to_repo_text: "Link\xA0to\xA0github",
     },
     About: {

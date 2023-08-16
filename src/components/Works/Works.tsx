@@ -96,6 +96,24 @@ const Works = ({lang}: {lang:string})=>{
             technologies={['unity3d','c_sharp']}
 
         />,
+
+        <ProjectCard key={4} lang={lang} title={dict.sorting_algorithms_project_card_title}
+            web_link={'https://jaume2000.github.io/OrdenationAlgorithms/'}
+
+            background_style={{
+                backgroundImage: 'url("/public/algorithms_background.png")',
+                backgroundSize: '100%',
+                backgroundPosition: 'right 0 top 00px',
+            } as React.CSSProperties}
+            title_style={{
+                width: '100%',
+                backgroundColor: 'rgba(0,0,0,0.7)',
+                color:'white'
+            } as React.CSSProperties}
+            technologies={['unity3d','c_sharp']}
+
+
+        />,
     ]
 
     return (
