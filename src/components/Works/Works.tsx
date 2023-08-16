@@ -98,7 +98,7 @@ const Works = ({lang}: {lang:string})=>{
         />,
 
         <ProjectCard key={4} lang={lang} title={dict.sorting_algorithms_project_card_title}
-            web_link={'https://jaume2000.github.io/OrdenationAlgorithms/'}
+            web_link={'https://jaume2000.github.io/SortingAlgorithms/'}
 
             background_style={{
                 backgroundImage: 'url("/public/algorithms_background.png")',
