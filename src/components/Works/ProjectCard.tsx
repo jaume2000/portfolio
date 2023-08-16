@@ -24,6 +24,8 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
     let typescript_text:string = "TypeScript"
     let python_text:string = "Python"
     let colab:string = "Google\xA0Colab"
+    let html_text:string  ="HTML"
+    let css_text:string  ="CSS"
     let c_sharp:string = "C#"
     let unity3d:string = "Unity\xA03D"
     let github_repo_text:string = dict.github_link_to_repo_text;
@@ -49,6 +51,12 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
 
         "unity3d": 
         <SingleTecnology title={unity3d} alt='Unity3D logo' src='/public/unity3d_logo.png'/>,
+
+        "css": 
+        <SingleTecnology title={html_text} alt='HTML logo' src='/public/html_logo.png'/>,
+        
+        "html": 
+        <SingleTecnology title={css_text} alt='CSS logo' src='/public/css_logo.png'/>,
 
     }
 

@@ -110,7 +110,7 @@ const Works = ({lang}: {lang:string})=>{
                 backgroundColor: 'rgba(0,0,0,0.7)',
                 color:'white'
             } as React.CSSProperties}
-            technologies={['typescript']}
+            technologies={['html','css','typescript']}
 
 
         />,
