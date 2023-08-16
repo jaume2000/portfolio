@@ -1,5 +1,4 @@
 
-import { bool } from 'aws-sdk/clients/signer'
 import './css/ProjectCard.css'
 import {getLanguageAllDictionary} from '@/lang/lang'
 
