@@ -67,7 +67,7 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
     )
 
     let web_object = (
-        <SingleTecnology additional_img_class='ts_logo white_background' round_border={false} title={dict.link_to_web} alt='New tab logo' src='/public/new_tab_icon.png' href={web_link}/>
+        <SingleTecnology additional_img_class='ts_logo' round_border={false} title={dict.link_to_web} alt='New tab logo' src='/public/new_tab_icon.png' href={web_link}/>
     )
 
 

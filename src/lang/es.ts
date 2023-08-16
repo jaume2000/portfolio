@@ -19,7 +19,7 @@ let es: translation_structure =
             stablediffusion_card_title: "Stable Diffussion Tuneado",
             visual_perceptron_card_title: "Visualización de un Perceptrón",
             hardware_project_card_title: "Simulador de Puertas Lógicas",
-            sorting_algorithms_project_card_title: "Algoritmos de ordenación",
+            sorting_algorithms_project_card_title: "Algoritmos de ordenado",
             link_to_web: "Link\xA0web",
             github_link_to_repo_text: "Link\xA0a\xA0github",
         },

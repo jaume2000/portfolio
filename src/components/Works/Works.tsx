@@ -106,6 +106,9 @@ const Works = ({lang}: {lang:string})=>{
                 backgroundPosition: 'right 0 top 00px',
             } as React.CSSProperties}
             title_style={{
+                fontFamily: 'ChalkBoard, arial',
+                fontWeight: '100',
+                fontSize: '3.5vw',
                 width: '100%',
                 backgroundColor: 'rgba(0,0,0,0.7)',
                 color:'white'

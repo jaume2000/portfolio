@@ -2,6 +2,10 @@
     font-family: 'DancingScript';
     src: url('/public/DancingScript-VariableFont_wght.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'ChalkBoard';
+    src: url('/public/Chalktastic-r78L.ttf');
+}
 
 /* Card ofthe project general CSS */
 
