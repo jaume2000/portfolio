@@ -93,7 +93,7 @@ const Works = ({lang}: {lang:string})=>{
                 backgroundColor: 'rgba(0,0,0,0.7)',
                 color:'gold'
             } as React.CSSProperties}
-            technologies={['unity3d','c_sharp']}
+            technologies={['typescript']}
 
         />,
 
