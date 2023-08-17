@@ -1,24 +1,45 @@
 "use client"
 
 import '@/lang/lang'
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 import {getLanguageAllDictionary} from '@/lang/lang'
 import '@/css/globals.css'
 import './style.css'
 import ProjectCardContainer from './ProjectCardContainer'
 import ProjectCard from './ProjectCard'
-import ProjectExplanationBox from './ProjectExplanationBox'
+import {ProjectExplanationBox, ProjectExplanationContent_properties} from './ProjectExplanationBox'
+import DefaultContent from './ProjectExplanationContents/DefaultContent'
 
 
 const Works = ({lang}: {lang:string})=>{
 
     const [hidden_work_explanation, set_hidden_work_explanation] = useState(true);
     const [first_time_load, setFirstTime] = useState(true);
+    const [explanation_content, setExplanationContent]= useState(<DefaultContent events={{onclose:()=>{},onopen:()=>{} }}/>)
 
     let dict = getLanguageAllDictionary(lang).Works
 
+    const CustomProjectCard = ({title, background_style, title_style,technologies, github_repo, explanation_content,web_link}:{key:number, title:string, background_style:React.CSSProperties, title_style:React.CSSProperties,technologies:string[], github_repo?:string, explanation_content?:JSX.Element, web_link?:string}) => {
+
+        return <ProjectCard
+            title={title}
+            title_style={title_style}
+            background_style={background_style}
+            technologies={technologies}
+            github_repo={github_repo}
+            explanation_content={explanation_content}
+
+            lang={lang}
+            setHiddenExplanation={set_hidden_work_explanation}
+            setFirstTime={setFirstTime}
+            setExplanationContent={setExplanationContent}
+            web_link={web_link}
+
+        />
+    }
+
     const project_cards = [
-        <ProjectCard key={0} lang={lang} title={dict.portfolio_project_card_title}
+        <CustomProjectCard key={0} title={dict.portfolio_project_card_title}
             background_style={{ backgroundImage: 'linear-gradient(75deg, var(--main_color1) 45%, white 45.1%, white 54.9%, var(--main_color2) 55%)'} as React.CSSProperties}
             title_style={{
                 userSelect: 'none',
@@ -29,11 +50,9 @@ const Works = ({lang}: {lang:string})=>{
                 padding: '1vh 5vh 0px 5vh'} as React.CSSProperties}
             technologies={['nextjs','react','typescript']}
             github_repo='https://github.com/jaume2000/portfolio'
-
-            setHiddenExplanation={set_hidden_work_explanation}
-            setFirstTime={setFirstTime}
+            explanation_content={undefined}
         />,
-        <ProjectCard key={1} lang={lang} title={dict.stablediffusion_card_title}
+        <CustomProjectCard key={1} title={dict.stablediffusion_card_title}
             background_style={{
                 backgroundImage: 'url("/public/stablediffusion_img1.png")',
                 backgroundPosition: 'right 0 top 00px',
@@ -43,11 +62,8 @@ const Works = ({lang}: {lang:string})=>{
                 fontFamily: "'DancingScript', cursive"}
             }
             technologies={['python','colab']}
-
-            setFirstTime={setFirstTime}
-            setHiddenExplanation={set_hidden_work_explanation}
         />,
-        <ProjectCard key={2} lang={lang} title={dict.visual_perceptron_card_title}
+        <CustomProjectCard key={2} title={dict.visual_perceptron_card_title}
             background_style={{
                 backgroundImage: 'url("/public/neural_network_background.png")',
                 backgroundSize: '100%',
@@ -59,11 +75,8 @@ const Works = ({lang}: {lang:string})=>{
                 fontFamily: "'Times New Roman', Times, serif"
             } as React.CSSProperties}
             technologies={['c_sharp']}
-
-            setFirstTime={setFirstTime}
-            setHiddenExplanation={set_hidden_work_explanation}
         />,
-        <ProjectCard key={3} lang={lang} title={dict.hardware_project_card_title}
+        <CustomProjectCard key={3} title={dict.hardware_project_card_title}
             background_style={{
                 backgroundImage: 'url("/public/logic_gate_background.webp")',
                 backgroundSize: '100%',
@@ -75,12 +88,9 @@ const Works = ({lang}: {lang:string})=>{
                 color:'gold'
             } as React.CSSProperties}
             technologies={['unity3d','c_sharp']}
-
-            setFirstTime={setFirstTime}
-            setHiddenExplanation={set_hidden_work_explanation}
         />,
 
-        <ProjectCard key={4} lang={lang} title={dict.sorting_algorithms_project_card_title}
+        <CustomProjectCard key={4} title={dict.sorting_algorithms_project_card_title}
             web_link={'https://jaume2000.github.io/SortingAlgorithms/'}
 
             background_style={{
@@ -97,9 +107,6 @@ const Works = ({lang}: {lang:string})=>{
                 color:'white'
             } as React.CSSProperties}
             technologies={['html','css','typescript']}
-
-            setFirstTime={setFirstTime}
-            setHiddenExplanation={set_hidden_work_explanation}
         />,
     ]
 
@@ -110,7 +117,7 @@ const Works = ({lang}: {lang:string})=>{
                 {dict.title}
             </h1>
             <ProjectCardContainer project_cards={project_cards}/>
-            <ProjectExplanationBox first_time_load={first_time_load} hidden={hidden_work_explanation} setHidden={set_hidden_work_explanation}/>
+            <ProjectExplanationBox first_time_load={first_time_load} hidden={hidden_work_explanation} setHidden={set_hidden_work_explanation} content={explanation_content}/>
         </div>
     )
 }

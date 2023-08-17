@@ -54,16 +54,8 @@ html:has(div.shown_explanation), body:has(div.shown_explanation){
 
 
 
-
-.project_explanation_box p{
-
-}
-
 .project_explanation_box{
     position: fixed;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
     top:5vh;
     width: min(1000px, 90vw);
     left: max(calc(50vw - 500px), 5vw);
