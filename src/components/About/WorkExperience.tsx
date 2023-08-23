@@ -11,17 +11,32 @@ const WorkExperience = ({lang}:{lang:string}) => {
     return (
         <div>
             <img className={"work_logo"} src={"/public/neurocatching_logo.png"}/>
-            <PlainText text=
-            {`02/2023 - 08/2023 (7 meses)
+            <PlainText double_next_line={true} text=
+            {`02/2023 - 08/2023 (7 months)
+
             * Main developer in the principal software of the company (the name is Discovery).
             -> Fullstack development with jQuery, MySQL, Node.js and AWS. Used JavaScript.
             -> This sofware takes biometric data of the user while observing an ad to study the emotions and where is looking this user to collect the data and calculate insights.
+
             * Developer in other project (NeuroAds).
             -> Fullstack development with React.js and Google Cloud. Used JavaScript and Python.
             -> Via Artificial Intelligence the app generates an improved ad.
             `}/>
+            <hr />
+            <br/>
+            <br/>
             <img className={"work_logo"} src={"/public/logo-sciling-light.png"}/>
-            <PlainText text={"06/2023 - 09/2023 (4 meses)"}/>
+            <PlainText double_next_line={true} text={`
+            06/2023 - 09/2023 (4 months)
+
+            * Backend development with Google Cloud
+            
+            * Product testing and validation with Python
+
+
+
+
+            `}/>
 
         </div>
     )

@@ -89,6 +89,12 @@
     border-color: rgb(0,255,0);
 }
 
+.hacker_console hr {
+    height: 2px;
+    background-color: #0f0;
+    border: none;
+  }
+
 .hacker_console > .console_container_header {
     background-color: rgb(0,255,0);
     border-color: rgba(0,255,0);
