@@ -13,6 +13,7 @@ import PlainText from './PlainText'
 import CVDownload from './CVDownload'
 import Studies from './Studies'
 import FolderContainer from '@/components/utils/FolderContainer/FolderContainer'
+import WorkExperience from './WorkExperience'
 import Tab from '@/components/utils/Tab/Tab'
 
 const About = ({lang}: {lang:string})=>{
@@ -24,7 +25,7 @@ const About = ({lang}: {lang:string})=>{
         {console: <PlainText text={dict.habilities_transcribed_content}/>, title: dict.habilities_transcribed_text},
         {console: <Studies lang={lang}/>, title: dict.studies.doc_title},
         {console: <CVDownload lang={lang}/>, title: dict.cv.doc_title},
-        {console: <TestingInformation content="Wops! I'm sorry, I'm currently building this part, it will be awsome! Please, check my CV at CV.html to get more info!"/>, title: dict.work_experience.doc_title},
+        {console: <WorkExperience lang={lang}/>, title: dict.work_experience.doc_title},
     ]
 
     let [selectedContent, setSelectedContent] = useState(0);
