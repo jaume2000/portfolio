@@ -3,6 +3,7 @@
 import { Dispatch, SetStateAction } from 'react'
 import './css/ProjectCard.css'
 import {getLanguageAllDictionary} from '@/lang/lang'
+import React from 'react';
 
 export default function ProjectCard ({lang, title, technologies, github_repo, title_style, background_style, web_link, setFirstTime, setHiddenExplanation, setExplanationContent, explanation_content}:{lang:string, title:string, title_style:React.CSSProperties, technologies:string[], github_repo?:string, background_style:React.CSSProperties, web_link?:string, setFirstTime:Dispatch<SetStateAction<boolean>>, setHiddenExplanation?:Dispatch<SetStateAction<boolean>>, setExplanationContent?:Dispatch<SetStateAction<JSX.Element>>,explanation_content?:JSX.Element}) {
 
@@ -44,16 +45,16 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
 
     const tech_dict = {
         "nextjs":
-        <SingleTecnology title={nextjs_text} alt='Next.js logo' src='/public/nextjs_logo.png' />,
+        <SingleTecnology title={nextjs_text} alt='Next.js logo' src='/public/nextjs_logo.png'/>,
 
         "react":
-        <SingleTecnology title={react_text} alt='React.js logo' src='/public/react_logo.png' />,
+        <SingleTecnology title={react_text} alt='React.js logo' src='/public/react_logo.png'/>,
 
         "typescript": 
-        <SingleTecnology title={typescript_text} alt='Typescript logo' src='/public/typescript_logo.png' additional_img_class='ts_logo' round_border={false}/>,
+        <SingleTecnology title={typescript_text} alt='Typescript logo' src='/public/typescript_logo.png' additional_img_class='ts_logo' round_border={false} key='typescript' />,
 
         "python":
-        <SingleTecnology title={python_text} alt='Python logo' src='/public/python_logo.png' white_background={true}/>,
+        <SingleTecnology title={python_text} alt='Python logo' src='/public/python_logo.png' white_background={true} key=''/>,
 
         "colab":
         <SingleTecnology title={colab} alt='Google Colab logo' src='/public/colab_logo.jpg' white_background={true}/>,
@@ -86,7 +87,9 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
 
     return (
         <div className='technologies' style={{"--technologies_background_color": background_color, "--technologies_text_color": text_color} as React.CSSProperties}>
-            {technologies.map((x,i)=>{return tech_dict[x  as keyof typeof tech_dict]})}
+            {technologies.map((x,i)=>{
+                return React.cloneElement(tech_dict[x  as keyof typeof tech_dict], {key:i})
+                })}
             {github_repo ? github_repo_object : undefined}
             {web_link ? web_object : undefined}
         </div>

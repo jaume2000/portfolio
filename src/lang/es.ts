@@ -9,7 +9,7 @@ let es: translation_structure =
             presentation: "Me llamo Jaume Ivars Grimalt, y hago desarrollo fullstack y proyectos de IA"
         },
         MenuBar:{
-            about: "Sobre mí",
+            about: "Sobre\xA0mí",
             works: "Trabajos",
             contact: "Contáctame",
         },

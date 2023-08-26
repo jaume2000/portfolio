@@ -8,8 +8,8 @@ let en: translation_structure = {
         presentation: "I'm Jaume Ivars Grimalt and I do fullstack developing and AI projects"
     },
     MenuBar:{
-        about: "About me",
-        works: "My work",
+        about: "About\xA0me",
+        works: "My\xA0work",
         contact: "Contact",
     },
     Works: {
