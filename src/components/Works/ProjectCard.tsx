@@ -9,20 +9,20 @@ export default function ProjectCard ({lang, title, technologies, github_repo, ti
 
 
     return (
-        <div className='grid_element project_background' style={background_style}
-        onClick={()=>{
-            if(setHiddenExplanation){
-                setHiddenExplanation(false);
-                setFirstTime(false)
-            }
-            if(setExplanationContent && explanation_content){
-                setExplanationContent(explanation_content)
-            }
-        }}>
-
+        <div className='grid_element'>
             <div className='portfolio_title_container full_size centered'>
                 <h2 style={title_style}>{title}</h2>
             </div>
+            <div className='project_background' style={background_style}
+            onClick={()=>{
+                if(setHiddenExplanation){
+                    setHiddenExplanation(false);
+                    setFirstTime(false)
+                }
+                if(setExplanationContent && explanation_content){
+                    setExplanationContent(explanation_content)
+                }
+            }}/>
             <Technologies lang={lang} github_repo={github_repo} technologies={technologies} web_link={web_link}/>
         </div>
     )
