@@ -14,24 +14,44 @@
 }
 
 @keyframes parent_animation {
-    
+    0% {
+
+    }
+    87% {
+        transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)) ) rotate(calc(360deg * 6 - 30deg));
+    }
+    99% {
+        transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)) ) rotate(calc(360deg * 6 - 30deg));
+    }
+    100% {
+        display: none;
+    }
 }
 
 #loading_screen_part1 {
     position: fixed;
     width:100%;
     height: 100%;
-    background-image: linear-gradient(to right, rgba(255,0,0,0.5) 50%, transparent 50.1%);
+    background-image: linear-gradient(to right, var(--main_color2) 50%, transparent 50.1%);
     z-index: 2;
     animation: part1_animation var(--loading_animation_time) ease forwards;
 }
 
 @keyframes part1_animation {
     0% {
-
+        transform: translate(0,0);
+    }
+    10% {
+        transform: translate(-5vw,0);
+    }
+    87% {
+        transform: translate(-15vw,0);
+    }
+    90% {
+        transform: translate(-12vw,0);
     }
     100% {
-        transform: translate(-5vw,0);
+        transform: translate(-100%,0);
     }
 }
 
@@ -41,17 +61,26 @@
     position: fixed;
     width:100%;
     height: 100%;
-    background-image: linear-gradient(to right, transparent 50%, rgba(0,255,0,0.5) 50.1%);
+    background-image: linear-gradient(to right, transparent 50%, var(--main_color1) 50.1%);
     z-index: 2;
     animation: part2_animation var(--loading_animation_time) ease forwards;
 }
 
 @keyframes part2_animation {
     0% {
-
+        transform: translate(0,0);
+    }
+    10% {
+        transform: translate(5vw,0);
+    }
+    87% {
+        transform: translate(15vw,0);
+    }
+    90% {
+        transform: translate(12vw,0);
     }
     100% {
-        transform: translate(5vw,0);
+        transform: translate(100%,0);
     }
 }
 
@@ -61,6 +90,24 @@
     position: fixed;
     width:100%;
     height: 100%;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,1);
     z-index: 1;
+    animation: part3_animation var(--loading_animation_time) ease forwards;
+    
+}
+
+@keyframes part3_animation {
+    0% {
+    }
+    10% {
+    }
+    87% {
+    }
+    90% {
+        background-color: rgba(255,255,255,1);
+    }
+    100% {
+        background-color: transparent;
+
+    }
 }
