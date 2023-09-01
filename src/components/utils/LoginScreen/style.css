@@ -1,5 +1,5 @@
 :root {
-    --loading_animation_time: 7s;
+    --loading_animation_time: 8s;
 }
 
 .loading_screen {
@@ -17,11 +17,14 @@
     0% {
 
     }
+    20% {
+        transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)))
+    }
     87% {
-        transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)) ) rotate(calc(360deg * 6 - 30deg));
+        transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)) ) rotate(calc(360deg * 5 - 30deg));
     }
     99% {
-        transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)) ) rotate(calc(360deg * 6 - 30deg));
+        transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)) ) rotate(calc(360deg * 5 - 30deg));
     }
     100% {
         display: none;
@@ -39,9 +42,12 @@
 
 @keyframes part1_animation {
     0% {
-        transform: translate(0,0);
+        
     }
     10% {
+        transform: translate(0,0);
+    }
+    20% {
         transform: translate(-5vw,0);
     }
     87% {
@@ -68,9 +74,12 @@
 
 @keyframes part2_animation {
     0% {
-        transform: translate(0,0);
+        
     }
     10% {
+        transform: translate(0,0);
+    }
+    20% {
         transform: translate(5vw,0);
     }
     87% {
@@ -97,11 +106,8 @@
 }
 
 @keyframes part3_animation {
-    0% {
-    }
-    10% {
-    }
-    87% {
+    0%{
+
     }
     90% {
         background-color: rgba(255,255,255,1);
