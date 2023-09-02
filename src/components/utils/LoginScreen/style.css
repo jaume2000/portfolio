@@ -168,7 +168,7 @@
         transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2)) scale(100%);
     }
     87% {
-        transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2)) scale(150%);
+        transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2)) scale(160%);
     }
     90% {
         transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2)) scale(70%);
