@@ -9,6 +9,16 @@
     width: 100vw;
     position: fixed;
     z-index: 11;
+    animation: loading_screen var(--loading_animation_time) ease forwards;
+}
+
+@keyframes loading_screen {
+    0% {
+
+    }
+    100% {
+        display: none;
+    }
 }
 
 .loading_animation {
@@ -35,6 +45,8 @@
         transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)) ) rotate(calc(360deg * 5 - 30deg));
     }
     100% {
+        transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)) ) rotate(calc(360deg * 5 - 30deg));
+        display: none;
     }
 }
 

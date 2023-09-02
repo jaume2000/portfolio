@@ -50,10 +50,10 @@ const MainPage = ({lang}:{lang:string}) => {
     //console.log(scrollPosition/(document.documentElement.scrollHeight-windowDimensions.height) * 100, "%")
 */
 
-    
+
 
     return (
-        <div>
+        <div id="page_container">
             <MenuBar lang={lang}/>
             <PresentationPage lang={lang}/>
             <About lang={lang}/>
