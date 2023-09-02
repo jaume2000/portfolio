@@ -1,15 +1,23 @@
 :root {
     --loading_animation_time: 8s;
+    --circle_radius: 30vw;
 }
 
 .loading_screen {
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 11;
+}
+
+.loading_animation {
     position: fixed;
     width: max(120vh, 120vw);
     height: max(120vh, 120vw);
     transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)) );
     top:0;
     left:0;
-    z-index: 11;
     animation: parent_animation var(--loading_animation_time) ease forwards;
 }
 
@@ -17,7 +25,7 @@
     0% {
 
     }
-    20% {
+    30% {
         transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)))
     }
     87% {
@@ -27,7 +35,6 @@
         transform: translate(calc((100vw - max(120vh, 120vw)) / 2), calc(((100vh - max(120vh, 120vw)) / 2)) ) rotate(calc(360deg * 5 - 30deg));
     }
     100% {
-        display: none;
     }
 }
 
@@ -36,7 +43,7 @@
     width:100%;
     height: 100%;
     background-image: linear-gradient(to right, var(--main_color2) 50%, transparent 50.1%);
-    z-index: 2;
+    z-index: 1;
     animation: part1_animation var(--loading_animation_time) ease forwards;
 }
 
@@ -44,10 +51,10 @@
     0% {
         
     }
-    10% {
+    20% {
         transform: translate(0,0);
     }
-    20% {
+    30% {
         transform: translate(-5vw,0);
     }
     87% {
@@ -63,12 +70,13 @@
 
 
 
+
 #loading_screen_part2 {
     position: fixed;
     width:100%;
     height: 100%;
     background-image: linear-gradient(to right, transparent 50%, var(--main_color1) 50.1%);
-    z-index: 2;
+    z-index: 1;
     animation: part2_animation var(--loading_animation_time) ease forwards;
 }
 
@@ -76,10 +84,10 @@
     0% {
         
     }
-    10% {
+    20% {
         transform: translate(0,0);
     }
-    20% {
+    30% {
         transform: translate(5vw,0);
     }
     87% {
@@ -100,7 +108,7 @@
     width:100%;
     height: 100%;
     background-color: rgba(255,255,255,1);
-    z-index: 1;
+    z-index: 0;
     animation: part3_animation var(--loading_animation_time) ease forwards;
     
 }
@@ -115,5 +123,47 @@
     100% {
         background-color: transparent;
 
+    }
+}
+
+
+
+
+#loading_screen_circle {
+    position: absolute;
+    top: 0;
+    width: var(--circle_radius);
+    height: var(--circle_radius);
+    transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2));
+    border-radius: 100%;
+    background-color: white;
+    z-index: 2;
+    animation: loading_circle_animation var(--loading_animation_time) ease forwards;
+}
+
+
+@keyframes loading_circle_animation {
+    0%{
+        transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2)) scale(0%);
+    }
+    10% {
+        transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2)) scale(0%);
+    }
+    20% {
+        transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2)) scale(20%);   
+    }
+    30% {
+        transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2)) scale(100%);
+    }
+    87% {
+        transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2)) scale(150%);
+    }
+    90% {
+        transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2)) scale(70%);
+        display: none;
+    }
+    100% {
+        transform: translate(calc( (100vw - var(--circle_radius)) / 2), calc( (100vh - var(--circle_radius)) / 2)) scale(0%);
+        display: none;
     }
 }
