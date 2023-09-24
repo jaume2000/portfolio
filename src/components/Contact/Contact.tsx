@@ -19,7 +19,7 @@ const Contact = ({lang}: {lang:string})=>{
                         <div>
                             <p>{"Gmail: jaumeig95@gmail.com"}</p>
                             <br/>
-                            <p>{"Linkedin: "}<a href="https://linkedin.com/in/jaume-ivars-grimalt" target='_blank'>{"https://linkedin.com/in/jaume-ivars-grimalt"}</a></p>
+                            <p>{"Linkedin: "}<a href="https://linkedin.com/in/jaume-ivars-grimalt" target='_blank'><img className="linkedin_contact" src='/public/linkedin_logo.pong'/></a></p>
                             <br/>
                             <p>{"Github: "}<a href="https://github.com/jaume2000" target='_blank'>{"https://github.com/jaume2000"}</a></p>
                         </div>
