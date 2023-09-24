@@ -56,7 +56,7 @@ const Works = ({lang}: {lang:string})=>{
             background_style={{
                 backgroundImage: 'url("/public/stablediffusion_img1.png")',
                 backgroundPosition: 'right 0 top 00px',
-                backgroundSize: '145%',
+                backgroundSize: 'cover',
             } as React.CSSProperties}
             title_style={{
                 fontFamily: "'DancingScript', cursive"}
@@ -66,7 +66,7 @@ const Works = ({lang}: {lang:string})=>{
         <CustomProjectCard key={2} title={dict.visual_perceptron_card_title}
             background_style={{
                 backgroundImage: 'url("/public/neural_network_background.png")',
-                backgroundSize: '100%',
+                backgroundSize: 'cover',
                 backgroundPosition: 'right 0 top 00px'
             } as React.CSSProperties}
             title_style={{
@@ -79,7 +79,7 @@ const Works = ({lang}: {lang:string})=>{
         <CustomProjectCard key={3} title={dict.hardware_project_card_title}
             background_style={{
                 backgroundImage: 'url("/public/logic_gate_background.webp")',
-                backgroundSize: '100%',
+                backgroundSize: 'cover',
                 backgroundPosition: 'right 0 top 00px',
             } as React.CSSProperties}
             title_style={{
@@ -95,7 +95,7 @@ const Works = ({lang}: {lang:string})=>{
 
             background_style={{
                 backgroundImage: 'url("/public/algorithms_background.png")',
-                backgroundSize: '100%',
+                backgroundSize: 'cover',
                 backgroundPosition: 'right 0 top 00px',
             } as React.CSSProperties}
             title_style={{
