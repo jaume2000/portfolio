@@ -17,16 +17,15 @@ function getLocale(request: Request): string {
   const languages = new Negotiator({ headers: headersObject }).languages();
 
   //CHANGED THIS
-  console.log(languages)
+  //console.log(languages)
   try{
-  let m = match(languages, locales, defaultLocale);
+    let m = match(languages, locales, defaultLocale);
+    //console.log("match",m)
+    return m
   }
   catch(err){
     return defaultLocale
   }
-  console.log("match",m)
-  
-  return m
 }
 
 export function middleware(request: NextRequest) {
