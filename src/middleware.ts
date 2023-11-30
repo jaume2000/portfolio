@@ -21,7 +21,7 @@ function getLocale(request: Request): string {
   try{
   let m = match(languages, locales, defaultLocale);
   }
-  catch(err:Error){
+  catch(err){
     return defaultLocale
   }
   console.log("match",m)
