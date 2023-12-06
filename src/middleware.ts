@@ -15,7 +15,17 @@ function getLocale(request: Request): string {
 
   const headersObject = Object.fromEntries(headers.entries());
   const languages = new Negotiator({ headers: headersObject }).languages();
-  return match(languages, locales, defaultLocale);
+
+  //CHANGED THIS
+  //console.log(languages)
+  try{
+    let m = match(languages, locales, defaultLocale);
+    //console.log("match",m)
+    return m
+  }
+  catch(err){
+    return defaultLocale
+  }
 }
 
 export function middleware(request: NextRequest) {
@@ -40,7 +50,7 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Skip all internal paths (_next)
-    '/((?!_next|api|favicon.ico|public/|images).*)',
+    '/((?!_next|api|favicon.ico|public/|images|robots).*)',
     // Optional: only run on root (/) URL
     // '/'
   ],
