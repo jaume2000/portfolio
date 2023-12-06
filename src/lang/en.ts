@@ -19,6 +19,7 @@ let en: translation_structure = {
         visual_perceptron_card_title: "Perceptron Visualization",
         hardware_project_card_title: "Logic Gate Simulator",
         sorting_algorithms_project_card_title: "Sorting algorithms",
+        autoencoder_card_title: "Autoencoder",
         link_to_web: "Web\xA0link",
         github_link_to_repo_text: "Link\xA0to\xA0github",
     },

@@ -52,6 +52,20 @@ const Works = ({lang}: {lang:string})=>{
             github_repo='https://github.com/jaume2000/portfolio'
             explanation_content={undefined}
         />,
+        <CustomProjectCard key={2} title={dict.autoencoder_card_title}
+            background_style={{
+                backgroundImage: 'url("/public/autoencoder.png")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'right 0 top 00px'
+            } as React.CSSProperties}
+            title_style={{
+                width: '100%',
+                backgroundColor: 'rgba(0,0,0,0.7)',
+                fontFamily: "'Times New Roman', Times, serif"
+            } as React.CSSProperties}
+            github_repo='https://github.com/jaume2000/CNN_Autoencoder'
+            technologies={['python', 'pytorch']}
+        />,
         <CustomProjectCard key={1} title={dict.stablediffusion_card_title}
             background_style={{
                 backgroundImage: 'url("/public/stablediffusion_img1.png")',

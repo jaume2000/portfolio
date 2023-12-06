@@ -43,6 +43,7 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
     let css_text:string  ="CSS"
     let c_sharp:string = "C#"
     let unity3d:string = "Unity\xA03D"
+    let pytorch:string = "Pytorch"
     let github_repo_text:string = dict.github_link_to_repo_text;
 
     const tech_dict = {
@@ -72,6 +73,9 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
         
         "html": 
         <SingleTecnology title={css_text} alt='CSS logo' src='/public/css_logo.png'/>,
+
+        "pytorch":
+        <SingleTecnology title={pytorch} alt='Pytorch logo' src='/public/pytorch.png' white_background={true}/>,
 
     }
 
