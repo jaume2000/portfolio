@@ -8,9 +8,16 @@ import './style.css'
 import ProjectCardContainer from './ProjectCardContainer'
 import ProjectCard from './ProjectCard'
 import {ProjectExplanationBox, ProjectExplanationContent_properties} from './ProjectExplanationBox'
+
 import DefaultContent from './ProjectExplanationContents/DefaultContent'
-import SortingAlgorithmsContent from './ProjectExplanationContents/SortingAlgorithmsContent'
+import PortfolioContent from './ProjectExplanationContents/PortfolioContent'
+import SparkedContent from './ProjectExplanationContents/SparkedContent'
+import MicroengineersContent from './ProjectExplanationContents/MicroengineersContent'
 import AutoencoderContent from './ProjectExplanationContents/AutoencoderContent'
+import SortingAlgorithmsContent from './ProjectExplanationContents/SortingAlgorithmsContent'
+import StableDiffussionContent from './ProjectExplanationContents/StableDiffussionContent'
+import LogicGateSimulatorContent from './ProjectExplanationContents/LogicGateSimulatorContent'
+import PerceptronContent from './ProjectExplanationContents/PerceptronContent'
 
 
 const BuildingInfo = () => {
@@ -63,10 +70,11 @@ const Works = ({lang}: {lang:string})=>{
                 padding: '1vh 5vh 0px 5vh'} as React.CSSProperties}
             technologies={['nextjs','react','typescript']}
             github_repo='https://github.com/jaume2000/portfolio'
+            explanation_content={<PortfolioContent lang={lang}/>}
         />,
+
         <CustomProjectCard key={1} title={""}
         web_link={'https://sparked.es/'}
-
         background_style={{
             backgroundImage: 'url("/public/sparked_background.png")',
             backgroundColor: 'black',
@@ -76,7 +84,9 @@ const Works = ({lang}: {lang:string})=>{
         } as React.CSSProperties}
         title_style={{}}
         technologies={['nextjs','react','typescript']}
+        explanation_content={<SparkedContent lang={lang}/>}
         />,
+
         <CustomProjectCard key={2} title={""}
             background_style={{
                 backgroundImage: 'url("/public/microengineers.jpeg")',
@@ -88,9 +98,9 @@ const Works = ({lang}: {lang:string})=>{
             title_style={{}}
             //github_repo='https://github.com/jaume2000/CNN_Autoencoder'
             technologies={['python', 'pytorch']}
-            explanation_content={<AutoencoderContent lang={lang}/>}
-            
+            explanation_content={<MicroengineersContent lang={lang}/>}
         />,
+
         <CustomProjectCard key={3} title={dict.autoencoder_card_title}
             background_style={{
                 backgroundImage: 'url("/public/autoencoder.png")',
@@ -105,8 +115,8 @@ const Works = ({lang}: {lang:string})=>{
             github_repo='https://github.com/jaume2000/CNN_Autoencoder'
             technologies={['python', 'pytorch']}
             explanation_content={<AutoencoderContent lang={lang}/>}
-            
         />,
+
         <CustomProjectCard key={4} title={dict.sorting_algorithms_project_card_title}
             web_link={'https://jaume2000.github.io/SortingAlgorithms/'}
 
@@ -126,6 +136,7 @@ const Works = ({lang}: {lang:string})=>{
             technologies={['html','css','typescript']}
             explanation_content={<SortingAlgorithmsContent lang={lang}/>}
         />,
+
         <CustomProjectCard key={5} title={dict.stablediffusion_card_title}
             background_style={{
                 backgroundImage: 'url("/public/stablediffusion_img1.png")',
@@ -136,7 +147,9 @@ const Works = ({lang}: {lang:string})=>{
                 fontFamily: "'DancingScript', cursive"}
             }
             technologies={['python','colab']}
+            explanation_content={<StableDiffussionContent lang={lang}/>}
         />,
+
         <CustomProjectCard key={6} title={dict.visual_perceptron_card_title}
             background_style={{
                 backgroundImage: 'url("/public/neural_network_background.png")',
@@ -149,7 +162,9 @@ const Works = ({lang}: {lang:string})=>{
                 fontFamily: "'Times New Roman', Times, serif"
             } as React.CSSProperties}
             technologies={['c_sharp']}
+            explanation_content={<PerceptronContent lang={lang}/>}
         />,
+
         <CustomProjectCard key={7} title={dict.hardware_project_card_title}
             background_style={{
                 backgroundImage: 'url("/public/logic_gate_background.webp")',
@@ -162,6 +177,7 @@ const Works = ({lang}: {lang:string})=>{
                 color:'gold'
             } as React.CSSProperties}
             technologies={['unity3d','c_sharp']}
+            explanation_content={<LogicGateSimulatorContent lang={lang}/>}
         />,
     ]
 

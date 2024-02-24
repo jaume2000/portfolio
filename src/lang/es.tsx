@@ -16,41 +16,61 @@ let es: translation_structure =
         Works: {
             title: "Mis trabajos",
             portfolio_project_card_title: "Portafolio",
+            portfolio_project_content: {
+                content: <><p>ES Portfolio Project</p></>
+            },
+            sparked_project_card_title: "",
+            sparked_project_content: {
+                content: <><p>ES Sparked Project</p></>
+            },
+            microengineers_project_card_title: "",
+            microengineers_project_content: {
+                content: <><p>ES Microengineers Project</p></>
+            },
             stablediffusion_card_title: "Stable Diffussion Tuneado",
+            stablediffusion_project_content: {
+                content: <><p>ES Stable diffussion Project</p></>
+            },
             visual_perceptron_card_title: "Visualización de un Perceptrón",
+            visual_perceptron_project_content: {
+                content: <><p>ES Perceptron Project</p></>
+            },
             hardware_project_card_title: "Simulador de Puertas Lógicas",
+            hardware_project_content: {
+                content: <><p>ES Logic Gates Project</p></>
+            },
             autoencoder_card_title: "IA: Autoencoder",
             autoencoder_project_content: {
                 explanation_1: <>
-                <h2 style={{textAlign: 'center'}}>Proyecto de IA: Autoencoder</h2>
-                <p>
-                    {`A ver, ¿qué es un autoencoder? Un autoencoder es una red neuronnal tipo feed-forward
+                    <h2 style={{ textAlign: 'center' }}>Proyecto de IA: Autoencoder</h2>
+                    <p>
+                        {`A ver, ¿qué es un autoencoder? Un autoencoder es una red neuronnal tipo feed-forward
                     que se suele usar para generación de datos, como la generación de imágenes. En este caso usé MNIST (un dataset de números manuscritos) e hice una red de convolucional seguido de una FF para el encoder que proyectaba
                     la imagen a un espacio de 2 dimensiones, de tal modo que se podía generar una imagen de un número nuevo a partir de una "coordenada" en un plano y una red FF seguida de de convolucionales transpuestas para el decoder.`}
-                </p>
-                <p>
-                    {`En resumen, hice una red que aprendió a representar imágenes de 28x28 de números en solo 2 "pixeles" que comprimen la información como para decodificarla a una nueva imagen 28x28, por eso,
+                    </p>
+                    <p>
+                        {`En resumen, hice una red que aprendió a representar imágenes de 28x28 de números en solo 2 "pixeles" que comprimen la información como para decodificarla a una nueva imagen 28x28, por eso,
                     es un modelo generativo. Aquí abajo podéis ver en qué parte del plano se codifican todas las imágenes del dataset, y con este plano, podemos decodificarlas y generar nuevas imágenes.`}
-                </p>
-                </>
-            ,
-            explanation_2: <>
-                <h2 style={{textAlign: 'center'}}>Animación</h2>
-                <p>
-                    {`La siguiente animación se ha hecho seleccionando diferentes puntos del plano, unos seguidos del otro, haciendo un recorrido y generando los números. El resultado al ponerlas juntas
+                    </p>
+                </>,
+
+                explanation_2: <>
+                    <h2 style={{ textAlign: 'center' }}>Animación</h2>
+                    <p>
+                        {`La siguiente animación se ha hecho seleccionando diferentes puntos del plano, unos seguidos del otro, haciendo un recorrido y generando los números. El resultado al ponerlas juntas
                     es esta curiosa animación donde parece que los números se pliegan y deforman para formar otros. A esto se le llama explorar el espacio latente. `}
-                </p>
-            </>
+                    </p>
+                </>
             },
             sorting_algorithms_project_card_title: "Algoritmos de ordenado",
             sorting_algorithms_project_content: {
                 content: <>
-                    <h2 style={{textAlign: 'center'}}>Proyecto de algoritmos de ordenado</h2>
+                    <h2 style={{ textAlign: 'center' }}>Proyecto de algoritmos de ordenado</h2>
                     <p>
                         Puedes encontrar el proyecto en la {<a href="https://github.com/jaume2000/SortingAlgorithms/" target="_blank">repo de github</a>} o
                         si lo prefieres puedes encontrar el código {<a href="https://jaume2000.github.io/SortingAlgorithms/" target="_blank"> aquí</a>}.
                     </p>
-                    <h2 style={{textAlign: 'center'}}>Motivación</h2>
+                    <h2 style={{ textAlign: 'center' }}>Motivación</h2>
                     <p>
                         {`Bueno, cuando estaba haciendo mi grado en ingeniería informática, pensé que sería interesante hacer una web visual de los algoritmos de ordenado,
                         así que implementé los 5 más famosos en una tarde por diversión.`}

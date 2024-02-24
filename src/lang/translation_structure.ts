@@ -15,9 +15,29 @@ type translation_structure = {
     Works:{
         title: string,
         portfolio_project_card_title: string,
+        portfolio_project_content: {
+            content: JSX.Element
+        }
+        sparked_project_card_title: string,
+        sparked_project_content: {
+            content: JSX.Element
+        }
+        microengineers_project_card_title: string,
+        microengineers_project_content: {
+            content: JSX.Element
+        }
         stablediffusion_card_title: string,
+        stablediffusion_project_content: {
+            content: JSX.Element
+        }
         visual_perceptron_card_title: string,
+        visual_perceptron_project_content: {
+            content: JSX.Element
+        }
         hardware_project_card_title: string,
+        hardware_project_content: {
+            content: JSX.Element
+        }
         autoencoder_card_title: string,
         autoencoder_project_content: {
             explanation_1: JSX.Element,

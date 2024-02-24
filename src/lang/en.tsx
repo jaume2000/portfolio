@@ -17,45 +17,65 @@ let en: translation_structure = {
     Works: {
         title: "Some of my projects",
         portfolio_project_card_title: "Portfolio Project",
+        portfolio_project_content: {
+            content: <><p>EN Portfolio Project</p></>
+        },
+        sparked_project_card_title: "",
+        sparked_project_content: {
+            content: <><p>EN Sparked Project</p></>
+        },
+        microengineers_project_card_title: "",
+        microengineers_project_content: {
+            content: <><p>EN Microengineers Project</p></>
+        },
         stablediffusion_card_title: "Fine-Tunned Stable Diffussion",
+        stablediffusion_project_content: {
+            content: <><p>EN Stable Diffusion Project</p></>
+        },
         visual_perceptron_card_title: "Perceptron Visualization",
+        visual_perceptron_project_content: {
+            content: <><p>EN Perceptron Project</p></>
+        },
         hardware_project_card_title: "Logic Gate Simulator",
+        hardware_project_content: {
+            content: <><p>EN Logic Gate Simulator Project</p></>
+        },
         sorting_algorithms_project_card_title: "Sorting algorithms",
         sorting_algorithms_project_content: {
             content: <>
-            <h2 style={{textAlign: 'center'}}>Sorting algorithms project</h2>
-            <p>
-                You can find this project in my {<a href="https://github.com/jaume2000/SortingAlgorithms/" target="_blank">github repo</a>} or
-                if you want, you can {<a href="https://jaume2000.github.io/SortingAlgorithms/" target="_blank">open it</a>} in a new tab.
-            </p>
-            <h2 style={{textAlign: 'center'}}>Motivation</h2>
-            <p>
-                {"Well, when I was doing my computer science degree I tought it would be fun to make a satisfactory visual sorting algorithm, so I programmed the 5 more famous in one day for fun."}
-            </p>
-            <p>{"Why you don't try it down below?"}</p>
-        </>
+                <h2 style={{ textAlign: 'center' }}>Sorting algorithms project</h2>
+                <p>
+                    You can find this project in my {<a href="https://github.com/jaume2000/SortingAlgorithms/" target="_blank">github repo</a>} or
+                    if you want, you can {<a href="https://jaume2000.github.io/SortingAlgorithms/" target="_blank">open it</a>} in a new tab.
+                </p>
+                <h2 style={{ textAlign: 'center' }}>Motivation</h2>
+                <p>
+                    {"Well, when I was doing my computer science degree I tought it would be fun to make a satisfactory visual sorting algorithm, so I programmed the 5 more famous in one day for fun."}
+                </p>
+                <p>{"Why you don't try it down below?"}</p>
+            </>
         },
         autoencoder_card_title: "AI: Autoencoder",
         autoencoder_project_content: {
             explanation_1: <>
-            <h2 style={{textAlign: 'center'}}>Proyecto de IA: Autoencoder</h2>
-            <p>
-                {`What is an autoencoder? An autoencoder is a feed-forward neural network that is often used for data generation, such as image generation.
+                <h2 style={{ textAlign: 'center' }}>Proyecto de IA: Autoencoder</h2>
+                <p>
+                    {`What is an autoencoder? An autoencoder is a feed-forward neural network that is often used for data generation, such as image generation.
                 that is often used for data generation, such as image generation. In this case I used MNIST (a dataset of handwritten numbers) and made a convolutional network followed by a FF for the encoder which projected
                 the image to a 2-dimensional space, so that an image of a new number could be generated from a "coordinate" in a plane and a FF network followed by transposed convolutionals for the decoder.`}</p>
-            <p>
-                {`In short, I made a network that learned to represent 28x28 images of numbers in only 2 "pixels" that compress the information to decode it to a new 28x28 image, that's why,
+                <p>
+                    {`In short, I made a network that learned to represent 28x28 images of numbers in only 2 "pixels" that compress the information to decode it to a new 28x28 image, that's why,
                 is a generative model. Here below you can see in which part of the blueprint all the images of the dataset are encoded, and with this blueprint, we can decode them and generate new images.`}
-            </p>
-            </>
-        ,
-        explanation_2: <>
-            <h2 style={{textAlign: 'center'}}>Animación</h2>
-            <p>
-                {`The following animation has been made by selecting different points of the plane, one after the other, making a path and generating the numbers. The result of putting them together
+                </p>
+            </>,
+
+            explanation_2: <>
+                <h2 style={{ textAlign: 'center' }}>Animación</h2>
+                <p>
+                    {`The following animation has been made by selecting different points of the plane, one after the other, making a path and generating the numbers. The result of putting them together
                 is this curious animation where it seems that the numbers fold and deform to form others. This is called exploring latent space. `}
-            </p>
-        </>
+                </p>
+            </>
         },
         link_to_web: "Web\xA0link",
         github_link_to_repo_text: "Link\xA0to\xA0github",
