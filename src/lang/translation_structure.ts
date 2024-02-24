@@ -19,7 +19,14 @@ type translation_structure = {
         visual_perceptron_card_title: string,
         hardware_project_card_title: string,
         autoencoder_card_title: string,
+        autoencoder_project_content: {
+            explanation_1: JSX.Element,
+            explanation_2: JSX.Element,
+        }
         sorting_algorithms_project_card_title:string,
+        sorting_algorithms_project_content: {
+            content: JSX.Element
+        }
         link_to_web:string,
         github_link_to_repo_text: string,
     },

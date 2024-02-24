@@ -5,7 +5,7 @@ import React from 'react';
 
 
 export interface ProjectExplanationContent_properties {
-    events:{onclose:()=>void,onopen:()=>void}
+    events:{onclose?:()=>void, onopen?:()=>void}
     otherprops?:any
 }
 interface ProjectExplanationBox_properties {
@@ -22,10 +22,10 @@ const ProjectExplanationBox:React.FC<ProjectExplanationBox_properties> = ({conte
     useEffect(()=>{
         if(!first_time_load){
             if(hidden){
-                content.props.events.onclose? content.props.events.onclose() : undefined;
+                content.props.events?.onclose ? content.props.events.onclose() : undefined;
             }
             else {
-                content.props.events.onopen? content.props.events.onopen() : undefined;
+                content.props.events?.onopen ? content.props.events.onopen() : undefined;
 
 
             }

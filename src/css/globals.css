@@ -26,7 +26,6 @@ html,body {
 h1 {
   text-align: center;
   font-size: min(10vw, 10vh);
-  color: black;
   padding-top: 70px;
   margin: 0;
 }
@@ -109,4 +108,8 @@ body {
 
 .white_background {
   background-color: white;
+}
+
+.hide_scrollbar::-webkit-scrollbar {
+  display: none;
 }
