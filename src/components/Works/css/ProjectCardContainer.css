@@ -26,9 +26,31 @@
     }
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 2000px) and (max-width: 3000px) {
     .works_grid{
         grid-template-columns: repeat(3, 1fr);
+    }
+    .grid_element h2 {
+        color: white;
+        font-size: 3vw;
+
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    .works_grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .grid_element h2 {
+        color: white;
+        font-size: 3vw;
+
+    }
+}
+
+@media screen and (min-width: 4000px) {
+    .works_grid{
+        grid-template-columns: repeat(5, 1fr);
     }
     .grid_element h2 {
         color: white;
