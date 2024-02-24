@@ -30,9 +30,9 @@ let en: translation_structure = {
             </p>
             <h2 style={{textAlign: 'center'}}>Motivation</h2>
             <p>
-                Well, when I was doing my computer science degree I tought it would be fun to make a satisfactory visual sorting algorithm, so I programmed the 5 more famous in one day for fun.
+                {"Well, when I was doing my computer science degree I tought it would be fun to make a satisfactory visual sorting algorithm, so I programmed the 5 more famous in one day for fun."}
             </p>
-            <p>Why you don't try it down below?</p>
+            <p>{"Why you don't try it down below?"}</p>
         </>
         },
         autoencoder_card_title: "AI: Autoencoder",
@@ -40,19 +40,20 @@ let en: translation_structure = {
             explanation_1: <>
             <h2 style={{textAlign: 'center'}}>Proyecto de IA: Autoencoder</h2>
             <p>
-                What is an autoencoder? An autoencoder is a feed-forward neural network that is often used for data generation, such as image generation.
+                {`What is an autoencoder? An autoencoder is a feed-forward neural network that is often used for data generation, such as image generation.
                 that is often used for data generation, such as image generation. In this case I used MNIST (a dataset of handwritten numbers) and made a convolutional network followed by a FF for the encoder which projected
-                the image to a 2-dimensional space, so that an image of a new number could be generated from a "coordinate" in a plane and a FF network followed by transposed convolutionals for the decoder.</p>
+                the image to a 2-dimensional space, so that an image of a new number could be generated from a "coordinate" in a plane and a FF network followed by transposed convolutionals for the decoder.`}</p>
             <p>
-                In short, I made a network that learned to represent 28x28 images of numbers in only 2 "pixels" that compress the information to decode it to a new 28x28 image, that's why,
-                is a generative model. Here below you can see in which part of the blueprint all the images of the dataset are encoded, and with this blueprint, we can decode them and generate new images.</p>
+                {`In short, I made a network that learned to represent 28x28 images of numbers in only 2 "pixels" that compress the information to decode it to a new 28x28 image, that's why,
+                is a generative model. Here below you can see in which part of the blueprint all the images of the dataset are encoded, and with this blueprint, we can decode them and generate new images.`}
+            </p>
             </>
         ,
         explanation_2: <>
             <h2 style={{textAlign: 'center'}}>Animación</h2>
             <p>
-                The following animation has been made by selecting different points of the plane, one after the other, making a path and generating the numbers. The result of putting them together
-                is this curious animation where it seems that the numbers fold and deform to form others. This is called exploring latent space. 
+                {`The following animation has been made by selecting different points of the plane, one after the other, making a path and generating the numbers. The result of putting them together
+                is this curious animation where it seems that the numbers fold and deform to form others. This is called exploring latent space. `}
             </p>
         </>
         },
