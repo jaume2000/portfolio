@@ -19,7 +19,7 @@ let en: translation_structure = {
         portfolio_project_card_title: "Portfolio Project",
         portfolio_project_content: {
             content: <>
-            <h2 style={{ textAlign: 'center' }}>Proyecto de este portafolio</h2>
+            <h2 style={{ textAlign: 'center' }}>Portfolio Project</h2>
             <p>{`A picture is worth a thousand words. And in this case, it's better if you take a look at the portfolio yourself. But if you are interested in motivation or technical details, stay.`}</p>
             <h2 style={{ textAlign: 'center' }}>{'Motivation'}</h2>
             <p>{`After almost finishing my degree, I had so many projects done and so much to share that I thought it would be a good idea to create my own website and share everything I have done and learnt.
