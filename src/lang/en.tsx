@@ -38,7 +38,61 @@ let en: translation_structure = {
         },
         sparked_project_card_title: "",
         sparked_project_content: {
-            content: <><p>EN Sparked Project</p></>
+            intro: <>
+                <h2>SparkED project</h2>
+                <p style={{ textAlign: 'center' }}>{`Wow... This is the biggest project in my portfolio I would say. Where do we start...?`}</p>
+            </>,
+            whatIsSparked_title: 'What is SparkED?',
+            whatIsSparked: <>
+                <p>{`SparkED is an initiative that promotes entrepreneurship among students from different careers through the creation of an environment of proactive profiles interested in developing their own projects and transforming their ideas into actions and results.`}</p>
+                <p>{`At SparkED, members have the opportunity to learn how to differentiate themselves, validate their ideas and establish quality connections through events and activities focused on entrepreneurship, personal growth and soft skills.`}</p>
+                <p>{`Main activities include: mentoring talks, technical and non-code skills workshops, events related to communication and teamwork, and weekly meetings for project coordination and networking among members.`}</p>
+            </>,
+            myRole_title: 'What is my role in SparkED?',
+            myRole: <>
+                <p>{`I am currently a member of the `}<span className="bold">{`Core Team`}</span>{`, This means that I am part of the management of the community. So I help to organise the events,
+                organise the networkings, invite and select new members, influence the direction the initiative takes or manage its budget.`}</p>
+                <p>{`My main role in the community is to be in charge of SparkED's communication and web development and maintenance departments. In the
+                communication area, I am in charge of managing our CRM (Customer Relationship Management), where I contact business people, entrepreneurs, universities and institutions
+                and institutions for partnerships. For example, at the first community event I was in charge of booking the auditorium. I am also in charge of the collaboration with the entrepreneurship area of my university, the UPV.
+                We have come to an agreement that we will hold a monthly event together with their budget allocation. Regarding the technological part, I am the main developer of the community website, which is still under construction,
+                but we already have the domain `} <a href="sparked.es">sparked.es</a>.
+                </p>
+            </>,
+            myRoadmap_title: 'My roadmap',
+            myRoadmap1: <>
+                <p>{`I met Pablo Martínez (Pau for friends) at a talk by Adrià Solà, an influencer with more than 3M followers on personal development, that same day,
+                I was about to leave the door of the Paraninfo auditorium when a thought crossed my mind:
+                'Jaume, it's 18:00 on a Friday in summer, and I'm at an event on how to be a 1% student rather than on the beach on holiday, I'm sure that here,
+                in this room, there are extremely valuable people, I'm going to stay'. So I did, and at the end, when there were a dozen kids left, and we said goodbye to Adrià, I saw a small group of 5 kids chatting, the last ones who were still there.
+                were still there. I just joined them and we started chatting, we liked each other very much and exchanged numbers. And I had no idea that this would be one of the most shocking decisions of my life.
+                `}</p>
+            </>,
+            myRoadmap2: <>
+                <p>{`Since then, everything has been growing, I met amazing people, we attended an incredible amount of events, such as VDS, the biggest entrepreneurship event in Valencia, events of Ideas UPV (the entrepreneurship area of the university), like Day Emprende or Week Emprende, etc.
+                like Day Emprende or Week Emprende, etc. So eventually we decided to do our own event, Spark your Speech. This event, in the end, turned out to be the biggest event in the history of UPV entrepreneurship made by and for students,
+                with more than 100 attendees. Because I had participated in IdeasUPV years ago in several projects, I already had contacts with whom I could book a large auditorium and obtain funding, which made the process much easier. Finally, I would like to mention that
+                I had the opportunity to participate as a speaker.
+                `}</p>
+            </>,
+            myRoadmap3: <>
+            <h2>{`What's for the future?`}</h2>
+                <p>{`SparkED's future is no lower than the moon itself, it is having unprecedented growth. As of today, we are organising the mother of all events. In May we will be hosting "SparkED: The grat show",
+                an event where we expect to have 250 to 300 attendees, 5 talks, 8 workshops and 3 networkings with entrepreneurs, influencers and companies. All in the auditorium where it all started: the Paraninfo + the entire school of computer science, where I did my bachelor's and master's degrees.`}</p>
+                <p>{`Other events that we have already discussed and organised to take place during these months are: Notion workshop for project management, tax workshop, visits to Zeleros (a company that develops hyperloop transport) and visits to Lanzadera, Spain's largest startup incubator.
+                    hyperloop transport) and visits to Lanzadera, the largest startup incubator in Spain.`}</p>
+            </>,
+            acknowledgements_title: 'Aknowledgements',
+            acknowledgements: <>
+                <p>{`Throughout this article I have spoken only about myself, as that is what this website is dedicated to, to record my personal achievements. However, this project was not started by me, nor am I the only person who helps to organise it.
+                who helps to organise it, so it would be very unfair not to recognise the titanic effort that the other members have made.`}</p>
+                <p>{`Above all, I would like to thank `}<a href="https://www.linkedin.com/in/pablo-martinez-ruiz/">Pau Martínez</a> {`for creating this fabulous community, always full of energy and the vision that currently drives the community.`}</p>
+                <p>{`I also thank the other members of the Core Team for administering and creating activities for the community: Sergio C., Sergio Marí, Manon Lagrange, Antonio Gabriel, Yoana Ilianova and Claudia Herrero.`}</p>
+                <p>{`Thank you for being the shining stars of enthusiasm, creativity and potential that you are. When I am with you, I know I am in the right place, because I admire something in all of you.`}</p>
+                <p>{`I would also like to thank all SparkED members of the community, without them, this project would be impossible. Above all, to the most active members who usually come to the networkings. Thank you <3`}</p>
+
+            </>,
+            gallery_title: 'Galería'
         },
         microengineers_project_card_title: "",
         microengineers_project_content: {

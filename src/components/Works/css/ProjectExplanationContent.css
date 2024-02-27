@@ -82,6 +82,14 @@ html:has(div.shown_explanation), body:has(div.shown_explanation){
     max-height: 100%;
 }
 
+.project_explanation_box a {
+    color: #c1f6ff;
+}
+
+.project_explanation_box a:hover {
+    color: #587175;
+}
+
 .project_explanation_box.shown_explanation {
     animation: enter_dialog_box 1s ease-in-out forwards;
 }
