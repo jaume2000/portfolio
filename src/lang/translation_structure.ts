@@ -20,7 +20,20 @@ type translation_structure = {
         }
         sparked_project_card_title: string,
         sparked_project_content: {
-            content: JSX.Element
+            intro: JSX.Element,
+            whatIsSparked_title: string,
+            whatIsSparked: JSX.Element,
+            myRole_title: string,
+            myRole: JSX.Element,
+            myRoadmap_title: string,
+            myRoadmap1: JSX.Element,
+            myRoadmap2: JSX.Element,
+            myRoadmap3: JSX.Element,
+            acknowledgements_title: string,
+            acknowledgements: JSX.Element,
+            gallery_title: string,
+
+
         }
         microengineers_project_card_title: string,
         microengineers_project_content: {

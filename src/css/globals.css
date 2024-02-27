@@ -82,6 +82,10 @@ body {
   height: 100%;
 }
 
+.full_width {
+  width: 100%;
+}
+
 .centered_text {
   text-align: center;
 }
@@ -104,6 +108,10 @@ body {
 
 .green {
   background-color: green;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .white_background {

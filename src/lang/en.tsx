@@ -18,7 +18,23 @@ let en: translation_structure = {
         title: "Some of my projects",
         portfolio_project_card_title: "Portfolio Project",
         portfolio_project_content: {
-            content: <><p>EN Portfolio Project</p></>
+            content: <>
+            <h2 style={{ textAlign: 'center' }}>Proyecto de este portafolio</h2>
+            <p>{`A picture is worth a thousand words. And in this case, it's better if you take a look at the portfolio yourself. But if you are interested in motivation or technical details, stay.`}</p>
+            <h2 style={{ textAlign: 'center' }}>{'Motivation'}</h2>
+            <p>{`After almost finishing my degree, I had so many projects done and so much to share that I thought it would be a good idea to create my own website and share everything I have done and learnt.
+                Besides, this is a perfect excuse to practice and learn!`}
+            </p>
+            <h2 style={{ textAlign: 'center' }}>{`Current functionalitites`}</h2>
+            <p>{`Currently you can only change your language, see a brief description of my profile (About me), see the description of my projects (Jobs) or contact me (Contact me). But I have a little something planned for the future.... Read on!`}</p>
+
+            <h2 style={{ textAlign: 'center' }}>{`Technical details for nerds like me`}</h2>
+            <p>{`The website is made with Next.js, plan CSS (without bootstrap or tailwind, to practice the basis, there is no other reason) and Typescript, a full-stack React framework using Express in the back-end. But you may have noticed that it has no back-end! Why use Next.js then?
+                It turns out that in the future I'd like to be able to add features like people leaving comments or opinions about my work, make a meeting booking system, maybe even add a
+                feed of my LinkedIn posts or who knows! With my imagination it's hard to predict how this is going to scale, so why not prepare for the big one today?`}
+            </p>
+
+        </>
         },
         sparked_project_card_title: "",
         sparked_project_content: {
@@ -58,7 +74,7 @@ let en: translation_structure = {
         autoencoder_card_title: "AI: Autoencoder",
         autoencoder_project_content: {
             explanation_1: <>
-                <h2 style={{ textAlign: 'center' }}>Proyecto de IA: Autoencoder</h2>
+                <h2 style={{ textAlign: 'center' }}>AI Project: Autoencoder</h2>
                 <p>
                     {`What is an autoencoder? An autoencoder is a feed-forward neural network that is often used for data generation, such as image generation.
                 that is often used for data generation, such as image generation. In this case I used MNIST (a dataset of handwritten numbers) and made a convolutional network followed by a FF for the encoder which projected
@@ -70,7 +86,7 @@ let en: translation_structure = {
             </>,
 
             explanation_2: <>
-                <h2 style={{ textAlign: 'center' }}>Animación</h2>
+                <h2 style={{ textAlign: 'center' }}>Animation</h2>
                 <p>
                     {`The following animation has been made by selecting different points of the plane, one after the other, making a path and generating the numbers. The result of putting them together
                 is this curious animation where it seems that the numbers fold and deform to form others. This is called exploring latent space. `}

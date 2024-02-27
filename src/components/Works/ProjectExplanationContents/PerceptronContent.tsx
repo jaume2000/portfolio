@@ -4,7 +4,9 @@ import React from 'react'
 function PerceptronContent({lang}:{lang:string}) {
   let dict = getLanguageAllDictionary(lang).Works
   return (
-    <div>{dict.visual_perceptron_project_content.content}</div>
+    <div className="hide_scrollbar" style={{ width: '100%', padding: '50px', color: 'white', overflowY: 'auto'}}>
+      {dict.visual_perceptron_project_content.content}
+    </div>
   )
 }
 
