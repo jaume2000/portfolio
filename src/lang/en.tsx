@@ -96,7 +96,27 @@ let en: translation_structure = {
         },
         microengineers_project_card_title: "",
         microengineers_project_content: {
-            content: <><p>EN Microengineers Project</p></>
+            content1: <>
+            <h2>{`Microengineers UPV`}</h2>
+            <p>{`
+            Microengineers is a group of Spontaneous Generation (group that manages the university clubs) of the UPV.
+            The group is dedicated to doing biotechnology projects. Currently there are two main ones: a biosensors project, and the one in which
+            I participate in: Mycrospace.
+            `}
+            </p>
+            </>,
+            myRole_title: `My role in Microengineers: Mycrospace`,
+            content2: <>
+            <p>{`Mycrospace is a project that mainly consists of developing an app for automatic colony counting of petri dishes.
+            petri dishes. Currently in our university laboratories this counting is still done by hand and all existing apps are of very poor quality.
+            are of very poor quality. So in collaboration with the best researchers of the biotechnology faculty we are going to create this app,
+            we are going to create this app.`}</p>
+            </>,
+            content3: <>
+            <p>{`I'm involved in the heart of the app: creating the tool to tag the dataset and create the AI model
+            model that does the task. For the design part, UX, UIn frontend and other DB tasks there are already other people who do it.
+            The TFM of my master's degree in Artificial Intelligence is based on this project.`}</p>
+            </>
         },
         stablediffusion_card_title: "Fine-Tunned Stable Diffussion",
         stablediffusion_project_content: {

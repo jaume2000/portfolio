@@ -98,7 +98,27 @@ let es: translation_structure =
             },
             microengineers_project_card_title: "",
             microengineers_project_content: {
-                content: <><p>ES Microengineers Project</p></>
+                content1: <>
+                <h2>{`Microengineers UPV`}</h2>
+                <p>{`
+                Microengineers es un grupo de Generación Espontánea (grupo que gestiona los clubs universitarios) de la UPV.
+                El grupo está dedicado a hacer proyectos de biotecnología. Actualmente hay dos principales: un proyecto de biosensores, y en el que
+                yo participo: Mycrospace.
+                `}
+                </p>
+                </>,
+                myRole_title: `Mi papel en Microengineers: Mycrospace`,
+                content2: <>
+                <p>{`Mycrospace es un proyecto que consiste, principalmente, en desarrollar una app de conteo de colonias automático de las
+                placas petri. Actualmente en los laboratorios de neustra universidad este conteo se sigue haciendo a mano y todas las apps
+                existentes tinen una calidad muy mala. Así que con colaboración con los mejores investigadores de la facultad de biotecnología,
+                vamos a crear esta app.`}</p>
+                </>,
+                content3: <>
+                <p>{`Yo me involucro en el corazón de la aplicación: crear la herramienta para taggear el dataset y crear el modelo de IA
+                que haga la tarea. Para la parte de diseño, UX, UIn frontend y otras tareas de BBDD ya hay otras personas que la hacen.
+                El TFM de mi master en Inteligencia Artificial está hecho en base a este proyecto.`}</p>
+                </>
             },
             stablediffusion_card_title: "Stable Diffussion Tuneado",
             stablediffusion_project_content: {

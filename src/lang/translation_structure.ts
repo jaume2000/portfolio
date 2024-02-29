@@ -37,7 +37,10 @@ type translation_structure = {
         }
         microengineers_project_card_title: string,
         microengineers_project_content: {
-            content: JSX.Element
+            content1: JSX.Element,
+            myRole_title: string,
+            content2: JSX.Element,
+            content3: JSX.Element,
         }
         stablediffusion_card_title: string,
         stablediffusion_project_content: {
