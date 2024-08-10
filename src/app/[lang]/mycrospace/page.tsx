@@ -22,6 +22,7 @@ const FetchingHello: React.FC = () => {
         const data = await response.json();
         setMessage(data);
       } catch (error:any) {
+        console.log(error)
         setError(error.message);
       } finally {
         setLoading(false);
