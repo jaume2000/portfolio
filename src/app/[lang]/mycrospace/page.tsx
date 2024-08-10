@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import '@/css/leaderboard.css'
 import os from 'os';
+import axios from 'axios';
 
 type StringNumberPair = [string, number];
 

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
-    const url = process.env.GOOGLE_CLOUD_TAGGING_RANKING || '';
+    const url = process.env.GOOGLE_CLOUD_TAGGING_RANKING || 'https://europe-west9-mycrospace.cloudfunctions.net/check_tagging_ranking';
     
     // Realizar la solicitud con axios
     const response = await axios.get(url);
