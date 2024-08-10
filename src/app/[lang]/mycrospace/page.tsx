@@ -16,7 +16,7 @@ const FetchingHello: React.FC = () => {
   useEffect(() => {
     const fetchMessage = async () => {
       try {
-        const response = await fetch("/test/"+process.env.LOCAL_HOST+'/api/mycrospacerank');
+        const response = await fetch('api/mycrospacerank');
         if (!response.ok) {
           throw new Error(`Error: ${response.status}`);
         }
