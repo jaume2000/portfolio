@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import '@/css/leaderboard.css'
+import os from 'os';
 
 type StringNumberPair = [string, number];
 
@@ -15,7 +16,7 @@ const FetchingHello: React.FC = () => {
   useEffect(() => {
     const fetchMessage = async () => {
       try {
-        const response = await fetch('/api/mycrospacerank');
+        const response = await fetch(process.env.LOCAL_HOST+'/api/mycrospacerank');
         if (!response.ok) {
           throw new Error(`Error: ${response.status}`);
         }
