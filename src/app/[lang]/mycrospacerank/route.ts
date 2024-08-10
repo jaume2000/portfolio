@@ -19,6 +19,6 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     console.error('Error fetching data:', error);
 
     // Si hay un error, retornamos un mensaje de error
-    return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
+    return NextResponse.json({ error}, { status: 500 });
   }
 }
