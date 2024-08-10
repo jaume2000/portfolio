@@ -1,7 +1,7 @@
 "use client"
 
 import '@/lang/lang'
-import { Dispatch, SetStateAction, useState } from 'react'
+import React, { Dispatch, SetStateAction, useState } from 'react'
 import {getLanguageAllDictionary} from '@/lang/lang'
 import '@/css/globals.css'
 import './style.css'
@@ -35,7 +35,7 @@ const Works = ({lang}: {lang:string})=>{
 
     let dict = getLanguageAllDictionary(lang).Works
 
-    const CustomProjectCard = ({title, background_style, title_style,technologies, github_repo, explanation_content,web_link}:{key:number, title:string, background_style:React.CSSProperties, title_style:React.CSSProperties,technologies:string[], github_repo?:string, explanation_content?:JSX.Element, web_link?:string}) => {
+    const CustomProjectCard = ({title, background_style, title_style,technologies, github_repo, explanation_content,web_link}:{title:string, background_style:React.CSSProperties, title_style:React.CSSProperties,technologies:string[], github_repo?:string, explanation_content?:JSX.Element, web_link?:string}) => {
 
         return <ProjectCard
             title={title}
@@ -59,7 +59,7 @@ const Works = ({lang}: {lang:string})=>{
 
 
     const project_cards = [
-        <CustomProjectCard key={0} title={dict.portfolio_project_card_title}
+        <CustomProjectCard title={dict.portfolio_project_card_title}
             background_style={{ backgroundImage: 'linear-gradient(75deg, var(--main_color1) 45%, white 45.1%, white 54.9%, var(--main_color2) 55%)'} as React.CSSProperties}
             title_style={{
                 userSelect: 'none',
@@ -73,7 +73,7 @@ const Works = ({lang}: {lang:string})=>{
             explanation_content={<PortfolioContent lang={lang}/>}
         />,
 
-        <CustomProjectCard key={1} title={""}
+        <CustomProjectCard title={""}
         web_link={'https://sparked.es/'}
         background_style={{
             backgroundImage: 'url("/public/sparked_background.png")',
@@ -87,7 +87,7 @@ const Works = ({lang}: {lang:string})=>{
         explanation_content={<SparkedContent lang={lang}/>}
         />,
 
-        <CustomProjectCard key={2} title={""}
+        <CustomProjectCard title={""}
             background_style={{
                 backgroundImage: 'url("/public/microengineers.jpeg")',
                 backgroundSize: 'contain',
@@ -101,7 +101,20 @@ const Works = ({lang}: {lang:string})=>{
             explanation_content={<MicroengineersContent lang={lang}/>}
         />,
 
-        <CustomProjectCard key={3} title={dict.autoencoder_card_title}
+        <CustomProjectCard title={""}
+            background_style={{
+                backgroundImage: 'url("/public/microengineers.jpeg")',
+                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundColor: 'white',
+            } as React.CSSProperties}
+            title_style={{}}
+            technologies={['python', 'pytorch']}
+            explanation_content={<MicroengineersContent lang={lang}/>}
+        />,
+
+        <CustomProjectCard title={dict.autoencoder_card_title}
             background_style={{
                 backgroundImage: 'url("/public/autoencoder.png")',
                 backgroundSize: 'cover',
@@ -117,7 +130,7 @@ const Works = ({lang}: {lang:string})=>{
             explanation_content={<AutoencoderContent lang={lang}/>}
         />,
 
-        <CustomProjectCard key={4} title={dict.sorting_algorithms_project_card_title}
+        <CustomProjectCard title={dict.sorting_algorithms_project_card_title}
             web_link={'https://jaume2000.github.io/SortingAlgorithms/'}
 
             background_style={{
@@ -137,7 +150,7 @@ const Works = ({lang}: {lang:string})=>{
             explanation_content={<SortingAlgorithmsContent lang={lang}/>}
         />,
 
-        <CustomProjectCard key={5} title={dict.stablediffusion_card_title}
+        <CustomProjectCard title={dict.stablediffusion_card_title}
             background_style={{
                 backgroundImage: 'url("/public/stablediffusion_img1.png")',
                 backgroundPosition: 'right 0 top 00px',
@@ -150,7 +163,7 @@ const Works = ({lang}: {lang:string})=>{
             explanation_content={<StableDiffussionContent lang={lang}/>}
         />,
 
-        <CustomProjectCard key={6} title={dict.visual_perceptron_card_title}
+        <CustomProjectCard title={dict.visual_perceptron_card_title}
             background_style={{
                 backgroundImage: 'url("/public/neural_network_background.png")',
                 backgroundSize: 'cover',
@@ -165,7 +178,7 @@ const Works = ({lang}: {lang:string})=>{
             explanation_content={<PerceptronContent lang={lang}/>}
         />,
 
-        <CustomProjectCard key={7} title={dict.hardware_project_card_title}
+        <CustomProjectCard title={dict.hardware_project_card_title}
             background_style={{
                 backgroundImage: 'url("/public/logic_gate_background.webp")',
                 backgroundSize: 'cover',
@@ -180,6 +193,10 @@ const Works = ({lang}: {lang:string})=>{
             explanation_content={<LogicGateSimulatorContent lang={lang}/>}
         />,
     ]
+
+    project_cards.map((card, index) => {
+        return React.cloneElement(card, {key: index})
+    })
 
     return (
         <div className='works_container fullpage'>

@@ -35,6 +35,7 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
     let dict = getLanguageAllDictionary(lang).Works
 
     let nextjs_text:string = "NextJS"
+    let 
     let react_text:string = "React"
     let typescript_text:string = "TypeScript"
     let python_text:string = "Python"

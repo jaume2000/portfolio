@@ -1,0 +1,46 @@
+
+.leaderboard_container {
+    display: flex;
+    flex-direction: column; /* Apilar los divs verticalmente */
+    align-items: center; /* Centrar los divs horizontalmente */
+    gap: 10px; /* Espacio entre los divs */
+}
+
+.leaderboard_container h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+.tagging_rank {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    width: 400px;
+}
+
+.default_rank {
+  background-color: #f0f0f0;
+}
+
+.gold_rank {
+  background-color: #FFD700;
+}
+
+.silver_rank {
+  background-color: #C0C0C0;
+}
+
+.bronze_rank {
+  background-color: #CD7F32;
+}
+
+.tagging_rank_header {
+    display: flex;
+    padding: 0 !important;
+    justify-content: space-between;    
+    width: 400px;
+    font-weight: bold;
+    background-color: transparent;
+}
