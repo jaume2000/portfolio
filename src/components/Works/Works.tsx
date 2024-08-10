@@ -38,6 +38,7 @@ const Works = ({lang}: {lang:string})=>{
     const CustomProjectCard = ({title, background_style, title_style,technologies, github_repo, explanation_content,web_link}:{title:string, background_style:React.CSSProperties, title_style:React.CSSProperties,technologies:string[], github_repo?:string, explanation_content?:JSX.Element, web_link?:string}) => {
 
         return <ProjectCard
+            key={"project_card_"+title}
             title={title}
             title_style={title_style}
             background_style={background_style}
