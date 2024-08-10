@@ -38,7 +38,6 @@ const Works = ({lang}: {lang:string})=>{
     const CustomProjectCard = ({title, background_style, title_style,technologies, github_repo, explanation_content,web_link}:{title:string, background_style:React.CSSProperties, title_style:React.CSSProperties,technologies:string[], github_repo?:string, explanation_content?:JSX.Element, web_link?:string}) => {
 
         return <ProjectCard
-            key={"project_card_"+title}
             title={title}
             title_style={title_style}
             background_style={background_style}
@@ -61,6 +60,7 @@ const Works = ({lang}: {lang:string})=>{
 
     const project_cards = [
         <CustomProjectCard title={dict.portfolio_project_card_title}
+            key={"project_card_"+dict.portfolio_project_card_title}
             background_style={{ backgroundImage: 'linear-gradient(75deg, var(--main_color1) 45%, white 45.1%, white 54.9%, var(--main_color2) 55%)'} as React.CSSProperties}
             title_style={{
                 userSelect: 'none',
@@ -75,6 +75,7 @@ const Works = ({lang}: {lang:string})=>{
         />,
 
         <CustomProjectCard title={""}
+        key={"project_card_"+dict.portfolio_project_card_title}
         web_link={'https://sparked.es/'}
         background_style={{
             backgroundImage: 'url("/public/sparked_background.png")',
@@ -89,6 +90,7 @@ const Works = ({lang}: {lang:string})=>{
         />,
 
         <CustomProjectCard title={""}
+            key={"project_card_"+dict.portfolio_project_card_title}
             background_style={{
                 backgroundImage: 'url("/public/microengineers.jpeg")',
                 backgroundSize: 'contain',
@@ -103,6 +105,7 @@ const Works = ({lang}: {lang:string})=>{
         />,
 
         <CustomProjectCard title={""}
+            key={"project_card_"+dict.portfolio_project_card_title}
             background_style={{
                 backgroundImage: 'url("/public/microengineers.jpeg")',
                 backgroundSize: 'contain',
@@ -116,6 +119,7 @@ const Works = ({lang}: {lang:string})=>{
         />,
 
         <CustomProjectCard title={dict.autoencoder_card_title}
+            key={"project_card_"+dict.portfolio_project_card_title}
             background_style={{
                 backgroundImage: 'url("/public/autoencoder.png")',
                 backgroundSize: 'cover',
@@ -134,6 +138,7 @@ const Works = ({lang}: {lang:string})=>{
         <CustomProjectCard title={dict.sorting_algorithms_project_card_title}
             web_link={'https://jaume2000.github.io/SortingAlgorithms/'}
 
+            key={"project_card_"+dict.portfolio_project_card_title}
             background_style={{
                 backgroundImage: 'url("/public/algorithms_background.png")',
                 backgroundSize: 'cover',
@@ -152,6 +157,7 @@ const Works = ({lang}: {lang:string})=>{
         />,
 
         <CustomProjectCard title={dict.stablediffusion_card_title}
+            key={"project_card_"+dict.portfolio_project_card_title}
             background_style={{
                 backgroundImage: 'url("/public/stablediffusion_img1.png")',
                 backgroundPosition: 'right 0 top 00px',
@@ -165,6 +171,7 @@ const Works = ({lang}: {lang:string})=>{
         />,
 
         <CustomProjectCard title={dict.visual_perceptron_card_title}
+            key={"project_card_"+dict.portfolio_project_card_title}
             background_style={{
                 backgroundImage: 'url("/public/neural_network_background.png")',
                 backgroundSize: 'cover',
@@ -180,6 +187,7 @@ const Works = ({lang}: {lang:string})=>{
         />,
 
         <CustomProjectCard title={dict.hardware_project_card_title}
+            key={"project_card_"+dict.portfolio_project_card_title}
             background_style={{
                 backgroundImage: 'url("/public/logic_gate_background.webp")',
                 backgroundSize: 'cover',
