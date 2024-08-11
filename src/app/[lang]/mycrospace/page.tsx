@@ -73,7 +73,8 @@ function LeaderBoard ({participants}:{participants:ListOfStringNumberPairs}) {
             return (
               <div key={participant[0]} className={assignedClass + " tagging_rank"}>
                 <div>{participant[0]}</div>
-                <div>{participant[1]}</div>
+                {/*<div>{participant[1]}</div>*/}
+                <div>{"???"}</div>
               </div>
             )
       })}
