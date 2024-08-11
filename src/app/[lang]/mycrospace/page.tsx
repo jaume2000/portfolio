@@ -58,12 +58,12 @@ function LeaderBoard ({participants}:{participants:ListOfStringNumberPairs}) {
 
       <div className="leaderboard_container">
         <h1>Leaderboard</h1>
-        {/*<div>
+        <div>
           <div className="tagging_rank tagging_rank_header">
             <div>Participante</div>
             <div>Nº Objetos</div>
           </div>
-        </div>*/}
+        </div>
           {participants.map((participant: StringNumberPair, index) => {
 
             let assignedClass = index == 0 ? 'gold_rank' : 'default_rank';
@@ -73,7 +73,7 @@ function LeaderBoard ({participants}:{participants:ListOfStringNumberPairs}) {
             return (
               <div key={participant[0]} className={assignedClass + " tagging_rank"}>
                 <div>{participant[0]}</div>
-                {/*<div>{participant[1]}</div>*/}
+                <div>{participant[1]}</div>
                 {/*<div>{"???"}</div>*/}
               </div>
             )

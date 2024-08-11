@@ -33,7 +33,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       "iratxegb133@gmail.com": "Iratxe García Bascuñan",
       "claudiaherrerop@gmail.com": "Claudia (literalmente mi madre)",
       "david.degois.suarez@gmail.com": "David de Gois Suarez",
-      "jaumeig95@gmail.com": "Jaume Ivars (el vago que no taggea)",
+      "jaumeig95@gmail.com": "Jaume Ivars (el vago)",
     };
     
 

@@ -21,11 +21,11 @@
 
 .tagging_rank {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
     border-radius: 5px;
     font-size: 1.2em;
-    width: 400px;
+    width: 350px;
 }
 
 .default_rank {
@@ -51,7 +51,7 @@
     display: flex;
     padding: 0 !important;
     justify-content: space-between;    
-    width: 400px;
+    width: 350px;
     font-weight: bold;
     background-color: transparent;
 }
@@ -78,6 +78,6 @@ body, html {
 .description {
   font-size: 1.2em;
   text-align: center;
-  width: 400px;
+  width: 350px;
   text-wrap: wrap;
 }
