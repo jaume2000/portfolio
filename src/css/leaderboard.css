@@ -21,7 +21,7 @@
 
 .tagging_rank {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
     border-radius: 5px;
     font-size: 1.2em;
