@@ -1,14 +1,22 @@
 
 .leaderboard_container {
-    display: flex;
+    display: inline-flex;
     flex-direction: column; /* Apilar los divs verticalmente */
-    align-items: center; /* Centrar los divs horizontalmente */
+    align-items: flex-start; /* Centrar los divs horizontalmente */
     gap: 10px; /* Espacio entre los divs */
+    padding: 20px;
+    margin: 20px;
+    background-image: linear-gradient(to top right, #5d5dff3b, #45ff453b);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
 }
 
 .leaderboard_container h1 {
     text-align: center;
     margin: 20px;
+
 }
 
 .tagging_rank {
@@ -21,19 +29,22 @@
 }
 
 .default_rank {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .gold_rank {
-  background-color: #FFD700;
+  background-color: #fff098;
+  font-weight: bold;
 }
 
 .silver_rank {
-  background-color: #C0C0C0;
+  background-color: #cecece;
+  font-weight: bold;
 }
 
 .bronze_rank {
-  background-color: #CD7F32;
+  background-color: #ffc183;
+  font-weight: bold;
 }
 
 .tagging_rank_header {
@@ -43,4 +54,23 @@
     width: 400px;
     font-weight: bold;
     background-color: transparent;
+}
+
+.flex {
+    display: flex;
+    width: 400px;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #f0f0f0;
 }

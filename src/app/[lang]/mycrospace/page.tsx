@@ -45,9 +45,7 @@ const FetchingHello: React.FC = () => {
 
 
   return (
-    <div className='centered'>
       <LeaderBoard participants={message} />
-    </div>
   );
 };
 
@@ -56,28 +54,29 @@ export default FetchingHello;
 function LeaderBoard ({participants}:{participants:ListOfStringNumberPairs}) {
 
   return (
-    <div>
+    <div className="container">
+
       <div className="leaderboard_container">
-      <h1>Leaderboard</h1>
-      <div>
-        <div className="tagging_rank tagging_rank_header">
-          <div>Participante</div>
-          <div>Nº Objetos</div>
+        <h1>Leaderboard</h1>
+        <div>
+          <div className="tagging_rank tagging_rank_header">
+            <div>Participante</div>
+            <div>Nº Objetos</div>
+          </div>
         </div>
-      </div>
-        {participants.map((participant: StringNumberPair, index) => {
+          {participants.map((participant: StringNumberPair, index) => {
 
-          let assignedClass = index == 0 ? 'gold_rank' : '';
-          assignedClass = index == 1 ? 'silver_rank' : assignedClass;
-          assignedClass = index == 2 ? 'bronze_rank' : assignedClass;
+            let assignedClass = index == 0 ? 'gold_rank' : 'default_rank';
+            assignedClass = index == 1 ? 'silver_rank' : assignedClass;
+            assignedClass = index == 2 ? 'bronze_rank' : assignedClass;
 
-          return (
-            <div key={participant[0]} className={assignedClass + " tagging_rank"}>
-              <div>{participant[0]}</div>
-              <div>{participant[1]}</div>
-            </div>
-          )
-    })}
+            return (
+              <div key={participant[0]} className={assignedClass + " tagging_rank"}>
+                <div>{participant[0]}</div>
+                <div>{participant[1]}</div>
+              </div>
+            )
+      })}
       </div>
     </div>
   );
