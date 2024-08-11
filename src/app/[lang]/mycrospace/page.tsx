@@ -28,7 +28,7 @@ const FetchingHello: React.FC = () => {
         setError(error.message);
       } finally {
         setLoading(false);
-        console.log(message);
+        //console.log(message);
       }
     };
 
@@ -77,6 +77,7 @@ function LeaderBoard ({participants}:{participants:ListOfStringNumberPairs}) {
               </div>
             )
       })}
+      <p className='description'>Nota: La puntuación son el número de objetos que habéis señalado y posteriormente han sido validados como Done. ¡Las fotos que están en fase de Revisión aún no se han contado!</p>
       </div>
     </div>
   );

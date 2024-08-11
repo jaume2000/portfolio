@@ -74,3 +74,10 @@ body, html {
   gap: 20px;
   background-color: #f0f0f0;
 }
+
+.description {
+  font-size: 1.2em;
+  text-align: center;
+  width: 400px;
+  text-wrap: wrap;
+}
