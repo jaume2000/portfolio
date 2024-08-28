@@ -4,19 +4,18 @@
     flex-direction: column; /* Apilar los divs verticalmente */
     align-items: flex-start; /* Centrar los divs horizontalmente */
     gap: 10px; /* Espacio entre los divs */
-    padding: 20px;
-    margin: 20px;
     background-image: linear-gradient(to top right, #5d5dff3b, #45ff453b);
     border-radius: 20px;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    max-width: 400px;
+    padding: 40px;
+    margin: 10px;
 }
 
 .leaderboard_container h1 {
     text-align: center;
-    margin: 20px;
-
 }
 
 .tagging_rank {
@@ -25,7 +24,7 @@
     padding: 20px;
     border-radius: 5px;
     font-size: 1.2em;
-    width: 350px;
+    width: 100%;
 }
 
 .default_rank {
@@ -51,14 +50,14 @@
     display: flex;
     padding: 0 !important;
     justify-content: space-between;    
-    width: 350px;
+    width: 100%;
+    margin:auto;
     font-weight: bold;
     background-color: transparent;
 }
 
 .flex {
     display: flex;
-    width: 400px;
 }
 
 body, html {
@@ -73,11 +72,16 @@ body, html {
   justify-content: center;
   gap: 20px;
   background-color: #f0f0f0;
+  min-height: 100%;
 }
 
 .description {
   font-size: 1.2em;
   text-align: center;
-  width: 350px;
   text-wrap: wrap;
+}
+
+.score {
+  font-size: 1em;
+  margin-left: 10px;
 }
