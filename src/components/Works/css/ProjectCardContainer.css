@@ -5,6 +5,18 @@
     width: calc(100% -60px);
 }
 
+.technologies {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    background-color: var(--technologies_background_color);
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    border-radius: 100px 0 10px 100px;
+    bottom: 0px;
+}
+
 @media screen and (max-width: 1000px){
     .works_grid{
         grid-template-columns: repeat(1, 1fr);
@@ -12,6 +24,9 @@
     .grid_element h2 {
         color: white;
         font-size: 9vw;
+    }
+    .technologies {
+        height: 10vw;
     }
 }
 
@@ -22,7 +37,9 @@
     .grid_element h2 {
         color: white;
         font-size: 4.5vw;
-
+    }
+    .technologies {
+        height: 5vw;
     }
 }
 
@@ -35,6 +52,9 @@
         font-size: 3vw;
 
     }
+    .technologies {
+        height: 3.33vw;
+    }
 }
 
 @media screen and (min-width: 3000px) {
@@ -46,6 +66,9 @@
         font-size: 3vw;
 
     }
+    .technologies {
+        height: 2.5vw;
+    }
 }
 
 @media screen and (min-width: 4000px) {
@@ -56,5 +79,8 @@
         color: white;
         font-size: 3vw;
 
+    }
+    .technologies {
+        height: 2vw;
     }
 }

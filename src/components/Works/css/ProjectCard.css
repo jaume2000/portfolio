@@ -50,32 +50,32 @@
 
 /* Technologies used part*/
 
-
+/*
+Deffined in ProjecCardContainer.css
 .technologies {
     display: flex;
     justify-content: right;
     position: absolute;
     background-color: var(--technologies_background_color);
-    height: 100px;
     bottom: 0;
     right: 0;
     z-index: 2;
     border-radius: 100px 0 10px 100px;
     bottom: 0px;
 }
-
+*/
 
 .technology_logo_container {
     display: flex;
     justify-content: right;
     align-items: center;
-    height: 100px;
+    height: 100%;
 }
 
 .technology_logo_container a, .technology_logo_container p {
     color: var(--technologies_text_color);
     text-decoration: none;
-    font-size: max(0.8vw, 30px);
+    font-size: max(0.7vw, 20px);
     overflow: hidden;
     word-wrap: unset;
     width: 0;
@@ -97,12 +97,12 @@
 }
 
 .technology_logo_container a:hover{
-    font-size: max(1.2vw, 40px);
+    font-size: max(1.0vw, 30px);
     cursor: pointer;
 }
 
 .technology_logo_container p:hover{
-    font-size: max(1.2vw, 40px);
+    font-size: max(1.0vw, 30px);
 }
 
 .technology_logo_container a:hover:after{

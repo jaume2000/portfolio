@@ -2,6 +2,7 @@
 
 import { Dispatch, SetStateAction } from 'react'
 import './css/ProjectCard.css'
+import './css/ProjectCardContainer.css'
 import {getLanguageAllDictionary} from '@/lang/lang'
 import React from 'react';
 
