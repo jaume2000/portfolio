@@ -1,26 +1,22 @@
 "use client"
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import '@/lang/lang'
 import {getLanguageAllDictionary} from '@/lang/lang'
-import Text from 'react/'
 import ConsoleContainer from '@/components/utils/ConsoleContainer/ConsoleContainer'
 import './style.css'
 import SkillsCode from './SkillsCode'
-import TestingInformation from './TestInformation'
-import PlainText from './PlainText'
 import CVDownload from './CVDownload'
 import Studies from './Studies'
 import FolderContainer from '@/components/utils/FolderContainer/FolderContainer'
 import WorkExperience from './WorkExperience'
-import Tab from '@/components/utils/Tab/Tab'
 import AboutMe from './AboutMe'
 import ContactMe from './ContactMe'
 import {ConsoleIcon, FeatherIcon, MoonIcon, SunIcon} from '@/components/SVGs/svg_gallery'
 
 const About = ({lang}: {lang:string})=>{
 
-    let dict = getLanguageAllDictionary(lang).About
+    const dict = getLanguageAllDictionary(lang).About
 
     const selectOptions = [
 
@@ -34,7 +30,7 @@ const About = ({lang}: {lang:string})=>{
         {console: <ContactMe lang={lang}/>, title: dict.conctactme.doc_title},
     ]
 
-    let [selectedContent, setSelectedContent] = useState(0);
+    const [selectedContent, setSelectedContent] = useState(0);
 
 
     return(

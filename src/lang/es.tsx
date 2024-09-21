@@ -319,7 +319,7 @@ Soy el CTO de la empresa. Me encargo de guiar el desarrollo de la IA de la empre
                 content:`
 # Información de contacto
 
-## Mi linkedin [aquí](https://linkedin.com/in/jaumeivars-grimalt)
+## Mi linkedin [aquí](https://linkedin.com/in/jaume-ivars-grimalt)
 ## Github [aquí](https://github.com/jaume2000)
 ## Mi correo personal: jaumeig95@gmail.com
                 `

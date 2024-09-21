@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 
-const FolderContainer = ({className,content_list, selectedKey, setSelectedContent}:{className:string, content_list:{console:React.ReactElement, title:string}[], selectedKey: number, setSelectedContent: any})=> {
+const FolderContainer = ({className,content_list, selectedKey, setSelectedContent}:{className:string, content_list:{console:React.ReactElement, title:string}[], selectedKey: number, setSelectedContent: (arg0:number)=>void})=> {
 
     return <div className={'folder_container ' + className}>
         <div>

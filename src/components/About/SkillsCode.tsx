@@ -4,9 +4,9 @@ import PlainText from './PlainText'
 import '@/globals.css'
 
 const SkillsCode = ({lang}:{lang:string}) => {
-    let dict = getLanguageAllDictionary(lang).About
+    const dict = getLanguageAllDictionary(lang).About
 
-    let TAB = '\xA0\xA0\xA0'
+    const TAB = '\xA0\xA0\xA0'
 
     return <div className='no_p_padding no_p_tb_margin'>
         <C color='rgba(150,150,150)'>

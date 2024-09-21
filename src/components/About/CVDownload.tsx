@@ -1,11 +1,10 @@
 import '@/globals.css'
 import './css/CVDownload.css'
-import PlainText from './PlainText'
 import { getLanguageAllDictionary } from '@/lang/lang'
 
 const CVDownload = ({lang}:{lang:string}) => {
 
-    let dict = getLanguageAllDictionary(lang).About.cv
+    const dict = getLanguageAllDictionary(lang).About.cv
 
     return (
     <>

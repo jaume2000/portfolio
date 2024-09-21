@@ -1,5 +1,4 @@
 
-import { useRouter } from "next/navigation"
 import {getLanguageAllDictionary} from "@/lang/lang";
 import '@/globals.css'
 import './style.css'
@@ -31,7 +30,7 @@ const ProfileImage = () => {
 
     return(
     <div className="profile_image_container">
-        <img className="profile_image" src="/public/presentation_photo.png" alt="Presentation photo"/>
+        <Image className="profile_image" src="/public/presentation_photo.png" alt="Presentation photo" width={500} height={500}/>
         <div className="rotating_shadows">
             <div className="profile_shadow_1"/>
             <div className="profile_shadow_2"/>

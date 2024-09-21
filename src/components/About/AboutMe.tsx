@@ -1,11 +1,10 @@
 import '@/globals.css'
-import PlainText from './PlainText'
 import './css/CVDownload.css'
 import { getLanguageAllDictionary } from '@/lang/lang'
 import ReactMarkdown from 'react-markdown';
 
 const AboutMe = ({lang}:{lang:string}) => {
-    let dict = getLanguageAllDictionary(lang).About.aboutme
+    const dict = getLanguageAllDictionary(lang).About.aboutme
 
     return (
         <div className='font-arial'>

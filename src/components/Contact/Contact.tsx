@@ -38,7 +38,7 @@ const Contact = ({lang}: {lang:string})=>{
                         <div>
                             <p className='masked-text'>{"Email: jaumeig95@gmail.com"}</p>
                             <a className='masked-text' href='https://linkedin.com/in/jaume-ivars-grimalt'>{"Checkout my LikedIn"}</a>
-                            <a className='masked-text' href='https://linkedin.com/in/jaume-ivars-grimalt'>{"Checkout my Github"}</a>
+                            <a className='masked-text' href='https://github.com/jaume2000'>{"Checkout my Github"}</a>
                         </div>
                     </div>
                 </ColoredCardIntersection>

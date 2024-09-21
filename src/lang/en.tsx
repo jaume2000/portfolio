@@ -311,7 +311,13 @@ During my education at the university I participated in a large variety of proje
             
         conctactme: {
             doc_title: "contactme.html",
-            content: ""
+            content:
+`# Contact Info
+
+## My linkedin [here](https://linkedin.com/in/jaume-ivars-grimalt)
+## Github [here](https://github.com/jaume2000)
+## Personal mail: jaumeig95@gmail.com
+            `
         }
     },
     Contact: {
