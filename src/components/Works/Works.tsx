@@ -3,7 +3,7 @@
 import '@/lang/lang'
 import React, { Dispatch, SetStateAction, useState } from 'react'
 import {getLanguageAllDictionary} from '@/lang/lang'
-import '@/css/globals.css'
+import '@/globals.css'
 import './style.css'
 import ProjectCardContainer from './ProjectCardContainer'
 import ProjectCard from './ProjectCard'
@@ -18,6 +18,7 @@ import SortingAlgorithmsContent from './ProjectExplanationContents/SortingAlgori
 import StableDiffussionContent from './ProjectExplanationContents/StableDiffussionContent'
 import LogicGateSimulatorContent from './ProjectExplanationContents/LogicGateSimulatorContent'
 import PerceptronContent from './ProjectExplanationContents/PerceptronContent'
+import FairJourneyContent from './ProjectExplanationContents/FairJourneyContent'
 
 
 const BuildingInfo = () => {
@@ -29,13 +30,18 @@ const BuildingInfo = () => {
 
 const Works = ({lang}: {lang:string})=>{
 
+    //////////////////////////////////////////////////////////////
+    //      Hay que separar los proyectos de emprendimiento     //
+    //      de los proyectos de programación y curiosidades.    //
+    //////////////////////////////////////////////////////////////
+
     const [hidden_work_explanation, set_hidden_work_explanation] = useState(true);
     const [first_time_load, setFirstTime] = useState(true);
     const [explanation_content, setExplanationContent]= useState(<DefaultContent events={{onclose:()=>{},onopen:()=>{} }}/>)
 
     let dict = getLanguageAllDictionary(lang).Works
 
-    const CustomProjectCard = ({title, background_style, title_style,technologies, github_repo, explanation_content,web_link}:{title:string, background_style:React.CSSProperties, title_style:React.CSSProperties,technologies:string[], github_repo?:string, explanation_content?:JSX.Element, web_link?:string}) => {
+    const CustomProjectCard = ({title, background_style, title_style,technologies, github_repo, explanation_content,web_link, id}:{title:string, background_style:React.CSSProperties, title_style:React.CSSProperties,technologies:string[], github_repo?:string, explanation_content?:JSX.Element, web_link?:string, id?:string}) => {
 
         return <ProjectCard
             title={title}
@@ -44,13 +50,12 @@ const Works = ({lang}: {lang:string})=>{
             technologies={technologies}
             github_repo={github_repo}
             explanation_content={explanation_content ?? <BuildingInfo/>}
-
             lang={lang}
             setHiddenExplanation={set_hidden_work_explanation}
             setFirstTime={setFirstTime}
             setExplanationContent={setExplanationContent}
             web_link={web_link}
-
+            id={id}
         />
     }
 
@@ -58,6 +63,72 @@ const Works = ({lang}: {lang:string})=>{
     // Puedes añadir en el JSX padre onclose y onopen para llamar eventos si lo deseas, para resetear o para iniciar el estado.
 
 
+    //Startup & entrepreneurship projects
+    const startups_cards = [
+        <CustomProjectCard title={""}
+        key={"project_card_"+dict.portfolio_project_card_title}
+        web_link={'https://sparked.es/'}
+        background_style={{
+            backgroundImage: 'url("/public/sparked_background.png")',
+            backgroundColor: 'black',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+        } as React.CSSProperties}
+        title_style={{}}
+        technologies={[]}
+        explanation_content={<SparkedContent lang={lang}/>}
+        id='sparked'
+        />,
+
+        <CustomProjectCard
+        title={"Mycrospace"}
+        id="mycrospace"
+        key={"project_card_" + dict.portfolio_project_card_title}
+        background_style={{
+            backgroundImage: 'url("/public/mycrospace.png")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "white",
+        } as React.CSSProperties}
+        title_style={{
+            background: "linear-gradient(90deg, magenta, yellow)",
+            WebkitBackgroundClip: "text",
+            color: "transparent",
+            fontFamily: "Poppins",
+            textShadow: "0px -6px 0px rgba(240, 240, 240, 1)",
+            filter: "drop-shadow(0px 0px 30px rgba(0, 0, 0, 1))",
+        }}
+        technologies={[]}
+        explanation_content={<MicroengineersContent lang={lang} />}
+        />,
+
+        <CustomProjectCard
+        title={"Fair Journey"}
+        id="mycrospace"
+        key={"project_card_" + dict.portfolio_project_card_title}
+        background_style={{
+            backgroundImage: 'url("/public/fairjourney.png")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "white",
+        } as React.CSSProperties}
+        title_style={{
+            WebkitBackgroundClip: "text",
+            color: "transparent",
+            fontFamily: "Poppins",
+            textShadow: "0px -6px 0px rgba(240, 240, 240, 1)",
+            filter: "drop-shadow(0px 0px 30px rgba(0, 0, 0, 1))",
+        }}
+        technologies={[]}
+        explanation_content={<FairJourneyContent lang={lang} />}
+        />
+
+    ]
+
+    //Other projects
     const project_cards = [
         <CustomProjectCard title={dict.portfolio_project_card_title}
             key={"project_card_"+dict.portfolio_project_card_title}
@@ -74,49 +145,6 @@ const Works = ({lang}: {lang:string})=>{
             explanation_content={<PortfolioContent lang={lang}/>}
         />,
 
-        <CustomProjectCard title={""}
-        key={"project_card_"+dict.portfolio_project_card_title}
-        web_link={'https://sparked.es/'}
-        background_style={{
-            backgroundImage: 'url("/public/sparked_background.png")',
-            backgroundColor: 'black',
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-        } as React.CSSProperties}
-        title_style={{}}
-        technologies={['nextjs','react','typescript']}
-        explanation_content={<SparkedContent lang={lang}/>}
-        />,
-
-        <CustomProjectCard title={""}
-            key={"project_card_"+dict.portfolio_project_card_title}
-            background_style={{
-                backgroundImage: 'url("/public/microengineers.jpeg")',
-                backgroundSize: 'contain',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundColor: 'white',
-            } as React.CSSProperties}
-            title_style={{}}
-            //github_repo='https://github.com/jaume2000/CNN_Autoencoder'
-            technologies={['python', 'pytorch']}
-            explanation_content={<MicroengineersContent lang={lang}/>}
-        />,
-
-        <CustomProjectCard title={""}
-            key={"project_card_"+dict.portfolio_project_card_title}
-            background_style={{
-                backgroundImage: 'url("/public/microengineers.jpeg")',
-                backgroundSize: 'contain',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundColor: 'white',
-            } as React.CSSProperties}
-            title_style={{}}
-            technologies={['python', 'pytorch']}
-            explanation_content={<MicroengineersContent lang={lang}/>}
-        />,
 
         <CustomProjectCard title={dict.autoencoder_card_title}
             key={"project_card_"+dict.portfolio_project_card_title}
@@ -147,7 +175,6 @@ const Works = ({lang}: {lang:string})=>{
             title_style={{
                 fontFamily: 'ChalkBoard, arial',
                 fontWeight: '100',
-                fontSize: '3.5vw',
                 width: '100%',
                 backgroundColor: 'rgba(0,0,0,0.7)',
                 color:'white'
@@ -209,12 +236,24 @@ const Works = ({lang}: {lang:string})=>{
 
     return (
         <div className='works_container fullpage'>
-            <div className="black_waves_2"/>
-            <h1 id='works'>
-                {dict.title}
-            </h1>
-            <ProjectCardContainer project_cards={project_cards}/>
-            <ProjectExplanationBox first_time_load={first_time_load} hidden={hidden_work_explanation} setHidden={set_hidden_work_explanation} content={explanation_content}/>
+            <div className="black_waves_2 bg-color-black"/>
+                <section className='startup_works_container'>
+                    <h1 id='works'>
+                        {dict.startups_title}
+                    </h1>
+                    <ProjectCardContainer project_cards={startups_cards}/>
+                    <ProjectExplanationBox first_time_load={first_time_load} hidden={hidden_work_explanation} setHidden={set_hidden_work_explanation} content={explanation_content}/>
+                </section>
+            <div className='black_waves_wrapper'>
+                <div className="black_waves_2 bg-color-gray"/>
+            </div>
+                <section>
+                    <h1 id='works'>
+                        {dict.title}
+                    </h1>
+                    <ProjectCardContainer project_cards={project_cards}/>
+                    <ProjectExplanationBox first_time_load={first_time_load} hidden={hidden_work_explanation} setHidden={set_hidden_work_explanation} content={explanation_content}/>
+                </section>
         </div>
     )
 }

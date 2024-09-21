@@ -6,13 +6,13 @@
 .folder_container p {
     margin: 0;
     padding: 2px 0;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .folder_container button {
     background-color: transparent;
     color:rgb(0,255,0);
-    font-size: 18px;
+    font-size: 25px;
     border: none;
 }
 

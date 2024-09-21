@@ -2,13 +2,23 @@
     height: 100px;
     width: calc(100% + 100px);
     position: absolute;
-    top: -1px;
-    top: 0;
-    background-image: url("/public/black_wave_2.png");
-    background-size: 100px;
-    background-repeat: repeat-x;
+    mask-image: url("/public/black_wave_2.png");
+    mask-size: 100px;
+    mask-repeat: repeat-x;
     z-index: 0;
     animation: waves2 5s linear infinite;
+}
+
+.bg-color-black {
+    background-color: black;
+}
+
+.bg-color-gray {
+    background-color: rgb(30, 30, 30);
+}
+
+.black_waves_wrapper {
+  transform: rotate(180deg);
 }
 
 @keyframes waves2{
@@ -20,6 +30,10 @@
     }
   }
   
+.startup_works_container {
+    background-color: rgb(240, 168, 0);
+    padding-bottom: 200px;
+}
 
 .works_container {
     background-color: rgb(30,30,30);

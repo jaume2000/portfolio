@@ -1,4 +1,4 @@
-import '@/css/globals.css'
+import '@/globals.css'
 
 const PlainText = ({text, custom_style=true, double_next_line=false}:{text:string, custom_style?:boolean, double_next_line?:boolean}) => {
 

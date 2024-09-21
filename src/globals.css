@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'NerdFont';
+  src: url('/public/Fonts/NerdFont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DancingScript';
+  src: url('/public/DancingScript-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ChalkBoard';
+  src: url('/public/Chalktastic-r78L.ttf');
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/public/Fonts/Poppins-Medium.ttf');
+}
+
+:root {
+  --main_color1: #ffb703;
+  --main_color2: #219ebc;
+}
+
+* {
+  font-family: 'NerdFont';
+}
+
+p {
+  font-size: 18px;
+}
+
+html,body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: min(10vw, 10vh);
+  font-weight: bold;
+  padding-top: 70px;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  scroll-behavior: smooth;
+}
+
+.no_p_padding p {
+  padding: 0 !important;
+}
+
+.no_p_tb_margin p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.font-poppins, .font-poppins * {
+  font-family: 'Poppins';
+}
+
+.font-dancing, .font-dancing * {
+  font-family: 'DancingScript';
+}
+
+.font-chalk, .font-chalk * {
+  font-family: 'ChalkBoard';
+}
+
+.font-nerd, .font-nerd * {
+  font-family: 'NerdFont';
+}
+
+.font-sans, .font-sans * {
+  font-family: sans-serif;
+}
+
+.font-arial, .font-arial * {
+  font-family: Arial, sans-serif;
+}
+
+.fullpage {
+  min-height: 100vh;
+  position: relative;
+}
+
+@media screen and (max-width : 760px) {
+  .fullpage {
+    min-height: 95vh;
+  }
+}
+
+.tab_1{
+  margin-left: 4ch !important;
+}
+
+.tab_2{
+  margin-left: 8ch !important;
+}
+
+.tab_3{
+  margin-left: 12ch !important;
+}
+
+.no_wrap {
+  white-space: nowrap;
+}
+
+
+.full_size {
+  width: 100%;
+  height: 100%;
+}
+
+.full_width {
+  width: 100%;
+}
+
+.centered_text {
+  text-align: center;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.white_background {
+  background-color: white;
+}
+
+.hide_scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  width: 80%; /* El contenido ocupará el 80% del ancho del contenedor padre */
+  max-width: 1200px; /* Máximo ancho del contenido */
+  margin: 0 auto; /* Centra el contenido */
+  padding: 20px;
+}

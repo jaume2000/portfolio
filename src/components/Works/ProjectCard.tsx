@@ -6,11 +6,11 @@ import './css/ProjectCardContainer.css'
 import {getLanguageAllDictionary} from '@/lang/lang'
 import React from 'react';
 
-export default function ProjectCard ({lang, title, technologies, github_repo, title_style, background_style, web_link, setFirstTime, setHiddenExplanation, setExplanationContent, explanation_content}:{lang:string, title:string, title_style:React.CSSProperties, technologies:string[], github_repo?:string, background_style:React.CSSProperties, web_link?:string, setFirstTime:Dispatch<SetStateAction<boolean>>, setHiddenExplanation?:Dispatch<SetStateAction<boolean>>, setExplanationContent?:Dispatch<SetStateAction<JSX.Element>>,explanation_content?:JSX.Element}) {
+export default function ProjectCard ({lang, title, technologies, github_repo, title_style, background_style, web_link, setFirstTime, setHiddenExplanation, setExplanationContent, explanation_content, id}:{lang:string, title:string, title_style:React.CSSProperties, technologies:string[], github_repo?:string, background_style:React.CSSProperties, web_link?:string, setFirstTime:Dispatch<SetStateAction<boolean>>, setHiddenExplanation?:Dispatch<SetStateAction<boolean>>, setExplanationContent?:Dispatch<SetStateAction<JSX.Element>>,explanation_content?:JSX.Element, id?:string}) {
 
 
     return (
-        <div className='grid_element'>
+        <div className='grid_element' id={id}>
             
             <div className='project_background' style={background_style}
             onClick={()=>{

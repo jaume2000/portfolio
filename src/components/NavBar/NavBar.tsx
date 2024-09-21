@@ -1,7 +1,6 @@
 import '@/lang/lang'
 import Image from "next/image"
 import {getLanguageAllDictionary} from '@/lang/lang'
-import '@/css/globals.css'
 import Dropdown from '@/components/utils/Dropdown/Dropdown'
 import Element from '@/components/utils/Element/Element'
 import './style.css'
@@ -14,7 +13,7 @@ const NavBar = ({lang}: {lang:string})=>{
         <nav>
             <div className='menu_container'>
                 <a href='#main_title' className="menu_left_zone">
-                    <Image width={100} height={40} className={"ji_logo  nav_hover_animation"} src={"/public/JaumeIvars_icon.png"} alt={"Jaume Ivars Grimalt logo"}/>
+                    <Image width={40} height={40} className={"ji_logo  nav_hover_animation"} src={"/public/JaumeIvars_icon.png"} alt={"Jaume Ivars Grimalt logo"}/>
                 </a>
                 <div className='menu_option_list'>
                     <div className='menu_option'>

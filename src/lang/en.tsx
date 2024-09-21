@@ -15,6 +15,7 @@ let en: translation_structure = {
         contact: "Contact",
     },
     Works: {
+        startups_title: "Startups and entrepreneurship",
         title: "Some of my projects",
         portfolio_project_card_title: "Portfolio Project",
         portfolio_project_content: {
@@ -172,60 +173,146 @@ let en: translation_structure = {
     },
     About: {
         title: "About me",
-        general_info_comment: "/*\nIf this is too hard to understand, please, check Habilities.txt\nAlso contains extra info!\n*/",
-        name_variable: "name",
-        birth_variable: "birth",
-        soft_skills: {
-            variable:"soft_skills",
-            self_taught:"self-taught",
-            likes_challenges:"I like challenges",
-            entrepeneur:"entrepeneur",
-            leadership:"leadership",
-            startup_culture:"startup culture ♥ ",
-            creative:"creative",
-            fast_learner:"fast learner",
+        aboutme: {
+            doc_title: "About_me.docx",
+            content1: `
+## What is this console?
+
+Hello! First of all, thank you for visiting my website. Here you will find information about me, my work, and how to contact me.
+
+This document (About_me.docx) **is a summary** of all the information on the website. In each section, I indicate where to learn more about each topic.
+
+On the right side (or at the top if you're on mobile), you'll find a **navigation menu** to open sections that contain information about me.
+For example, why not click on **CV.pdf to see my CV**?
+
+## Okay, but... Who is this guy?
+
+Well, this guy is named Jaume Ivars Grimalt! I’m passionate about Machine Learning, full-stack development, and entrepreneurship.
+
+### About my studies
+
+I graduated with a degree in Computer Engineering from the Polytechnic University of Valencia in 2023, and I completed my master's degree in
+Artificial Intelligence, Pattern Recognition, and Digital Imaging at the same university in 2024. Finally, I was selected for the
+CDTM (Center for Digital Technology and Management), a program focused on entrepreneurship and technology based in Munich, Germany.
+
+*More info in Studies.docx*
+
+### The work
+
+I have worked at several startups: Sciling as a backend developer, Neurocatching as a full-stack developer (basically taking care of the whole product),
+and I am currently at Vesta-Z as CTO, responsible for developing the company's AI and database.
+
+*More info in Experiencia_laboral.tsx*
+
+### The projects I'm working on now
+
+Currently, I'm working on my master's thesis, where I'm creating the largest open-source dataset of petri dish images for
+the automatic detection of different microorganism colonies. To achieve this feat, I lead a team of 5 people to develop the App and, depending on the time,
+between 12 and 20 additional people to create the dataset in one of the largest collaborations within the university.
+
+If this blew your mind, go check out the project titled Mycrospace in the Work section.`,
+            check_mycrospace_work: "Check Mycrospace",
+            check_fairjourney_work: "Check FairJourney",
+            check_sparked_work: "Check SparkED",
+                
+            content2: `
+Another big project I'm working on is SparkED. I'm a member of the Core Team of SparkED, the most disruptive entrepreneurship community in Valencia, where I connect with the city's top entrepreneurs and organize high-level activities for the community.
+Among other things, I created the website [sparked.es](https://sparked.es) and organized the largest entrepreneurship event in UPV history, Spark your Speech.
+`,
+            content3: `
+### Paused projects
+
+Some time ago, I decided to create FairJourney as an alternative to BlaBlaCar since I've traveled a lot using this app and many users mentioned their issues with the app, so I saw an opportunity.
+The problem was that I tried to create the app all by myself, and it took up too much time. Currently, the backend is finished, and the frontend is about 70% done. I decided to prioritize other projects like
+Mycrospace and SparkED, which had more potential. But in the future, I’d like to revisit and complete the project.
+`,
+            
+            content4: `
+### About my hobbies and interests
+
+I love doing sports and going to the gym, especially practicing calisthenics. I also love playing Nintendo Switch and watching interesting videos on YouTube. Additionally, I enjoy drawing and watching Studio Ghibli movies.
+
+Also, as a true nerd, I like to read and stay updated on the latest news in Machine Learning and scientific advances.
+
+### Want to know more?
+
+Check out my résumé in *CV.pdf* where you'll find more information. But I warn you, this website contains much more information and is more up-to-date than my CV.
+`,
         },
-        getProgrammingLanguages_function: "get_Hard_Skills",
-        getNaturalLanguages_function: "get_Natural_Languages",
-        birth_month: "October",
-        language_variable: "spoken_languages",
-        native_value: "native",
-        english_language: "english",
-        spanish_language: "spanish",
-        catalan_language: "catalan",
-        french_language: "french",
-        habilities_text: "Habilities.js",
-        habilities_transcribed_text: "Habilities.txt",
-        habilities_transcribed_content: 
-`My name is Jaume Ivars Grimalt, I was born in October 2001 here in Alicante, Spain, so I am currently 21 years old. Curently I am currently living in Valencia, I moved on to study a degree in Computer Engineering and loved the city. I am passionate about the world of entrepreneurship, which has led me to be self-taught and to lead small teams in personal projects.
+        soft_skills: {
+            variable: "soft_skills",
+            self_taught: "self-taught",
+            likes_challenges: "I like challenges",
+            entrepreneur: "entrepreneur",
+            leadership: "leadership",
+            startup_culture: "startup culture ♥ ",
+            creative: "creative",
+            fast_learner: "fast learner",
+        },
+        skills_code:{
+            doc_title: "SkillsCode.tsx",
+            general_info_comment: "/*\nIf this is too hard to understand, please, check Habilities.txt\nAlso contains extra info!\n*/",
+            name_variable: "name",
+            getProgrammingLanguages_function: "get_Hard_Skills",
+            getNaturalLanguages_function: "get_Natural_Languages",
+            birth_month: "October",
+            language_variable: "spoken_languages",
+            native_value: "native",
+            english_language: "english",
+            spanish_language: "spanish",
+            catalan_language: "catalan",
+            french_language: "french",
+        },
+        skills: {
+            doc_title: "Skills.docx",
+            habilities_transcribed_text: "Habilities.txt",
+            habilities_transcribed_content: `My name is Jaume Ivars Grimalt, I was born in October 2001 here in Alicante, Spain, so I am currently 21 years old. Curently I am currently living in Valencia, I moved on to study a degree in Computer Engineering and loved the city. I am passionate about the world of entrepreneurship, which has led me to be self-taught and to lead small teams in personal projects.
 I have 4 years of experience in Unity3D and its language C#. I have also learned c and c++ in competitive programming clubs. I learned on my own JavaScript, HTML and CSS to later learn TypeScript, React, NextJS and other libraries such as Express, D3, ThreeJS, etc. I also had the chance to learn databases and cloud services (Firebase, MongoDB, AWS S3, Google Cloud Buckets) and API creation.
 Because I have specialized in computer science (algorithms, AI, etc.) I have learned a lot of Python (pytorch, keras, tensowflow, numpy, matplotlib, ...).
 I have always been bilingual, speaking Spanish and Catalan and I use English every day for leisure and work. I am currently in the process of learning French.`,
+        },
         studies: {
-            doc_title:"Studies.docx",
-            content:
-`I graduated in a bachelor of Computer Science on 2023 at the Polytechnic University of Valencia. My average score is 8.3 with honors in statistics and Artificial Intelligence.
+            doc_title: "Studies.docx",
+            content: `I graduated in a bachelor of Computer Science on 2023 at the Polytechnic University of Valencia. My average score is 8.3 with honors in statistics and Artificial Intelligence.
 During my education at the university I participated in a large variety of projects:
 • Videogame Development Club mentor
 • ACM Member (ACM is a global organization responsible of the Turing prices)
 • 4 time reelected delegate
 • Started 2 startup projects at Start.inf`,
         },
-        cv:{
-            doc_title:"CV.html",
-            web_title:"Welcome to my CV download web!",
-            web_description:"Remember that you can check my LinkedIn too in ",
-            web_contact_info_link:"Contact Info",
-            web_download_cv_button:"Download CV",
-            web_check_cv_description:"If you preffer, you can check the CV's PDF in a new tab.",
-            web_check_cv_button:"Check CV",
+        cv: {
+            doc_title: "CV.html",
+            web_title: "Welcome to my CV download web!",
+            web_description: "Remember that you can check my LinkedIn too in ",
+            web_contact_info_link: "Contact Info",
+            web_download_cv_button: "Download CV",
+            web_check_cv_description: "If you preffer, you can check the CV's PDF in a new tab.",
+            web_check_cv_button: "Check CV",
         },
         work_experience: {
-            doc_title:'Work_experience.tsx',
-            sciling_work_experience:'',
-            neurocatching_work_experience:''
+            doc_title: 'Work_experience.tsx',
+            sciling_work_experience:
+            `
+            Jun 2022 - Sep 2022 (4 months)
+            
+            I was a backend developer with Google Cloud, IBM Watson, connecting to OpenAI API and using Python. I also did product testing and validation with Python.`,
+                            neurocatching_work_experience:
+            `Feb 2023 - Aug 2023 (7 months).
+            
+            I was the lead developer of the company's software and CTO. I did fullstack development with jQuery, MySQL, Node.js and AWS. I used JavaScript. This software takes biometric data from the user while watching an ad to study emotions and where this user is looking to collect the data and calculate insights.
+            I was also a developer on another project (NeuroAds). I did fullstack development with React.js and Google Cloud. I used JavaScript and Python. Via Artificial Intelligence the app generates an improved ad.
+            `,
+                            vestaz_work_experience:
+            `Jul 2024 - Current
+            
+            I am the CTO of the company. I am in charge of guiding the development of the company's AI and database. We use Google Cloud and for the front and backend we kept using Wordpress. Later we will migrate to Next.js for the backend.
+            `,
+                        },
+            
+        conctactme: {
+            doc_title: "contactme.html",
+            content: ""
         }
-
     },
     Contact: {
         title: "Let's talk about new projects!"

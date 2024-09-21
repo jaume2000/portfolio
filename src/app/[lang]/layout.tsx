@@ -1,5 +1,6 @@
 import {getLanguageAllDictionary} from '@/lang/lang'
 import { defaultLocale } from '@/middleware'
+import "@/globals.css";
 
 export default function RootLayout({
   children,

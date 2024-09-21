@@ -13,6 +13,7 @@ type translation_structure = {
         contact: string
     },
     Works:{
+        startups_title: string,
         title: string,
         portfolio_project_card_title: string,
         portfolio_project_content: {
@@ -68,31 +69,45 @@ type translation_structure = {
     },
     About: {
         title: string,
-        general_info_comment:string,
-        name_variable: string,
-        birth_variable: string,
+        aboutme: {
+            doc_title:string,
+            content1:string,
+            check_mycrospace_work:string,
+            check_fairjourney_work:string,
+            check_sparked_work:string,
+            content2:string,
+            content3:string,
+            content4:string,
+        },
         soft_skills: {
             variable:string,
             self_taught:string,
             likes_challenges:string,
-            entrepeneur:string,
+            entrepreneur:string,
             leadership:string,
             startup_culture:string,
             creative:string,
             fast_learner:string,
         },
-        getProgrammingLanguages_function: string,
-        getNaturalLanguages_function: string,
-        birth_month: string,
-        language_variable:string,
-        native_value:string,
-        english_language:string,
-        spanish_language:string,
-        catalan_language:string,
-        french_language:string,
-        habilities_text:string,
-        habilities_transcribed_text: string,
-        habilities_transcribed_content: string,
+        skills_code:{
+            doc_title: string,
+            general_info_comment:string,
+            name_variable: string,
+            getProgrammingLanguages_function: string,
+            getNaturalLanguages_function: string,
+            birth_month: string,
+            language_variable:string,
+            native_value:string,
+            english_language:string,
+            spanish_language:string,
+            catalan_language:string,
+            french_language:string,
+        },
+        skills: {
+            doc_title:string,
+            habilities_transcribed_text: string,
+            habilities_transcribed_content: string,
+        }
         studies: {
             doc_title:string,
             content:string
@@ -109,7 +124,12 @@ type translation_structure = {
         work_experience: {
             doc_title:string,
             sciling_work_experience:string,
-            neurocatching_work_experience:string
+            neurocatching_work_experience:string,
+            vestaz_work_experience:string,
+        },
+        conctactme: {
+            doc_title:string,
+            content: string,
         }
     },
     Contact: {

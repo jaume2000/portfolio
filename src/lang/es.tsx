@@ -16,6 +16,7 @@ let es: translation_structure =
             contact: "Contáctame",
         },
         Works: {
+            startups_title: "Startups y emprendimiento",
             title: "Mis trabajos",
             portfolio_project_card_title: "Portafolio",
             portfolio_project_content: {
@@ -176,57 +177,152 @@ let es: translation_structure =
         },
         About: {
             title: "Sobre mí",
-            general_info_comment: "/*\nSi se te complica entender esto, porfavor, revisa Habilidades.txt\nAdemás contiene información extra!\n*/",
-            name_variable: "nombre",
-            birth_variable: "nacimiento",
-            soft_skills: {
-                variable:"habilidades_sociales",
-                self_taught:"autodidacta",
-                likes_challenges:"me gustan los retos",
-                entrepeneur:"emprendedor",
-                leadership:"liderazgo",
-                startup_culture:"cultura de las startups ♥ ",
-                creative:"creativo",
-                fast_learner:"aprendizaje veloz",
-            },
-            getProgrammingLanguages_function: "get_Habilidades_Tecnicas",
-            getNaturalLanguages_function: "get_Idiomas_Hablados",
-            birth_month: "Octubre",
-            language_variable: "idiomas_hablados",
-            native_value: "nativo",
-            english_language: "inglés",
-            spanish_language: "español",
-            catalan_language: "catalán",
-            french_language: "francés",
-            habilities_text: "Habilidades.js",
-            habilities_transcribed_text: "Habilidades.txt",
-            habilities_transcribed_content: 
-    `Mi nombre es Jaume Ivars Grimalt, nací en Octubre de 2001 aquí en Alicante, España, por lo que actualmente tengo 21 años. Actualmente vivo en Valencia, me trasladé a estudiar la carrera de Ingeniería Informática y me encantó la ciudad. Me apasiona el mundo del emprendimiento, lo que me ha llevado a ser autodidacta y a liderar pequeños equipos en proyectos personales.
+            aboutme: {
+                doc_title: "Sobre_mí.docx",
+                content1:
+`
+## ¿Qué es esta consola?
+
+Buenas! Antes de nada, gracias por visitar mi web. Aquí encontrarás información sobre mi, mis trabajos y cómo contactar conmigo.
+
+Este documento (Sobre_mi.docx) **es un resumen** toda la información de la web. En cada sección indico dónde saber más sobre cada tema.
+
+En la parte derecha (o en la superior si estás en el movil) podrás encontrar un **menú de navegación** para abrir secciones que tienen información sobre mí.
+Por ejemplo, porqué no clickas en **CV.pdf para ver mi CV**?
+
+
+## Okey, pero... ¿Quien es este chaval?
+
+Pues este chaval se llama Jaume Ivars Grimalt! Y soy un apasionado del Machine Learning, el desarrollo fullstack y el emprendimiento.
+
+### Sobre mis estudios
+
+Me gradué en el grado de Ingeniería Informática en la Universidad Politécnica de Valencia el 2023 y en el master de
+Inteligencia Artificial Reconocimiento de Formas e Imagen Digital en la misma universidad el 2024. Y por último, fui seleccionado para cursar el programa del
+CDTM (Center for Digital Technology and Management), un programa de emprendimiento y tecnología originario de Munich, Alemania.
+
+*Más info en Estudios.docx*
+
+### El curro
+
+He trabajado en varias startups: Sciling como desarrollador backend, Neurocatching como desarrollador fullstack (y básicamente encargarme de todo el producto)
+y actualmente estoy en Vesta-Z como CTO encargado de desarrollar la IA de la empresa y la base de datos.
+
+*Más info en Experiencia_laboral.tsx*
+
+### Los proyectos que hago ahora
+
+Actualmente estoy trabajando en mi tesis de master, donde estoy creando el dataset open-soruce más grande del mundo de imágenes de placas petri para
+detección automática de colonias de diferentes microorganismos. Para lograr tal azaña, dirijo un equipo de 5 personas para desarrollar la App y dependiendo del momento,
+entre unas 12 y 20 personas adicionales para crear el dataset en una de las mayores colaboraciones dentro de la universidad.
+
+Si esto te ha dejado flipando, ve a revisar el proyecto titulado como Mycrospace en la sección de Trabajos.`,
+check_mycrospace_work: "Revisar Mycrospace",
+check_fairjourney_work: "Revisar FairJourney",
+check_sparked_work: "Revisar SparkED",
+content2:
+`Otro proyecto tocho en el que estoy trabajando es SparkED. Soy miembro del Core Team de SparkED, la comunidad de emprendimiento más disruptiva de Valencia donde me encargo de conectar con los emprendedores más importantes de la ciudad y organizo actividades de alto nivel para la comunidad.
+Entre otras cosas me encargué de crear la web [sparked.es](https://sparked.es) y de organizar el mayor evento de emprendimiento de la historia de la UPV, Spark your Speech.
+`,
+content3:`
+### Proyectos en pausa
+
+Hace un tiempo decidí crear FairJourney como alternativa a blablacar ya que he viajado mucho con esta app y muchos usuarios me comentaron sus problemas con la app y vú una oportunidad.
+El problema fué que intenté crear la app yo solo y me consumió mucho tiempo. Actualmente el backend está terminado y el front está a un 70%. Decidí priorizar otros proeyctos como
+Mycrospace y SparkED que tenían más potencial. Pero en un futuro, me gustaría retomar el proyecto y terminarlo.
+`,
+
+content4:
+`
+### Sobre mis hobbies y mis aficiones
+
+Me encanta hacer deporte e ir al gimnasio, sobrtodo hacer calistenia. También me encanta jugar a la nintendo switch y ver videos interesantes en youtube. Además me encanta dibujar y ver películas de Studio Ghibli.
+
+También como buen nerdy que soy, me gusta leer e informarme sobre las últimas novedades en el Machien Learning y los avances en la ciencia.
+
+### ¿Quieres saber más?
+
+Revisa mi currículum en *CV.pdf* donde encontrarás más información. Pero te aviso que esta web contiene mucha más información y más actualizada que mi CV.
+`,
+},
+soft_skills: {
+    variable: "habilidades_sociales",
+    self_taught: "autodidacta",
+    likes_challenges: "me gustan los retos",
+    entrepreneur: "emprendedor",
+    leadership: "liderazgo",
+    startup_culture: "cultura de las startups ♥ ",
+    creative: "creativo",
+    fast_learner: "aprendizaje veloz",
+},
+skills_code: {
+    doc_title: "Habilidades.js",
+    general_info_comment: "/*\nSi se te complica entender esto, porfavor, revisa CV.pdf\n*/",
+    name_variable: "nombre",
+    getProgrammingLanguages_function: "get_Habilidades_Tecnicas",
+    getNaturalLanguages_function: "get_Idiomas_Hablados",
+    birth_month: "Octubre",
+    language_variable: "idiomas_hablados",
+    native_value: "nativo",
+    english_language: "inglés",
+    spanish_language: "español",
+    catalan_language: "catalán",
+    french_language: "francés",
+},
+skills: {
+    doc_title: "Habilidades.docx",
+    habilities_transcribed_text: "Habilidades.txt",
+    habilities_transcribed_content: `Mi nombre es Jaume Ivars Grimalt, nací en Octubre de 2001 aquí en Alicante, España, por lo que actualmente tengo 21 años. Actualmente vivo en Valencia, me trasladé a estudiar la carrera de Ingeniería Informática y me encantó la ciudad. Me apasiona el mundo del emprendimiento, lo que me ha llevado a ser autodidacta y a liderar pequeños equipos en proyectos personales.
     Tengo 4 años de experiencia en Unity3D y su lenguaje C#. También he aprendido c y c++ en clubes de programación de competición. Aprendí por mi cuenta JavaScript, HTML y CSS para más tarde aprender TypeScript, React, NextJS y otras librerías como Express, D3, ThreeJS, etc. También tuve la oportunidad de aprender bases de datos y servicios en la nube (Firebase, MongoDB, AWS S3, Google Cloud Buckets) y creación de APIs.
     Como me he especializado en informática (algoritmos, IA, etc.) he aprendido mucho Python (pytorch, keras, tensowflow, numpy, matplotlib, ...).
     Siempre he sido bilingüe, hablo castellano y catalán y uso el inglés a diario por ocio y trabajo. Actualmente estoy en proceso de aprender francés.`,
+            },
             studies: {
-                doc_title:"Estudios.docx",
-                content:`Me licencié en Informática en 2023 en la Universidad Politécnica de Valencia. Mi nota media es de 8,3 con matrícula de honor en estadística e Inteligencia Artificial.
+                doc_title: "Estudios.docx",
+                content: `Me licencié en Informática en 2023 en la Universidad Politécnica de Valencia. Mi nota media es de 8,3 con matrícula de honor en estadística e Inteligencia Artificial.
                 Durante mi formación en la universidad participé en una gran variedad de proyectos:
                 • Mentor del Club de Desarrollo de Videojuegos
                 • Miembro de ACM (ACM es una organización mundial responsable de los precios Turing)
                 • 4 veces reelegido delegado
                 • Inició 2 proyectos de puesta en marcha en Start.inf`,
             },
-            cv:{
-                doc_title:"CV.html",
-                web_title:"¡Bienvenido a mi web de descarga de CV!",
-                web_description:"Recuerda que puedes revisar mi LinkedIn también en ",
-                web_contact_info_link:"Información de contacto",
-                web_download_cv_button:"Descargar CV (en inglés)",
-                web_check_cv_description:"Si lo prefieres, puedes visualizar el pdf del CV en una nueva pestaña",
-                web_check_cv_button:"Visualizar CV (en inglés)",
+            cv: {
+                doc_title: "CV.pdf",
+                web_title: "¡Bienvenido a mi web de descarga de CV!",
+                web_description: "Recuerda que puedes revisar mi LinkedIn también en ",
+                web_contact_info_link: "Información de contacto",
+                web_download_cv_button: "Descargar CV (en inglés)",
+                web_check_cv_description: "Si lo prefieres, puedes visualizar el pdf del CV en una nueva pestaña",
+                web_check_cv_button: "Visualizar CV (en inglés)",
             },
             work_experience: {
-                doc_title:'Experiencia_laboral.tsx',
-                sciling_work_experience:'',
-                neurocatching_work_experience:''
+                doc_title: 'Experiencia_laboral.tsx',
+                sciling_work_experience:
+`
+Jun 2022 - Sep 2022 (4 meses)
+
+Fui desarrollador backend con Google Cloud, IBM Watson, conexión a API de OpenAI y uso de Python. También hice testing y validación de productos con Python.`,
+                neurocatching_work_experience:
+`Feb 2023 - Ago 2023 (7 meses)
+
+Fui el principal desarrollador del software de la empresa y CTO. Hice desarrollo fullstack con jQuery, MySQL, Node.js y AWS. Usé JavaScript. Este software toma datos biométricos del usuario mientras observa un anuncio para estudiar las emociones y dónde está mirando este usuario para recopilar los datos y calcular insights.
+También fui desarrollador en otro proyecto (NeuroAds). Hice desarrollo fullstack con React.js y Google Cloud. Usé JavaScript y Python. Vía Inteligencia Artificial la app genera un anuncio mejorado.
+`,
+                vestaz_work_experience:
+`Jul 2024 - Actualidad
+
+Soy el CTO de la empresa. Me encargo de guiar el desarrollo de la IA de la empresa y de la base de datos. Usamos Google Cloud y para el front y backend mantuvimos el uso de Wordpress. Posteriormente migraremos a Next.js para el backend.
+`,
+            },
+            conctactme: {
+                doc_title: "Contáctame.html",
+                content:`
+# Información de contacto
+
+## Mi linkedin [aquí](https://linkedin.com/in/jaumeivars-grimalt)
+## Github [aquí](https://github.com/jaume2000)
+## Mi correo personal: jaumeig95@gmail.com
+                `
             }
         },
         Contact: {
