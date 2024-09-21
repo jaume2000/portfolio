@@ -1,13 +1,13 @@
 "use client"
 
 import '@/lang/lang'
-import React, { Dispatch, SetStateAction, useState } from 'react'
+import React, { useState } from 'react'
 import {getLanguageAllDictionary} from '@/lang/lang'
 import '@/globals.css'
 import './style.css'
 import ProjectCardContainer from './ProjectCardContainer'
 import ProjectCard from './ProjectCard'
-import {ProjectExplanationBox, ProjectExplanationContent_properties} from './ProjectExplanationBox'
+import {ProjectExplanationBox} from './ProjectExplanationBox'
 
 import DefaultContent from './ProjectExplanationContents/DefaultContent'
 import PortfolioContent from './ProjectExplanationContents/PortfolioContent'
@@ -39,7 +39,7 @@ const Works = ({lang}: {lang:string})=>{
     const [first_time_load, setFirstTime] = useState(true);
     const [explanation_content, setExplanationContent]= useState(<DefaultContent events={{onclose:()=>{},onopen:()=>{} }}/>)
 
-    let dict = getLanguageAllDictionary(lang).Works
+    const dict = getLanguageAllDictionary(lang).Works
 
     const CustomProjectCard = ({title, background_style, title_style,technologies, github_repo, explanation_content,web_link, id}:{title:string, background_style:React.CSSProperties, title_style:React.CSSProperties,technologies:string[], github_repo?:string, explanation_content?:JSX.Element, web_link?:string, id?:string}) => {
 

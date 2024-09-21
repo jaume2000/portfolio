@@ -4,8 +4,8 @@ import { useState } from "react"
 
 const Dropdown = ({children}:{children:React.ReactNode}) => {
 
-    const [shown, setShown] = useState(false)
-    const [selectedOption, setSelectedOption] = useState(0);
+    const [shown] = useState(false)
+    //const [selectedOption, setSelectedOption] = useState(0);
 
 
     if(!shown){

@@ -1,6 +1,6 @@
-import { text } from "stream/consumers"
+import { translation_structure } from "./translation_structure"
 
-let es: translation_structure =
+const es: translation_structure =
     {
         Header: {
             title: "Jaume Ivars Grimalt - Portafolio",

@@ -1,6 +1,6 @@
-import ReactPlayer from "react-player";
+import { translation_structure } from "./translation_structure"
 
-let en: translation_structure = {
+const en: translation_structure = {
     Header: {
         title: "Jaume Ivars Grimalt - Portfolio",
         meta_description: "Portfolio web of Jaume Ivars Grimalt: Computer scientist, fullstack programmer and artificial intelligence engineer."

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function FairJourneyContent() {
+const FairJourneyContent = ({lang}:{lang:string}) => {
   return (
     <div>FairJourneyContent</div>
   )

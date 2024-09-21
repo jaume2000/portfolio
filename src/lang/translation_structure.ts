@@ -1,4 +1,4 @@
-type translation_structure = {
+export type translation_structure = {
     Header: {
         title:string,
         meta_description:string,

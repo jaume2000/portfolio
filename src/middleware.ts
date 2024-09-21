@@ -3,8 +3,8 @@ import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 import {getAvailableLenguages} from '@/lang/lang'
 
-let locales = getAvailableLenguages();
-export let defaultLocale = 'en';
+const locales = getAvailableLenguages();
+export const defaultLocale = 'en';
 
 function getLocale(request: Request): string {
   const headers = new Headers(request.headers)
@@ -19,11 +19,11 @@ function getLocale(request: Request): string {
   //CHANGED THIS
   //console.log(languages)
   try{
-    let m = match(languages, locales, defaultLocale);
+    const m = match(languages, locales, defaultLocale);
     //console.log("match",m)
     return m
   }
-  catch(err){
+  catch (error) {
     return defaultLocale
   }
 }
@@ -32,8 +32,8 @@ export function middleware(request: NextRequest) {
   let locale = getLocale(request) ?? defaultLocale
   let pathname = request.nextUrl.pathname
 
-  let pathname_list = pathname.split('/')
-  let possible_locale = pathname_list[1];
+  const pathname_list = pathname.split('/')
+  const possible_locale = pathname_list[1];
   if(locales.includes(possible_locale)){
     locale = possible_locale;
     pathname_list.splice(0,2)
