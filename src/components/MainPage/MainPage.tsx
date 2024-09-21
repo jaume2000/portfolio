@@ -5,7 +5,6 @@ import About from '@/components/About/About'
 import Works from '@/components/Works/Works'
 import MenuBar from '@/components/NavBar/NavBar'
 import Contact from '@/components/Contact/Contact'
-import { useState, useEffect } from "react";
 import LoadingScreen from '@/components/utils/LoginScreen/LoginScreen'
 
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const FairJourneyContent = ({lang}:{lang:string}) => {
   return (
-    <div>FairJourneyContent</div>
+    <div>{lang + " Fair journey content"}</div>
   )
 }
 

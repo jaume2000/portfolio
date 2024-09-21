@@ -6,7 +6,7 @@ import './style.css'
 
 const Contact = ({lang}: {lang:string})=>{
 
-    let dict = getLanguageAllDictionary(lang).Contact
+    const dict = getLanguageAllDictionary(lang).Contact
 
     return(
         <div className='contact_container_with_bulb'>

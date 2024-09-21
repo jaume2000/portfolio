@@ -1,6 +1,4 @@
-import PresentationPage from "@/components/PresentationPage/PresentationPage";
 import MainPage from "@/components/MainPage/MainPage";
-import { useState } from "react";
 import '@/globals.css';
 
 

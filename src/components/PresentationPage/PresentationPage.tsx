@@ -7,7 +7,7 @@ import Image from "next/image";
 const PresentationPage = ({lang}: {lang:string}) => {
     
     //const {push} = useRouter()
-    let dict = getLanguageAllDictionary(lang).PresentationPage;
+    const dict = getLanguageAllDictionary(lang).PresentationPage;
 
     return (
         <div>

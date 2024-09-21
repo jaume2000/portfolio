@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server';
+import {NextResponse } from 'next/server';
 import axios from 'axios';
 
-export async function GET(request: NextRequest): Promise<NextResponse> {
+export async function GET(): Promise<NextResponse> {
   try {
     const url = 'https://europe-west9-mycrospace.cloudfunctions.net/check_tagging_ranking';
     
@@ -13,7 +13,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
     console.log(data);
 
-    let processed_data = []
+    const processed_data = []
 
     const contacts: { [email: string]: string } = {
       "juliams2707@gmail.com": "Júlia Molina Sánchez",
@@ -39,7 +39,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
 
     for (let i = 0; i < data.length; i++) {
-      let element = data[i];
+      const element = data[i];
       if (element[0] in contacts) {
         element[0] = contacts[element[0]];
       }

@@ -23,7 +23,7 @@ function getLocale(request: Request): string {
     //console.log("match",m)
     return m
   }
-  catch (error) {
+  catch {
     return defaultLocale
   }
 }

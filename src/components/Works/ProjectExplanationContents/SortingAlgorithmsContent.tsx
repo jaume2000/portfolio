@@ -3,7 +3,7 @@ import { getLanguageAllDictionary } from "@/lang/lang"
 
 export default function SortingAlgorithmsContent({lang}:{lang:string}) {
 
-    let dict = getLanguageAllDictionary(lang).Works
+    const dict = getLanguageAllDictionary(lang).Works
     
     return (
         <div className="hide_scrollbar" style={{ width: '100%', padding: '50px', color: 'white', overflowY: 'auto'}}>

@@ -2,7 +2,7 @@ import { getLanguageAllDictionary } from '@/lang/lang'
 import React from 'react'
 
 function SparkedContent({lang}:{lang:string}) {
-  let dict = getLanguageAllDictionary(lang).Works.sparked_project_content
+  const dict = getLanguageAllDictionary(lang).Works.sparked_project_content
   return (
     <div className="hide_scrollbar" style={{ width: '100%', padding: '50px', color: 'white', overflowY: 'auto'}}>
       {dict.intro}

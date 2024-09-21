@@ -2,7 +2,7 @@ import { getLanguageAllDictionary } from '@/lang/lang'
 import React from 'react'
 
 function AutoencoderContent({lang}:{lang:string}) {
-    let dict = getLanguageAllDictionary(lang).Works
+    const dict = getLanguageAllDictionary(lang).Works
   return (
     <div className="hide_scrollbar" style={{ width: '100%', padding:'50px', color: 'white', overflowY: 'auto'}}>
 

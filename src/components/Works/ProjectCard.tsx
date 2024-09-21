@@ -33,19 +33,19 @@ export default function ProjectCard ({lang, title, technologies, github_repo, ti
 
 const Technologies = ({lang, technologies,background_color="black", text_color="white", github_repo, web_link}:{lang:string, technologies:string[],background_color?:string, text_color?:string, github_repo?:string, web_link?:string}) => {
 
-    let dict = getLanguageAllDictionary(lang).Works
+    const dict = getLanguageAllDictionary(lang).Works
 
-    let nextjs_text:string = "NextJS"
-    let react_text:string = "React"
-    let typescript_text:string = "TypeScript"
-    let python_text:string = "Python"
-    let colab:string = "Google\xA0Colab"
-    let html_text:string  ="HTML"
-    let css_text:string  ="CSS"
-    let c_sharp:string = "C#"
-    let unity3d:string = "Unity\xA03D"
-    let pytorch:string = "Pytorch"
-    let github_repo_text:string = dict.github_link_to_repo_text;
+    const nextjs_text:string = "NextJS"
+    const react_text:string = "React"
+    const typescript_text:string = "TypeScript"
+    const python_text:string = "Python"
+    const colab:string = "Google\xA0Colab"
+    const html_text:string  ="HTML"
+    const css_text:string  ="CSS"
+    const c_sharp:string = "C#"
+    const unity3d:string = "Unity\xA03D"
+    const pytorch:string = "Pytorch"
+    const github_repo_text:string = dict.github_link_to_repo_text;
 
     const tech_dict = {
         "nextjs":
@@ -82,11 +82,11 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
 
 
 
-    let github_repo_object = (
+    const github_repo_object = (
         <SingleTecnology title={github_repo_text} alt='Github logo' src='/public/github-mark.png' href={github_repo}/>
     )
 
-    let web_object = (
+    const web_object = (
         <SingleTecnology additional_img_class='ts_logo' round_border={false} title={dict.link_to_web} alt='New tab logo' src='/public/new_tab_icon.png' href={web_link}/>
     )
 
@@ -107,7 +107,7 @@ const Technologies = ({lang, technologies,background_color="black", text_color="
 
 const SingleTecnology = ({src, title, alt, href, additional_img_class, white_background=false, round_border=true}:{src:string, title:string, alt:string, additional_img_class?:string, white_background?:boolean, round_border?:boolean, href?:string}) => {
     
-    let img_classes = 'technology_logo' + (round_border ? ' round_border':'') + (white_background ? ' white_background':'') + (additional_img_class ? ' ' + additional_img_class : '')
+    const img_classes = 'technology_logo' + (round_border ? ' round_border':'') + (white_background ? ' white_background':'') + (additional_img_class ? ' ' + additional_img_class : '')
     
     return (
         <div className="technology_logo_container" style={{"--text_length": ((title.length +2) + "ch")} as React.CSSProperties}>

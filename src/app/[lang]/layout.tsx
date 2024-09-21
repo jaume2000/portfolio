@@ -9,8 +9,8 @@ export default function RootLayout({
   children: React.ReactNode,
   params: {lang: string}
 }) {
-  let language = params.lang ?? defaultLocale;
-  let dict = getLanguageAllDictionary(language).Header
+  const language = params.lang ?? defaultLocale;
+  const dict = getLanguageAllDictionary(language).Header
   return (
     <html lang={language}>
       <head>

@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import '@/css/leaderboard.css'
-import os from 'os';
-import axios from 'axios';
 
 type StringNumberPair = [string, number];
 
@@ -23,9 +21,13 @@ const FetchingHello: React.FC = () => {
         }
         const data = await response.json();
         setMessage(data);
-      } catch (error:any) {
+      } catch (error) {
         console.log(error)
-        setError(error.message);
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError('An unknown error occurred');
+        }
       } finally {
         setLoading(false);
         //console.log(message);
