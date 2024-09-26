@@ -14,7 +14,11 @@ import AboutMe from './AboutMe'
 import ContactMe from './ContactMe'
 import {ConsoleIcon, FeatherIcon, MoonIcon, SunIcon} from '@/components/SVGs/svg_gallery'
 
+export type ConsoleTheme = "hacker" | "sun" | "moon" | "feather"
+
 const About = ({lang}: {lang:string})=>{
+
+    const [theme, setTheme] = useState<ConsoleTheme>("hacker")
 
     const dict = getLanguageAllDictionary(lang).About
 
@@ -37,16 +41,16 @@ const About = ({lang}: {lang:string})=>{
         <div className='about_container fullpage'>
             <div className='container'>
                 <div style={{width: "100%", display: "flex", justifyContent: "end"}}>
-                    <button className='p-2'>
+                    <button className={'p-2 bg-black rounded-xl ' + (theme == "sun" ? "invert" : "")} onClick={()=>setTheme("sun")}>
                         <SunIcon color="#ffffff"/>
                     </button>
-                    <button className='p-2'>
-                        <ConsoleIcon color="#ffffff"/>
-                    </button>
-                    <button className='p-2'>
+                    <button className={'p-2 bg-black rounded-xl ' + (theme == "moon" ? "invert" : "")} onClick={()=>setTheme("moon")}>
                         <MoonIcon color="#ffffff"/>
                     </button>
-                    <button className='p-2'>
+                    <button className={'p-2 bg-black rounded-xl ' + (theme == "hacker" ? "invert" : "")} onClick={()=>setTheme("hacker")}>
+                        <ConsoleIcon color="#ffffff"/>
+                    </button>
+                    <button className={'p-2 bg-black rounded-xl ' + (theme == "feather" ? "invert" : "")} onClick={()=>setTheme("feather")}>
                         <FeatherIcon color="#ffffff"/>
                     </button>
                 </div>
@@ -55,7 +59,7 @@ const About = ({lang}: {lang:string})=>{
                 </h1>
                 <div className='console_and_file_container'>
                     <FolderContainer className={"custom_folder_container"} content_list={selectOptions} selectedKey={selectedContent} setSelectedContent={setSelectedContent}/>
-                    <ConsoleContainer className={"custom_console"} title={selectOptions[selectedContent].title} theme={"hacker_console"}>
+                    <ConsoleContainer className={"custom_console"} title={selectOptions[selectedContent].title} theme={theme}>
                         {selectOptions[selectedContent].console}
                     </ConsoleContainer>
                 </div>

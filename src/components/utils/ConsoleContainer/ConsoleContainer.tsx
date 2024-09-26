@@ -1,12 +1,13 @@
 
+import { ConsoleTheme } from '@/components/About/About'
 import './style.css'
 
-type console_mode = "dark_console"|"light_console"|"hacker_console"
+const ConsoleContainer = ({className, children, theme, style, title}:{className?:string, children: React.ReactNode|undefined, theme:ConsoleTheme, style?:object, title?:string}) => {
 
-const ConsoleContainer = ({className, children, theme, style, title}:{className?:string, children: React.ReactNode|undefined, theme:console_mode, style?:object, title?:string}) => {
+    const theme_string = theme + "_console"
 
     return (
-    <div className={className+" console_container " + theme } style={style}>
+    <div className={className+" console_container " + theme_string } style={style}>
         <div className="console_container_header">
             <div className="console_container_header_left">
                 <div className="decorator first_dot dot"/>
